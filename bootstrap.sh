@@ -15,7 +15,7 @@ rm -rf __MACOSX
 
 # link git config
 mv ~/.gitconfig ~/.gitconfig_back
-ln -s git-config/.gitconfig ~/.gitconfig
+ln -s $PWD/git-config/.gitconfig ~/.gitconfig
 
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
