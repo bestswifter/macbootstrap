@@ -35,11 +35,14 @@ else
 fi
 
 # link git config
-mv ~/.gitconfig ~/.gitconfig_back
+mv ~/.gitconfig ~/.gitconfig_backup
 ln -s $PWD/git-config/.gitconfig ~/.gitconfig
 
 if [[ ! -e ~/.oh-my-zsh ]]; then
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 fi
 
+# link zshrc
+mv ~/.zshrc ~/.zshrc_backup
+ln -s $PWD/zsh-config/.zshrc ~/.zshrc
 
