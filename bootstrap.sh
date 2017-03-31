@@ -1,21 +1,45 @@
 #!/bin/sh
 
-# install homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if [[ ! -e /usr/local/bin/brew ]]; then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+    echo “You have installed brew”
+fi
 
-brew cask install iterm2
-brew cask install sourcetree
-brew install wget
+if [[ ! -e /Applications/iTerm.app ]]; then
+    brew cask install iterm2
+else
+    echo “You have installed iTerm2”
+fi
+
+if [[ ! -e /Applications/SourceTree.app/ ]]; then
+    brew cask install sourcetree
+else
+    echo “You have installed SourceTree”
+fi
+
+if [[ ! -e /usr/local/bin/wget ]]; then
+    brew cask install wget
+else
+    echo “You have installed wget”
+fi
 
 # install MacVim
-unzip software/MacVim.zip
-mv MacVim.app /Applications/MacVim.app
-ln -s /Applications/MacVim.app/Contents/bin/gvim /usr/local/bin/gvim
-rm -rf __MACOSX
+if [[ ! -e /usr/local/bin/gvim ]]; then
+    unzip software/MacVim.zip
+    mv MacVim.app /Applications/MacVim.app
+    ln -s /Applications/MacVim.app/Contents/bin/gvim /usr/local/bin/gvim
+    rm -rf __MACOSX
+else
+    echo “You have installed macvim”
+fi
 
 # link git config
 mv ~/.gitconfig ~/.gitconfig_back
 ln -s $PWD/git-config/.gitconfig ~/.gitconfig
 
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+if [[ ! -e ~/.oh-my-zsh ]]; then
+    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+fi
+
 
