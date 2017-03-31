@@ -1,2 +1,44 @@
-:q
-
+[user]
+    name = bestswifter
+    email = ktzhang@ bestswifter.com
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+[help]
+    format = html
+[alias]
+    br = branch
+    ca = commit -a
+    ci = commit
+    co = checkout
+    st = status
+    oln = log --pretty=oneline --since='2 days ago' --color --graph --abbrev-commit
+    olg = log -p -1 --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue) <%an>%Creset' --abbrev-commit
+    lg = log --stat --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue) <%an>%Creset' --abbrev-commit
+    amend = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
+    zip = !git archive --format zip master --output
+    zipHead = !git archive --format=zip HEAD --output
+    rmd = !git ls-files -d  -z | xargs -0 git rm
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[log]
+    date = local
+[core]
+    excludesfile = ~/.gitignore_global
+    whitespace = cr-at-eol
+    quotepath = false
+[i18n]
+    commitencoding = utf-8
+    logoutputencoding = utf-8
+[gui]
+    encoding = utf-8
+[push]
+    default = current
+[grep]
+    lineNumber = true
