@@ -53,3 +53,11 @@ fi
 mv ~/.zshrc ~/.zshrc_backup
 ln -s $PWD/zsh-config/.zshrc ~/.zshrc
 
+# vim configuration
+if [[ ! -e $PWD/vim-config ]]; then
+    rm -rf vim-config
+fi
+git clone https://github.com/bestswifter/.vim.git --recursive vim-config
+mv ~/.vimrc ~/.vimrc_backup
+ln -s $PWD/vim-config/.vimrc ~/.vimrc
+vim +PluginInstall +qall 2&> /dev/null
