@@ -24,6 +24,13 @@ else
     echo “You have installed wget”
 fi
 
+# install gsed
+if [[ ! -e /usr/local/bin/gsed ]]; then
+    brew install gnu-sed
+else
+    echo “You have installed gsed”
+fi
+
 # install MacVim
 if [[ ! -e /usr/local/bin/gvim ]]; then
     unzip software/MacVim.zip
