@@ -1,5 +1,7 @@
 #!/bin/sh
 
+xcode-select --install
+
 if [[ ! -e /usr/local/bin/brew ]]; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
@@ -63,7 +65,7 @@ ln -s $PWD/zsh-config/.zshrc ~/.zshrc
 if [[ ! -e $PWD/vim-config ]]; then
     rm -rf vim-config
 fi
-git clone https://github.com/bestswifter/.vim.git --recursive vim-config
+git clone https://github.com/bestswifter/.vim.git --recursive ~/.vim
 mv ~/.vimrc ~/.vimrc_backup
 ln -s $PWD/vim-config/.vimrc ~/.vimrc
 vim +PluginInstall +qall 2&> /dev/null
