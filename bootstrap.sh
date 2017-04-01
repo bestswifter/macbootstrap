@@ -19,7 +19,7 @@ else
 fi
 
 if [[ ! -e /usr/local/bin/wget ]]; then
-    brew cask install wget
+    brew install wget
 else
     echo “You have installed wget”
 fi
