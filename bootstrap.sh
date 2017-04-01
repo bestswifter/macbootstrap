@@ -31,6 +31,12 @@ else
     echo “You have installed gsed”
 fi
 
+if [[ ! -e /usr/local/bin/autojump ]]; then
+    brew install autojump
+else
+    echo "You have installed autojump"
+fi
+
 # install MacVim
 if [[ ! -e /usr/local/bin/gvim ]]; then
     unzip software/MacVim.zip
