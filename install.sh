@@ -76,4 +76,12 @@ if [[ -e ~/.vimrc ]]; then
     mv ~/.vimrc ~/.vimrc_backup
 fi
 ln -s ~/.vim/.vimrc ~/.vimrc
+
+# install YCM
+cd ~/.vim/bundle/
+git clone https://github.com/Valloric/YouCompleteMe.git
+cd YouCompleteMe
+git submodule update --init --recursive
+./install.py --clang-completer --tern-completer
+
 vim -c PluginInstall
