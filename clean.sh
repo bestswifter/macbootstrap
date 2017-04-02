@@ -7,6 +7,7 @@ brew cask uninstall sourcetree
 brew uninstall wget
 brew uninstall gnu-sed
 brew uninstall autojump
+brew uninstall cmake
 
 rm -f ~/.zshrc
 rm -f ~/.vimrc
