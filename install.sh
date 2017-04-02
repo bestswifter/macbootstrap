@@ -42,6 +42,12 @@ else
     echo "You have installed autojump"
 fi
 
+if [[ ! -e /usr/local/bin/node ]]; then
+    brew install node
+else
+    echo "You have installed node"
+fi
+
 # install MacVim
 if [[ ! -e /usr/local/bin/gvim ]]; then
     unzip software/MacVim.zip
