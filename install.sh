@@ -65,4 +65,4 @@ if [[ -e ~/.vimrc ]]; then
     mv ~/.vimrc ~/.vimrc_backup
 fi
 ln -s ~/.vim/.vimrc ~/.vimrc
-vim +PluginInstall +qall 2&> /dev/null
+vim -c PluginInstall
