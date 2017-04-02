@@ -49,7 +49,7 @@ fi
 
 # link git config
 mv ~/.gitconfig ~/.gitconfig_backup
-ln -s $PWD/git-config/.gitconfig ~/.gitconfig
+ln -s ~/.macbootstrap/git-config/.gitconfig ~/.gitconfig
 
 if [[ ! -e ~/.oh-my-zsh ]]; then
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
@@ -57,12 +57,12 @@ fi
 
 # link zshrc
 mv ~/.zshrc ~/.zshrc_backup
-ln -s $PWD/zsh-config/.zshrc ~/.zshrc
+ln -s ~/.macbootstrap/zsh-config/.zshrc ~/.zshrc
 
 # vim configuration
 git clone https://github.com/bestswifter/.vim.git --recursive ~/.vim
 if [[ -e ~/.vimrc ]]; then
     mv ~/.vimrc ~/.vimrc_backup
-if
-ln -s $PWD/vim-config/.vimrc ~/.vimrc
+fi
+ln -s ~/.vim/.vimrc ~/.vimrc
 vim +PluginInstall +qall 2&> /dev/null
