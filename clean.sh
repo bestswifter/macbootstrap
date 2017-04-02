@@ -12,3 +12,4 @@ rm -f ~/.zshrc
 rm -f ~/.vimrc
 rm -f ~/.gitconfig
 rm -rf ~/.vim
+rm -rf ~/.oh-my-zsh
