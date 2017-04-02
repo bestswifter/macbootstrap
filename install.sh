@@ -84,4 +84,4 @@ cd YouCompleteMe
 git submodule update --init --recursive
 ./install.py --clang-completer --tern-completer
 
-vim -c PluginInstall
+vim -c PluginInstall -c quitall
