@@ -24,11 +24,16 @@ else
     echo “You have installed wget”
 fi
 
-# install gsed
 if [[ ! -e /usr/local/bin/gsed ]]; then
     brew install gnu-sed
 else
     echo “You have installed gsed”
+fi
+
+if [[ ! -e /usr/local/bin/cmake ]]; then
+    brew install cmake
+else
+    echo "You have installed cmake"
 fi
 
 if [[ ! -e /usr/local/bin/autojump ]]; then
