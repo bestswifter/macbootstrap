@@ -18,13 +18,13 @@ First of all, it will install xcode command tool for you, which includes **git**
 
 Then, you will install **homebrew** and some tools available from it. It includes:
 
-*. iterm(cask)
-*. sourcetree(cask)
-*. wget
-*. gnu-sed
-*. autojump
-*. cmake
-*. node&npm
+* iterm(cask)
+* sourcetree(cask)
+* wget
+* gnu-sed
+* autojump
+* cmake
+* node&npm
 
 ## Git
 
