@@ -9,6 +9,7 @@ brew uninstall gnu-sed
 brew uninstall autojump
 brew uninstall cmake
 brew uninstall node
+brew uninstall ctags
 
 rm -f ~/.zshrc
 rm -f ~/.vimrc

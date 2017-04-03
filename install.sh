@@ -48,6 +48,12 @@ else
     echo "You have installed node"
 fi
 
+if [[ ! -e /usr/bin/ctags ]]; then
+    brew install ctags
+else
+    echo "You have installed ctags"
+fi
+
 # install MacVim
 if [[ ! -e /usr/local/bin/gvim ]]; then
     unzip software/MacVim.zip
