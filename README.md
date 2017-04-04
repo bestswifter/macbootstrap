@@ -20,18 +20,31 @@ Then, you will install **homebrew** and some tools available from it. It include
 
 * iterm(cask)
 * sourcetree(cask)
+* chrome(cask)
 * wget
 * gnu-sed
-* autojump
 * cmake
+* autojump
 * node&npm
+* ctags
 
 ## Git
 
-There are two 
+
+
+## Vim
+
+Plugins are included in `~/.vimrc`, you can change them according to your favor.
+
+You can change configuration about vim itself in `~/.vim/bundle/vimrc/plugin/vimrc_wssq.vim`
+
+Configuration about vim plugins are specified in `~/.vim/bundle/vimrc/self/PluginSetting.vim`
 
 # What's next
 
-1. Split vim plugin configuration out.
-2. Add keymap export/save for iTerm
+- [x] Split vim plugin configuration out.
+- [] Add keymap export/save for iTerm.
+- [] Add keymap export/save for Snap.
+- [] Add more npm packages
+- [] Remove alias to number 1-9 in `~/.oh-my-zsh/lib/directories.zsh`, this is considered to be done in [h function](https://github.com/bestswifter/history)
 
