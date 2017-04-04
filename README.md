@@ -47,4 +47,4 @@ Configuration about vim plugins are specified in `~/.vim/bundle/vimrc/self/Plugi
 - [] Add keymap export/save for Snap.
 - [] Add more npm packages
 - [] Remove alias to number 1-9 in `~/.oh-my-zsh/lib/directories.zsh`, this is considered to be done in [h function](https://github.com/bestswifter/history)
-
+- [] IMPORTANT: Add demo for this project to show the convenience and advantange of this project
