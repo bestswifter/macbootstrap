@@ -54,6 +54,12 @@ else
     echo "You have installed ctags"
 fi
 
+if [[ ! -e /Applications/Google\ Chrome.app ]]; then
+    brew cask install google-chrome
+else
+    echo "You have installed chrome"
+fi
+
 # install MacVim
 if [[ ! -e /usr/local/bin/gvim ]]; then
     unzip software/MacVim.zip
