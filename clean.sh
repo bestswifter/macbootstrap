@@ -4,6 +4,7 @@ rm -f /usr/local/bin/gvim
 
 brew cask uninstall iterm2
 brew cask uninstall sourcetree
+brew cask uninstall google-chrome
 brew uninstall wget
 brew uninstall gnu-sed
 brew uninstall autojump
