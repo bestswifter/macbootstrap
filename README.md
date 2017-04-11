@@ -28,6 +28,17 @@ Then, you will install **homebrew** and some tools available from it. It include
 * node&npm
 * ctags
 
+## Zsh
+
+所有 Zsh 相关的函数、配置（主要是对一些 Unix 函数的封装）都在 `zsh-config` 目录下。
+
+### 方便的查找文件名
+
+如果你想查找文件夹内的某个文件，可以使用 `find` 命令，但默认的 `find` 命令并不支持表达，所以我在 `personalized.sh` 文件中封装了 `bsfn` 函数，它接受一个参数，可以精确匹配，也可以写正则表达式：
+
+![正则表达搜索文件](http://images.bestswifter.com/1491892266.png )
+
+
 ## Git
 
 
