@@ -36,8 +36,9 @@ Then, you will install **homebrew** and some tools available from it. It include
 
 如果你想查找文件夹内的某个文件，可以使用 `find` 命令，但默认的 `find` 命令并不支持表达，所以我在 `personalized.sh` 文件中封装了 `bsfn` 函数，它接受一个参数，可以精确匹配，也可以写正则表达式：
 
-![正则表达搜索文件](http://images.bestswifter.com/1491892266.png )
+![正则表达搜索文件](http://images.bestswifter.com/1491892266.png)
 
+比如这里我们搜索所有**以 BBA 开头，中间字符不限，以 Plugin 结尾**的文件。
 
 ## Git
 
