@@ -1,5 +1,5 @@
 # Find file using regex
 function bsfn () {
-    find . -type f -name "*" | egrep --color=always $1
-    find . -type l -name "*" | egrep --color=always $1
+    # Use -or to support multi types
+    find . \( -type f -or -type l \) | egrep --color=always $1
 }
