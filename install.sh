@@ -49,7 +49,7 @@ else
 fi
 
 if [[ ! -e /usr/bin/ctags ]]; then
-    brew install ctags
+    brew install ctags --HEAD
 else
     echo "You have installed ctags"
 fi
