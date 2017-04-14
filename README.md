@@ -52,6 +52,14 @@ You can change configuration about vim itself in `~/.vim/bundle/vimrc/plugin/vim
 
 Configuration about vim plugins are specified in `~/.vim/bundle/vimrc/self/PluginSetting.vim`
 
+### <Leader>u
+
+Leader 键是逗号 `,`，按下 `,u` 触发 Unite outline:
+
+![Unite outline](http://images.bestswifter.com/1492167124.png)
+
+连按两次 `Ctrl-w` 可以左右切换窗口，左侧 outline 中用 j/k 上下移动，o 前往指定位置。
+
 # What's next
 
 - [x] Split vim plugin configuration out.
