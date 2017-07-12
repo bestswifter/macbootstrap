@@ -18,7 +18,7 @@ SAVEHIST=1000000
 
 BS_ZSH_BASE="$HOME/.macbootstrap"
 source $BS_ZSH_BASE/zsh-config/common.sh
-
+source tools.sh
 source $(brew --prefix)/etc/profile.d/autojump.sh
 fpath=(/usr/local/share/zsh-completions $fpath)
 export PATH=$PATH:$M2_HOME/bin
