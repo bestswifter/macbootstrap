@@ -97,3 +97,8 @@ git submodule update --init --recursive
 ./install.py --clang-completer --tern-completer
 
 vim -c PluginInstall -c quitall
+
+# Gem update
+sudo gem update --system
+sudo gem install -n /usr/local/bin cocoapods
+sudo gem install colored
