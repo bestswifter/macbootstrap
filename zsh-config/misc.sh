@@ -33,6 +33,10 @@ function column() {
     esac
 }
 
+function line() {
+    awk -v l=$1 'NR == l'
+}
+
 function add() {
     case $# in
         0)
