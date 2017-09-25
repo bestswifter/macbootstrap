@@ -46,9 +46,9 @@ function proxy() {
         http_port=$(echo $http_status | tail -n 1 | awk '{print $2}')
 
         if [ "$http_enable" = "Yes" ]; then
-            echo -e "${green}HTTP: ✔${NC}" $http_ip ":" $http_port
+            echo -e "${green}HTTP : ✔${NC}" $http_ip ":" $http_port
         else
-            echo -e "${RED}HTTP: ✘${NC}" $http_ip ":" $http_port
+            echo -e "${RED}HTTP : ✘${NC}" $http_ip ":" $http_port
         fi
 
         https_status=$(networksetup -getsecurewebproxy $network | head -n 3)
