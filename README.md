@@ -40,6 +40,19 @@ Then, you will install **homebrew** and some tools available from it. It include
 
 比如这里我们搜索所有**以 BBA 开头，中间字符不限，以 Plugin 结尾**的文件。
 
+### proxy: 方便的切换和展示系统代理
+
+如果想使用 Charles 抓包，则输入 `p on` 即可将系统的 HTTP 和  HTTPS 代理设置为 127.0.0.1:8888
+
+如果想使用 Shadowsocks 科学上网，则输入 `p g` 即可将系统的 socks 代理设置为 localhost:14179，需要自行修改端口号
+
+如果不想使用代理，输入 `p off` 可以禁用所有代理，恢复默认设置。
+
+输入 `p s` 可以查看当前的系统代理。
+
+![p 命令使用简介](https://o8ouygf5v.qnssl.com/1506333678.png )
+
+
 ## Git
 
 
