@@ -5,47 +5,42 @@ alias ip="ifconfig | sed -n -e '/127.0.0.1/d' -e '/inet /p'|awk '{print \$2}'"
 
 # Follow this page to avoid enter password
 # http://apple.stackexchange.com/questions/236806/prevent-networksetup-from-asking-for-password
-function proxy-charles() {
-    sudo networksetup -setwebproxystate Wi-Fi on;
-    sudo networksetup -setsecurewebproxystate  Wi-Fi on;
-    sudo networksetup -setwebproxy Wi-Fi 127.0.0.1 8888;
-    sudo networksetup -setsecurewebproxy Wi-Fi 127.0.0.1 8888;
-    sudo networksetup -setautoproxystate Wi-Fi off;
-    sudo networksetup -setsocksfirewallproxystate Wi-Fi off;
-}
-
-function proxy-google() {
-    sudo networksetup -setwebproxystate Wi-Fi off;
-    sudo networksetup -setsecurewebproxystate  Wi-Fi off;
-    sudo networksetup -setautoproxystate Wi-Fi on;
-    sudo networksetup -setautoproxyurl Wi-Fi http://pac.internal.baidu.com/bdnew.pac;
-    sudo networksetup -setsocksfirewallproxystate Wi-Fi off;
-}
-
-function proxy() {
-	case "$1" in
-	on)
-		sudo networksetup -setsocksfirewallproxystate Wi-Fi on
-		;;
-	off)
-		sudo networksetup -setsocksfirewallproxystate Wi-Fi off
-		;;
-	set)
-		local domain="$2"
-		local port="$3"
-		if [ -z "$domain" ] || [ -z "$port" ]; then
-			echo "Usage: proxy set domain port"
-		else
-			sudo networksetup -setsocksfirewallproxy Wi-Fi "$domain" "$port"
-		fi
-		;;
-	status|st)
-		networksetup -getsocksfirewallproxy Wi-Fi
-		;;
-	*)
-		echo "Usage: proxy {on|off|set|status}"
-		;;
-	esac
+function p() {
+    network=$(networksetup -listallnetworkservices | line 3)
+    case "$1" in
+    on)
+        sudo networksetup -setwebproxystate $network on;
+        sudo networksetup -setsecurewebproxystate $network on;
+        sudo networksetup -setwebproxy $network 127.0.0.1 8888;
+        sudo networksetup -setsecurewebproxy $network 127.0.0.1 8888;
+        sudo networksetup -setautoproxystate $network off;
+        sudo networksetup -setsocksfirewallproxystate $network off;
+        ;;
+    g)
+        sudo networksetup -setwebproxystate $network off;
+        sudo networksetup -setsecurewebproxystate  $network off;
+        sudo networksetup -setautoproxystate $network off;
+        sudo networksetup -setsocksfirewallproxy "$network" localhost 14179
+        ;;
+    off)
+        sudo networksetup -setwebproxystate $network off;
+        sudo networksetup -setsecurewebproxystate  $network off;
+        sudo networksetup -setautoproxystate $network off;
+        sudo networksetup -setsocksfirewallproxystate $network off;
+        ;;
+    s)
+        networksetup -getsocksfirewallproxy $network;
+        networksetup -getwebproxy $network;
+        networksetup -getsecurewebproxy $network;
+        ;;
+    *)
+        echo "Usage: p {on|off|g|s}"
+        echo "p on: Set proxy to Charles(port 8888)"
+        echo "p off: Reset proxy to system default"
+        echo "p g: Set proxy to GoAgentx(port 14179)"
+        echo "p h: Show usage"
+        ;;
+    esac
 }
 
 function ow() {
