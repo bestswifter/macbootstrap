@@ -112,6 +112,30 @@ function s() {
     ls | xargs cat | gawk 'BEGIN{RS="### "} {if(tolower($0) ~ /'"$word"'/)print "###", $0}' | egrep --color=always -i "$word|$|^"
 }
 
+function bssize() {
+    location=$1
+    if [ ${location} = "/" ]; then
+        df -gH
+        return
+    fi
+
+    if [ -d "${location}" ]; then
+        pushd $PWD > /dev/null
+        cd ${location}
+        du -d 1 -h -c
+        if [ ${location} != "." ]; then
+            popd >/dev/null
+        fi
+    else
+        if [ -f "${location}" ]; then
+            du -h ${location}
+        else
+            echo "No such file or directory"
+            return
+        fi
+    fi
+}
+
 function pt() {
     launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.polipo.plist
     launchctl load ~/Library/LaunchAgents/homebrew.mxcl.polipo.plist
