@@ -1,6 +1,6 @@
 alias o='open'
 alias oo='open .'
-alias ll='ls -alG'
+alias ll='ls -alhG'
 alias ip="ifconfig | sed -n -e '/127.0.0.1/d' -e '/inet /p'|awk '{print \$2}'"
 
 # Follow this page to avoid enter password
