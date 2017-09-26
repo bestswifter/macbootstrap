@@ -50,8 +50,15 @@ Then, you will install **homebrew** and some tools available from it. It include
 
 输入 `p s` 可以查看当前的系统代理。
 
-![p 命令使用简介](https://o8ouygf5v.qnssl.com/1506333678.png )
+![p 命令使用简介](https://o8ouygf5v.qnssl.com/1506333678.png)
 
+### bssize：快速查看文件夹和文件大小
+
+bssize 后面的参数可以是文件名，表示查看这个文件的大小。也可以是文件夹名，表示查看文件夹大小和文件夹内各子目录的大小。
+
+`bssize .` 表示查看当前目录大小和子目录大小，`bssize /` 表示查看系统磁盘的使用情况。具体效果如图所示：
+
+![](https://o8ouygf5v.qnssl.com/1506396195.png)
 
 ## Git
 
