@@ -54,6 +54,10 @@ else
     echo "You have installed ctags"
 fi
 
+if [[ ! -e /usr/local/bin/gawk ]]; then
+    brew install gawk
+fi
+
 if [[ ! -e /Applications/Google\ Chrome.app ]]; then
     brew cask install google-chrome
 else
