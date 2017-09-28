@@ -110,6 +110,7 @@ function s() {
     word=$1
     cd ~/dev/DailyLearning
     ls | xargs cat | gawk 'BEGIN{RS="### "} {if(tolower($0) ~ /'"$word"'/)print "###", $0}' | egrep --color=always -i "$word|$|^"
+    cd -
 }
 
 function bssize() {
