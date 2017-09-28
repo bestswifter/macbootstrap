@@ -11,6 +11,7 @@ brew uninstall autojump
 brew uninstall cmake
 brew uninstall node
 brew uninstall ctags
+brew uninstall gawk
 
 rm -f ~/.zshrc
 rm -f ~/.vimrc
