@@ -6,7 +6,7 @@ alias ip="ifconfig | sed -n -e '/127.0.0.1/d' -e '/inet /p'|awk '{print \$2}'"
 # Follow this page to avoid enter password
 # http://apple.stackexchange.com/questions/236806/prevent-networksetup-from-asking-for-password
 function proxy() {
-    network=$(networksetup -listallnetworkservices | line 3)
+    network=$(networksetup -listallnetworkservices | row 3)
     case "$1" in
     on)
         sudo networksetup -setwebproxystate $network on;
