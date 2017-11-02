@@ -12,6 +12,7 @@ brew uninstall cmake
 brew uninstall node
 brew uninstall ctags
 brew uninstall gawk
+brew uninstall coreutils
 
 rm -f ~/.zshrc
 rm -f ~/.vimrc

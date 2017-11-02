@@ -71,7 +71,14 @@ if [[ ! -e /usr/local/bin/gvim ]]; then
     ln -s /Applications/MacVim.app/Contents/bin/gvim /usr/local/bin/gvim
     rm -rf __MACOSX
 else
-    echo “You have installed macvim”
+    echo "You have installed macvim”"
+fi
+
+# install coreutils
+if [[ ! -e /usr/local/opt/coreutils ]]; then
+    brew install coreutils
+else
+    echo "You have installed coreutils"
 fi
 
 # link git config
