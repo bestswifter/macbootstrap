@@ -60,6 +60,16 @@ bssize 后面的参数可以是文件名，表示查看这个文件的大小。�
 
 ![](https://o8ouygf5v.qnssl.com/1506396195.png)
 
+### 显示文件的绝对路径：
+
+安装脚本中已经通过 homebrew 安装了 `coreutils`，其中自带了 GNU 的 `realpath` 或者 `readlink -f` 命令：
+
+```shell
+realpath clean.sh
+readlink -f clean.sh
+# 输出结果都是 /Users/zxy/.macbootstrap/clean.sh
+```
+
 ## Git
 
 
