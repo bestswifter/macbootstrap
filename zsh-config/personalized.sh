@@ -10,7 +10,7 @@ function y () {
         brew install youtube-dl
     fi
 
-    youtube-dl --proxy socks5://127.0.0.1:14179/ --console-title $1 -f 'best' -o '~/Movies/Youtube/%(title)s.%(ext)s'
+    youtube-dl -q --proxy socks5://127.0.0.1:14179/ --console-title $1 -f 'best' -o '~/Movies/Youtube/%(title)s.%(ext)s' &
 }
 
 # Make ctags in current directory
