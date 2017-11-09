@@ -70,6 +70,13 @@ readlink -f clean.sh
 # 输出结果都是 /Users/zxy/.macbootstrap/clean.sh
 ```
 
+### resolution: 显示图片的分辨率
+
+```shell
+resolution path_to_image.png
+# 输出结果是：4096 x 2048
+```
+
 ## Git
 
 
