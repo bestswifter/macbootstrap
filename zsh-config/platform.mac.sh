@@ -149,6 +149,11 @@ mkcdir () {
     cd -P -- "$1"
 }
 
+function resolution() {
+    brew_install -q exiv2
+    exiv2 $1 | grep 'Image size' | column 4 5 6
+}
+
 # Android
 function aupdate() {
      cd /tmp/1

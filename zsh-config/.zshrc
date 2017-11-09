@@ -18,7 +18,10 @@ HISTSIZE=1000
 SAVEHIST=1000000
 
 BS_ZSH_BASE="$HOME/.macbootstrap"
+
+source $BS_ZSH_BASE/basic.sh
 source $BS_ZSH_BASE/zsh-config/common.sh
 source $(brew --prefix)/etc/profile.d/autojump.sh
+
 fpath=(/usr/local/share/zsh-completions $fpath)
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH:$M2_HOME/bin
