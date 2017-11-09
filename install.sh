@@ -1,4 +1,5 @@
 #!/bin/sh
+source basic.sh
 
 if [[ ! -e /usr/local/bin/brew ]]; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -80,6 +81,9 @@ if [[ ! -e /usr/local/opt/coreutils ]]; then
 else
     echo "You have installed coreutils"
 fi
+
+# install exiv2 for image info
+brew_install exiv2
 
 # link git config
 mv ~/.gitconfig ~/.gitconfig_backup
