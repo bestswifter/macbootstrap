@@ -13,6 +13,7 @@ brew uninstall node
 brew uninstall ctags
 brew uninstall gawk
 brew uninstall coreutils
+brew uninstall exiv2
 
 rm -f ~/.zshrc
 rm -f ~/.vimrc
