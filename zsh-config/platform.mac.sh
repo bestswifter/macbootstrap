@@ -149,6 +149,7 @@ mkcdir () {
     cd -P -- "$1"
 }
 
+# Get resolution of image
 function resolution() {
     brew_install -q exiv2
     exiv2 $1 | grep 'Image size' | column 4 5 6
