@@ -98,6 +98,10 @@ Host bwh
 
 只要简单的输入 `ssh bwh` 就可以登录了，再也不用担心多个 VPS 记不住了，而且这个配置文件仅仅记录了秘钥的位置，并不会泄露出来、
 
+### show/hideFiles：显示(隐藏)文件
+
+使用 `showFiles` 命令展示系统隐藏文件，`hideFiles` 命令恢复隐藏
+
 ## Git
 
 
