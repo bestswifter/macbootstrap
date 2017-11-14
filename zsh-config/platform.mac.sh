@@ -1,7 +1,6 @@
 alias o='open'
 alias oo='open .'
 alias ll='ls -alhG'
-alias ip="ifconfig | sed -n -e '/127.0.0.1/d' -e '/inet /p'|awk '{print \$2}'"
 
 function current_networkservice() {
     network=''
@@ -13,6 +12,11 @@ function current_networkservice() {
        network=''
     fi
     echo $network
+}
+
+function ip() {
+    network=`current_networkservice`
+    networksetup -getinfo $network | grep '^IP address' | awk -F: '{print $2}' | sed 's/ //g'
 }
 
 # Follow this page to avoid enter password
