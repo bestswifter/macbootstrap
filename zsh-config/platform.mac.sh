@@ -150,8 +150,8 @@ mkcdir () {
     cd -P -- "$1"
 }
 
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles -bool true'
-alias hideFiles='defaults write com.apple.finder AppleShowAllFiles -bool false'
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
 
 # Get resolution of image
 function resolution() {
