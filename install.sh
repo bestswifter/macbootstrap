@@ -104,6 +104,12 @@ if [[ -e ~/.vimrc ]]; then
 fi
 ln -s ~/.vim/.vimrc ~/.vimrc
 
+# ssh configuration
+if [[ -e ~/.ssh/config ]]; then
+    mv ~/.ssh/config ~/.ssh/config_backup
+fi
+ln -s ~/.macbootstrap/zsh-config/ssh_config ~/.ssh/config
+
 # install YCM
 cd ~/.vim/bundle/
 git clone https://github.com/Valloric/YouCompleteMe.git
