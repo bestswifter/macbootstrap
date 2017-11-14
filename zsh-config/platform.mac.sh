@@ -106,6 +106,13 @@ function h(){
     cat ~/.histfile_color_result | sed '1!G;h;$!d' # 倒序输出，更容易看到第一条
 }
 
+function pt() {
+    launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.polipo.plist
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.polipo.plist
+    export http_proxy=http://localhost:8123
+    export https_proxy=http://localhost:8123
+}
+
 function s() {
     word=$1
     cd ~/dev/DailyLearning
@@ -113,6 +120,7 @@ function s() {
     cd -
 }
 
+# File operatoin
 function bssize() {
     location=$1
     if [ ${location} = "/" ]; then
@@ -137,17 +145,13 @@ function bssize() {
     fi
 }
 
-function pt() {
-    launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.polipo.plist
-    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.polipo.plist
-    export http_proxy=http://localhost:8123
-    export https_proxy=http://localhost:8123
-}
-
 mkcdir () {
     mkdir -p -- "$1" &&
     cd -P -- "$1"
 }
+
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles -bool true'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles -bool false'
 
 # Get resolution of image
 function resolution() {
