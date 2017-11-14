@@ -78,6 +78,7 @@ fi
 # install coreutils
 if [[ ! -e /usr/local/opt/coreutils ]]; then
     brew install coreutils
+    mv /usr/local/opt/coreutils/libexec/gnubin/ls /usr/local/opt/coreutils/libexec/gnubin/gls
 else
     echo "You have installed coreutils"
 fi
