@@ -116,7 +116,7 @@ function s() {
 function bssize() {
     location=$1
     if [ ${location} = "/" ]; then
-        df -gH
+        /bin/df -gH
         return
     fi
 
