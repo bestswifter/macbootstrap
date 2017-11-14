@@ -1,4 +1,4 @@
-plugins=(git)
+plugins=(git extract encode64 urltools)
 
 ZSH=$HOME/.oh-my-zsh
 
