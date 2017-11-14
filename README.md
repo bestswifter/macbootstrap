@@ -86,8 +86,17 @@ brew install ssh-copy-id
 ssh-copy-id -i .ssh/id_rsa.pub root@100.100.100.100 -p 12345
 ```
 
-端口和 IP 地址需要自己填写，这里将是你最后一次接触到 Root 密码的地方，今后再用 ssh 登录时就不需要密码。然而每次还要记忆端口
+端口和 IP 地址需要自己填写，这里将是你最后一次接触到 Root 密码的地方，今后再用 ssh 登录时就不需要密码。然而每次还要记忆端和 IP 地址依然是一件麻烦的事情，得益于 `~/.ssh/config` 文件中的配置：
 
+```
+Host bwh
+    HostName 172.96.215.73
+    User root
+    Port 27850
+    IdentityFile ~/.ssh/id_rsa
+```
+
+只要简单的输入 `ssh bwh` 就可以登录了，再也不用担心多个 VPS 记不住了，而且这个配置文件仅仅记录了秘钥的位置，并不会泄露出来、
 
 ## Git
 
