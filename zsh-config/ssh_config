@@ -1,0 +1,15 @@
+Host *
+	ForwardAgent yes
+	ServerAliveInterval 3
+	ServerAliveCountMax 20
+	TCPKeepAlive no
+	ControlMaster auto
+	ControlPath ~/.ssh/%h-%p-%r
+	ControlPersist 4h
+	Compression yes
+
+Host bwh
+    HostName 172.96.215.73
+    User root
+    Port 27850
+    IdentityFile ~/.ssh/id_rsa
