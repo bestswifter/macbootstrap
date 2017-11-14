@@ -77,6 +77,18 @@ resolution path_to_image.png
 # 输出结果是：4096 x 2048
 ```
 
+### ssh: 依赖预先的配置
+
+以登录搬瓦工为例，每次都需要输入端口号、IP 地址和 root 密码是一件效率极低的事，首先需要把我们的公钥复制到远程服务器上：
+
+```shell
+brew install ssh-copy-id
+ssh-copy-id -i .ssh/id_rsa.pub root@100.100.100.100 -p 12345
+```
+
+端口和 IP 地址需要自己填写，这里将是你最后一次接触到 Root 密码的地方，今后再用 ssh 登录时就不需要密码。然而每次还要记忆端口
+
+
 ## Git
 
 
