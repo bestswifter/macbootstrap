@@ -15,9 +15,12 @@ brew uninstall gawk
 brew uninstall coreutils
 brew uninstall exiv2
 brew uninstall ssh-copy-id
+brew uninstall imagemagick
+brew uninstall catimg
 
 rm -f ~/.zshrc
 rm -f ~/.vimrc
 rm -f ~/.gitconfig
+rm -f ~/.ssh/config
 rm -rf ~/.vim
 rm -rf ~/.oh-my-zsh

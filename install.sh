@@ -86,6 +86,8 @@ fi
 # install exiv2 for image info
 brew_install exiv2
 brew_install ssh-copy-id
+brew_install imagemagick
+brew_install catimg
 
 # link git config
 mv ~/.gitconfig ~/.gitconfig_backup
