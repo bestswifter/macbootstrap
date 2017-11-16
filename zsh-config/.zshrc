@@ -14,9 +14,11 @@ zstyle ':completion:*:*' ignored-patterns '*ORIG_HEAD'
 fpath=(/usr/local/share/zsh-completions $fpath)
 compinit -u
 
+HISTCONTROL=ignorespace
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000000
+HISTSIZE=10000000
+HISTFILESIZE=10000000
+SAVEHIST=10000000
 
 BS_ZSH_BASE="$HOME/.macbootstrap"
 
