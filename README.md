@@ -54,6 +54,7 @@ curl https://raw.githubusercontent.com/bestswifter/macbootstrap/master/bootstrap
 
 ## Git
 
+详细教程请参考这份说明：[Git 使用指南](./doc/git.md)
 
 ## Vim
 
