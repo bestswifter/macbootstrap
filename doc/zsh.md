@@ -91,3 +91,14 @@ urldecode https%3A%2F%2Fbaidu.com
 ### ow 命令行中打开 Xcode 工程
 
 如果当期目录下存在 xcodeproj 文件或者 xcworkspace 文件，可以用 ow 命令快速打开，如果要打开的工程在别的目录，则使用  `ow path_to_project` 的命令打开
+
+### x 快速解压
+
+使用命令 `x` 可以快速解压任何压缩文件
+
+
+### cal 终端日历
+
+如果你的日历里没有，仅仅想查看日期，`cal` 这个命令就足够用了，它可以显示当前的日期、月份和星期。`cal -3` 可以显示当前月和前后一个月的日期，`cal -y` 可以显示当年的日期。
+
+http://images.bestswifter.com/WX20171117-210346@2x.png
