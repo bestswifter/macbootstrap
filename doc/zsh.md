@@ -96,9 +96,8 @@ urldecode https%3A%2F%2Fbaidu.com
 
 使用命令 `x` 可以快速解压任何压缩文件
 
-
 ### cal 终端日历
 
 如果你的日历里没有，仅仅想查看日期，`cal` 这个命令就足够用了，它可以显示当前的日期、月份和星期。`cal -3` 可以显示当前月和前后一个月的日期，`cal -y` 可以显示当年的日期。
 
-http://images.bestswifter.com/WX20171117-210346@2x.png
+![](http://images.bestswifter.com/WX20171117-210346@2x.png)
