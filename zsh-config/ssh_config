@@ -13,3 +13,10 @@ Host bwh
     User root
     Port 27850
     IdentityFile ~/.ssh/id_rsa
+
+Host pi
+    HostName 172.23.237.55
+    User pi
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+
