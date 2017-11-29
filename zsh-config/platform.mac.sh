@@ -2,6 +2,8 @@ alias o='open'
 alias oo='open .'
 alias ll='ls -alhG'
 
+export BSTEMP='/private/tmp'
+
 function current_networkservice() {
     network=''
     if [ "$(networksetup -getnetworkserviceenabled Ethernet)" = 'Enabled' ]; then
