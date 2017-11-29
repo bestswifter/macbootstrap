@@ -101,3 +101,19 @@ urldecode https%3A%2F%2Fbaidu.com
 如果你的日历里没有，仅仅想查看日期，`cal` 这个命令就足够用了，它可以显示当前的日期、月份和星期。`cal -3` 可以显示当前月和前后一个月的日期，`cal -y` 可以显示当年的日期。
 
 ![](http://images.bestswifter.com/WX20171117-210346@2x.png)
+
+### app2ipa 将 .app 转换为 .ipa
+
+如果想把 xcodebuild 编译出来的 .app 文件转换成 .ipa，可以用这个命令：
+
+```shell
+app2ipa xxx.app
+# /private/tmp/ipa/output.ipa
+```
+
+配合 `ideviceinstaller` 可以快速安装到手机上：
+
+```shell
+# brew install ideviceinstaller
+app2ipa xxx.app | xargs ideviceinstaller -i 
+```
