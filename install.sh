@@ -90,8 +90,14 @@ brew_install imagemagick
 brew_install catimg
 
 # link git config
+git_username=`git config --get user.name`
+git_email=`git config --get user.email`
+
 mv ~/.gitconfig ~/.gitconfig_backup
 ln -s ~/.macbootstrap/git-config/.gitconfig ~/.gitconfig
+
+git config --global user.name "$git_username"
+git config --global user.email "$git_email"
 
 if [[ ! -e ~/.oh-my-zsh ]]; then
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
