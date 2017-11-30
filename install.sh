@@ -93,6 +93,11 @@ brew_install catimg
 mv ~/.gitconfig ~/.gitconfig_backup
 ln -s ~/.macbootstrap/git-config/.gitconfig ~/.gitconfig
 
+read -p "please input your username for Git:" name
+read -p "please input youer email for Git:" email
+git config --global user.name "$name"
+git config --global user.email "$email"
+
 if [[ ! -e ~/.oh-my-zsh ]]; then
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 fi
