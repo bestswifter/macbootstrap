@@ -19,34 +19,10 @@ else
     echo “You have installed SourceTree”
 fi
 
-if [[ ! -e /usr/local/bin/wget ]]; then
-    brew install wget
+if [[ ! -e /Applications/Google\ Chrome.app ]]; then
+    brew cask install google-chrome
 else
-    echo “You have installed wget”
-fi
-
-if [[ ! -e /usr/local/bin/gsed ]]; then
-    brew install gnu-sed
-else
-    echo “You have installed gsed”
-fi
-
-if [[ ! -e /usr/local/bin/cmake ]]; then
-    brew install cmake
-else
-    echo "You have installed cmake"
-fi
-
-if [[ ! -e /usr/local/bin/autojump ]]; then
-    brew install autojump
-else
-    echo "You have installed autojump"
-fi
-
-if [[ ! -e /usr/local/bin/node ]]; then
-    brew install node
-else
-    echo "You have installed node"
+    echo "You have installed chrome"
 fi
 
 if [[ ! -e /usr/bin/ctags ]]; then
@@ -55,15 +31,7 @@ else
     echo "You have installed ctags"
 fi
 
-if [[ ! -e /usr/local/bin/gawk ]]; then
-    brew install gawk
-fi
-
-if [[ ! -e /Applications/Google\ Chrome.app ]]; then
-    brew cask install google-chrome
-else
-    echo "You have installed chrome"
-fi
+brew install redis
 
 # install MacVim
 if [[ ! -e /usr/local/bin/gvim ]]; then
@@ -83,7 +51,12 @@ else
     echo "You have installed coreutils"
 fi
 
-# install exiv2 for image info
+brew_install cmake
+brew_install gawk
+brew_install autojump
+brew_install wget
+brew_install node
+brew_install gsed
 brew_install exiv2
 brew_install ssh-copy-id
 brew_install imagemagick
