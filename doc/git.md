@@ -5,7 +5,7 @@
 1. `gcn bestswifter` 配置用户名，等价于 `git config user.name`
 2. `gcng bestswifter` 配置全局用户名，等价于 `git config --global user.name`
 3. `gce ktzhang@bestswifter.com` 配置邮箱，等价于 `git config user.email`
-4. `gceg ktzhang@bestswifter.com` 配置全局邮箱，等价于 `git config user.email`
+4. `gceg ktzhang@bestswifter.com` 配置全局邮箱，等价于 `git config --global user.email`
 
 ## git diff
 
