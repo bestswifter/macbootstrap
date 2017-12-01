@@ -1,7 +1,7 @@
 function column() {
     case $# in
         1)
-        awk -v c1=$1 '{print $c1}'
+        awk -v c1=$1 '{(c1>0)?v1=c1:v1=1+NF+c1; print $v1}'
         ;;
         2)
         awk -v c1=$1 -v c2=$2 '{print $c1, $c2}'
