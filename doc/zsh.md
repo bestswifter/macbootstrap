@@ -117,3 +117,18 @@ app2ipa xxx.app
 # brew install ideviceinstaller
 app2ipa xxx.app | xargs ideviceinstaller -i 
 ```
+
+###  bsof 检查端口占用
+
+可以通过系统的 `lsof -i:port` 来检查哪个程序占用了 `port` 端口，但有时候我们不想记参数，或者想查找某个程序占用了哪些端口，此时可以使用 `bsof`:
+
+```shell
+# 检查哪个程序占用了 6379 端口
+bosf :6379
+# redis-ser 68700  zxy    6u  IPv4 0xe7d9046575ae3325      0t0  TCP 127.0.0.1:6379 (LISTEN)
+# redis-ser 68700  zxy    7u  IPv6 0xe7d90465c4f195c5      0t0  TCP [::1]:6379 (LISTEN)
+
+# 检查 redis 进程占用了哪些端口
+bsof redis
+# 输出同上
+```
