@@ -1,5 +1,9 @@
 # Git 的常用封装
 
+## 帮助信息
+
+1. 输入 `gh COMMAND` 可以获取对应命令的帮助，比如 `gh commit`，等价于 `git help --man commit`，将在终端中打开这个命令的帮助文档
+
 ## 配置用户信息
 
 1. `gcn bestswifter` 配置用户名，等价于 `git config user.name`
@@ -17,3 +21,13 @@
 
 1. 输入 `gpo` 可以快速的将提交推送到远程仓库，等价于命令 `git push origin`，如果不写分支名则默认把当前分支推送到远程仓库对应的分支上
 2. 如果远程仓库的名称不是默认的 origin，可以使用 `gp repo_name`，因为 `gp` 等价于 `git push`
+
+## git commit
+
+1. 输入 `gcam` 可以在不 add 的前提下一次性提交所有改动，等价于命令 `git commit -a -m`
+
+## 常见工作流
+
+注意，这里说的工作流不是 git-workflow 的意思，而是一些常见命令的组合。
+
+1. 输入 `gsfrs` 可以先暂存(stash) 当前改动，拉取远程代码，rebase 以后再应用暂存，等价于命令 `git stash;git fetch;git rebase;git stash pop;`。**警告⚠️** 如果 rebase 的过程中遇到冲突，不会自动 pop 暂存，需要手动执行命令
