@@ -32,24 +32,24 @@ function proxy() {
 
     case "$1" in
     on)
-        sudo networksetup -setwebproxystate $network on;
-        sudo networksetup -setsecurewebproxystate $network on;
-        sudo networksetup -setwebproxy $network 127.0.0.1 8888;
-        sudo networksetup -setsecurewebproxy $network 127.0.0.1 8888;
-        sudo networksetup -setautoproxystate $network off;
-        sudo networksetup -setsocksfirewallproxystate $network off;
+        networksetup -setwebproxystate $network on;
+        networksetup -setsecurewebproxystate $network on;
+        networksetup -setwebproxy $network 127.0.0.1 8888;
+        networksetup -setsecurewebproxy $network 127.0.0.1 8888;
+        networksetup -setautoproxystate $network off;
+        networksetup -setsocksfirewallproxystate $network off;
         ;;
     g)
-        sudo networksetup -setwebproxystate $network off;
-        sudo networksetup -setsecurewebproxystate  $network off;
-        sudo networksetup -setautoproxystate $network off;
-        sudo networksetup -setsocksfirewallproxy "$network" localhost 14179
+        networksetup -setwebproxystate $network off;
+        networksetup -setsecurewebproxystate  $network off;
+        networksetup -setautoproxystate $network off;
+        networksetup -setsocksfirewallproxy "$network" localhost 14179
         ;;
     off)
-        sudo networksetup -setwebproxystate $network off;
-        sudo networksetup -setsecurewebproxystate  $network off;
-        sudo networksetup -setautoproxystate $network off;
-        sudo networksetup -setsocksfirewallproxystate $network off;
+        networksetup -setwebproxystate $network off;
+        networksetup -setsecurewebproxystate  $network off;
+        networksetup -setautoproxystate $network off;
+        networksetup -setsocksfirewallproxystate $network off;
         ;;
     s)
         socks_status=$(networksetup -getsocksfirewallproxy $network | head -n 3;)
