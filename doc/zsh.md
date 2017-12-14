@@ -125,3 +125,12 @@ app2ipa xxx.app | xargs ideviceinstaller -i
 比如查看 `redis` 进程占用了哪些端口，可以输入 `bsof redis`，查看哪些进程占用了 80 端口可以输入 `bsof :80`，如下图所示：
 
 ![](http://images.bestswifter.com/WX20171201-210038.png)
+
+### first & last 快速过滤
+
+只是简单的封装了 `head -n` 和 `tail -n`，并且更加语义化，比如：
+
+```shell
+cat xxx.txt | fisrt 3
+# 输出文本的前三行
+```
