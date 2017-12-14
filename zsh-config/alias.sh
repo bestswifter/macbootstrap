@@ -8,3 +8,5 @@ alias gceg='git config --global user.email'
 # zsh
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
+alias fisrt='tail -n'
+alias last='head -n'
