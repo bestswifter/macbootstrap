@@ -26,6 +26,10 @@
 
 1. 输入 `gcam` 可以在不 add 的前提下一次性提交所有改动，等价于命令 `git commit -a -m`
 
+## git remote
+
+1. 输入 `grsh` 可以查看所有的远程仓库，输入 `grsh origin` 可以查看 origin 仓库中的分支、track 信息，等价于命令 `git remote show`
+
 ## 常见工作流
 
 注意，这里说的工作流不是 git-workflow 的意思，而是一些常见命令的组合。
