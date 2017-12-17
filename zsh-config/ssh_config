@@ -20,3 +20,9 @@ Host pi
     Port 22
     IdentityFile ~/.ssh/id_rsa
 
+Host qcloud
+    HostName 115.159.123.174
+    User root
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+
