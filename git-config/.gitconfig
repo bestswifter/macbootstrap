@@ -13,7 +13,7 @@
     st = status
     oln = log --pretty=oneline --since='2 days ago' --color --graph --abbrev-commit
     olg = log -p -1 --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue) <%an>%Creset' --abbrev-commit
-    lg = log --stat --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue) <%an>%Creset' --abbrev-commit
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue) <%an>%Creset' --abbrev-commit
     amend = !git log -n 1 --pretty=tformat:%s%n%n%b | git commit -F - --amend
     zip = !git archive --format zip master --output
     zipHead = !git archive --format=zip HEAD --output
