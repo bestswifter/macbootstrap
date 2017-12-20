@@ -17,8 +17,13 @@
 
 1. 输入 `gg`，它会单行展示提交历史，也支持展示分支的关系，如图所示：
    ![](http://images.bestswifter.com/QQ20171220-114944@2x.png)
-2. 输入 `gg --stat`，它在 gg 的基础上会展示每次提交具体改动的文件，如图所示：
+2. 输入 `ggs`，它在 gg 的基础上会展示每次提交具体改动的文件，等价于命令 `gg --stat`，如图所示：
    ![](http://images.bestswifter.com/QQ20171220-114134@2x.png)
+3. 输入 `ggp`，它在 gg 的基础上会展示文件的具体改动，等价于命令 `gg -p`，如图所示：
+   ![](http://images.bestswifter.com/QQ20171220-120353@2x.png)
+4. 不管是`gg`，还是衍生出来的 `ggs` 和 `ggp`，后面都可以加上 `-n`，比如 `ggs -2`，或者 `ggp -1`，表示只显示前 n 个提交
+5. 如果想看某一个区间内的 log，可以输入 `gg HEAD~3..HEAD`，注意区间是左开右闭，所以这个命令会查看三次提交的记录。注意较早的提交要写在左边。
+6. 如果只记得某次提交内容里有一个词，比如 **networksetup**，可以用 `ggp -S networksetup` 来查找所有提交内容中包含 **networksetup** 的提交。
 
 ## git diff
 
