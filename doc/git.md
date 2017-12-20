@@ -11,6 +11,17 @@
 3. `gce ktzhang@bestswifter.com` 配置邮箱，等价于 `git config user.email`
 4. `gceg ktzhang@bestswifter.com` 配置全局邮箱，等价于 `git config --global user.email`
 
+## git log
+
+这个命令非常常用，也非常复杂，常见的有以下几种：
+
+1. 输入 `gg`，它会单行展示提交历史，也支持展示分支的关系
+   如图所示：
+   ![](http://images.bestswifter.com/QQ20171220-113955@2x.png)
+2. 输入 `gg --stat`，它在 gg 的基础上会展示每次提交具体改动的文件
+   如图所示：
+   ![](http://images.bestswifter.com/QQ20171220-114134@2x.png)
+
 ## git diff
 
 1. 输入 `gd` 即可查看工作区内的变动，等价于命令 `git diff`
