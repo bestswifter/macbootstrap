@@ -26,6 +26,12 @@
 6. 如果只记得某次提交内容里有一个词，比如 **networksetup**，可以用 `ggp -S networksetup` 来查找所有提交内容中包含 **networksetup** 的提交。
 7. 如果想查看某个文件或者文件夹的改动历史，可以输入 `gg file_name`，当然 `ggs` 和 `ggp` 也都是支持的。
 
+## git branch
+
+1. 输入 `gb`，它会展示所有本地分支，等价于命令 `git branch`
+2. 输入 `gba`，查看本地和远程分支，等价于命令 `git branch -a`，输入命令 `gbr`，查看远程分支，等价于命令 `git branch --remote`
+3. 输入 `gcb new_branch` 可以创建分支 **new_branch** 并切换到这个分支上，它是 `git check -b` 命令的缩写，等价于 `git branch new_branch` 和 `git checkout new_branch` 这两条命令
+
 ## git diff
 
 1. 输入 `gd` 即可查看工作区内的变动，等价于命令 `git diff`
