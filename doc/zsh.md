@@ -142,3 +142,7 @@ cat xxx.txt | fisrt 3
 ```shell
 echo '{"hello": "world"}' | ppjson
 ```
+
+### bubu 更新 Homebrew 安装的所有软件并删除旧的版本
+
+这个命令封装了一些列琐碎的操作，可以放到 crontab 里面定时执行
