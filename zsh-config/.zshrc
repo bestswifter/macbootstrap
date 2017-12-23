@@ -21,6 +21,7 @@ HISTFILESIZE=10000000
 SAVEHIST=10000000
 
 BS_ZSH_BASE="$HOME/.macbootstrap"
+BS_ZSH_TOOLS=${BS_ZSH_BASE}/tools
 
 source $BS_ZSH_BASE/basic.sh
 source $BS_ZSH_BASE/zsh-config/common.sh
