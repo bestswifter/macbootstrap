@@ -1,4 +1,4 @@
-plugins=(git extract encode64 urltools brew)
+plugins=(git extract encode64 urltools brew zsh-syntax-highlighting)
 
 ZSH=$HOME/.oh-my-zsh
 
