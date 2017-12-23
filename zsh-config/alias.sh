@@ -13,3 +13,4 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles -bool true &&
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
 alias fisrt='tail -n'
 alias last='head -n'
+alias ppjson='python $BS_ZSH_BASE/tools/json_pretty.py'
