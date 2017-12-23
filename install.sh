@@ -7,16 +7,24 @@ else
     echo “You have installed brew”
 fi
 
+if [[ ! -e /Applications/Beyond\ Compare.app ]]; then
+    brew cask install beyond-compare
+    rm /Applications/Beyond\ Compare.app/Contents/Resources/trial.key
+    cp /Users/zxy/.macbootstrap/tools/beyond_compare_key /Applications/Beyond\ Compare.app/Contents/Resources/trial.key
+else
+    echo "You have installed Beyond Compare"
+fi
+
 if [[ ! -e /Applications/iTerm.app ]]; then
     brew cask install iterm2
 else
-    echo “You have installed iTerm2”
+    echo "You have installed iTerm2"
 fi
 
 if [[ ! -e /Applications/SourceTree.app/ ]]; then
     brew cask install sourcetree
 else
-    echo “You have installed SourceTree”
+    echo "You have installed SourceTree"
 fi
 
 if [[ ! -e /Applications/Google\ Chrome.app ]]; then
