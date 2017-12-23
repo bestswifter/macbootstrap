@@ -78,7 +78,8 @@ if [[ ! -e ~/.oh-my-zsh ]]; then
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 fi
 
-# link zshrc
+# zshrc setup
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 mv ~/.zshrc ~/.zshrc_backup
 ln -s ~/.macbootstrap/zsh-config/.zshrc ~/.zshrc
 
