@@ -134,3 +134,11 @@ app2ipa xxx.app | xargs ideviceinstaller -i
 cat xxx.txt | fisrt 3
 # 输出文本的前三行
 ```
+
+### ppjson 在终端中格式化 json
+
+用法：
+
+```shell
+echo '{"hello": "world"}' | ppjson
+```
