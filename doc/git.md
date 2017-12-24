@@ -29,9 +29,10 @@
 
 ## git branch
 
-1. 输入 `gb`，它会展示所有本地分支，等价于命令 `git branch`
+1. 输入 `gb`，它会展示所有本地分支，等价于命令 `git branch`, 输入命令 `gbv` 可以额外显示每个分支的最后一次提交，等价于命令 `git branch -v`
 2. 输入 `gba`，查看本地和远程分支，等价于命令 `git branch -a`，输入命令 `gbr`，查看远程分支，等价于命令 `git branch --remote`
 3. 输入 `gcb new_branch` 可以创建分支 **new_branch** 并切换到这个分支上，它是 `git check -b` 命令的缩写，等价于 `git branch new_branch` 和 `git checkout new_branch` 这两条命令
+4. 输入 `gbd branch_name` 删除某个分支，等价于命令 `git branch -d`
 
 ## git diff
 
