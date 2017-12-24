@@ -44,6 +44,7 @@ curl https://raw.githubusercontent.com/bestswifter/macbootstrap/master/bootstrap
 * ssh-copy-id (upload public ssh key to server)
 * imagemagick、catimg (print image in terminal)
 * redis  (通过 `redis-server /usr/local/etc/redis.conf` 启动或者 `brew services start redis` 启动并且设置为开机立即启动)
+* gpg
 
 ## Zsh
    
