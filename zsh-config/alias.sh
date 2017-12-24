@@ -8,6 +8,9 @@ alias grsh='git remote show'
 alias ggs='gg --stat'
 alias ggp='gg -p'
 alias gbv='gb -v'
+alias gbD='git branch -D'
+alias gbm='git branch --merged'
+alias gbnm='git branch --no-merged'
 
 # zsh
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
