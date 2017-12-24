@@ -46,6 +46,20 @@
 6. `gbm` 列出的分支都是**可以抵达**的，因此可用 `gbd` 删除，而 `gbnm` 列出的则是不可达的分支，因此不能用 `gbd` 删除，它是 `git branch --no-merged` 命令的简写
 7. 如果真的要强行删除，可以用 `gbD` 命令，它是 `git branch -D` 的简写
 
+有时候我们要从远程仓库检出一个新的分支，比如叫 feature 吧，有几种思路：
+
+```shell
+git branch -t feature origin/feature
+git checkout -b feature origin/feature
+git checkout --track origin/feature
+```
+
+第一种写法不太合适，因为它只会创建分支并且跟踪远程分支，并不会切换。我想一般创建分支的时候都是需要切换的，否则你创建它干嘛呢，可以等到要切换的时候再创建呐。
+
+第二种写法稍微高级些，它和第一种写法一致并且可以切换分支，之前的 tips 中介绍过 `gcb` 后面加单个参数的含义和用法，这里第二个参数表示跟着远程分支。
+
+第三中方法最简单，因为它参数少，而且功能和第二种写法一样，我给他起的别名叫 `gct`，对应 `git checkout --track`
+
 ## git diff
 
 1. 输入 `gd` 即可查看工作区内的变动，等价于命令 `git diff`
