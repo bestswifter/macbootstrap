@@ -11,6 +11,7 @@ alias gbv='gb -v'
 alias gbD='git branch -D'
 alias gbm='git branch --merged'
 alias gbnm='git branch --no-merged'
+alias gvc='git verify-commit'
 
 # zsh
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
