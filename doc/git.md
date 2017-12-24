@@ -18,13 +18,13 @@
 3. 安装完成后输入 `gpg --list-keys` 查看刚刚生成的秘钥，在 pub 下面有一长串数字和字母，这个是 ID
 4. 输入 `git config --global user.signingkey ID` 来配置使用哪个 key。
 5. 单次提交时使用 `git commit -s` 参数来开启 GPG key，或者使用 `git config --global commit.gpgsign true` 设置为全局默认使用
-6. 输入 `gvc <commit_hash>` 来检查某次提交的 GPG 签名情况，如果没有输出，说明没有签名
+6. 输入 `gvc <commit_hash>` 来检查某次提交的 GPG 签名情况，如果没有输出，说明没有签名。它是`git verify-commit` 命令的缩写
 
 ## git log
 
 这个命令非常常用，也非常复杂，常见的有以下几种：
 
-1. 输入 `gg`，它会单行展示提交历史，也支持展示分支的关系，如图所示：
+1. 输入 `gg`，它会单行展示提交历史，也支持展示分支的关系，如图所示。它的完整命令是 `git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue) <%an>%Creset' --abbrev-commit`
    ![](http://images.bestswifter.com/QQ20171220-114944@2x.png)
 2. 输入 `ggs`，它在 gg 的基础上会展示每次提交具体改动的文件，等价于命令 `gg --stat`，如图所示：
    ![](http://images.bestswifter.com/QQ20171220-114134@2x.png)
