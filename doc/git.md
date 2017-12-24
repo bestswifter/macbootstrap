@@ -70,3 +70,9 @@
 注意，这里说的工作流不是 git-workflow 的意思，而是一些常见命令的组合。
 
 1. 输入 `gsfrs` 可以先暂存(stash) 当前改动，拉取远程代码，rebase 以后再应用暂存，等价于命令 `git stash;git fetch;git rebase;git stash pop;`。**警告⚠️** 如果 rebase 的过程中遇到冲突，不会自动 pop 暂存，需要手动执行命令
+
+## 其他
+
+这里整理了一些暂时无法分类的命令：
+
+1. `grt` 可以跳转到本地 git 目录的根路径，等价于 `cd $(git rev-parse --show-toplevel || echo ".")`
