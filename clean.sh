@@ -18,6 +18,7 @@ brew uninstall ssh-copy-id
 brew uninstall imagemagick
 brew uninstall catimg
 brew uninstall redis
+brew uninstall gpg
 
 rm -f ~/.zshrc
 rm -f ~/.vimrc

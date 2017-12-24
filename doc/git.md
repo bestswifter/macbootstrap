@@ -11,6 +11,14 @@
 3. `gce ktzhang@bestswifter.com` 配置邮箱，等价于 `git config user.email`
 4. `gceg ktzhang@bestswifter.com` 配置全局邮箱，等价于 `git config --global user.email`
 
+## 配置 GPG key
+
+1. 如果使用我的安装脚本可以跳过这一步，否则执行 `brew install gpg` 来安装依赖
+2. 输入 `gpg --full-generate-key` 并按照配置安装，注意第三步选择时长时，如果是个人使用可以填 0，表示永不过期，避免以后的麻烦。最后填写密码时可以不填
+3. 安装完成后输入 `gpg --list-keys` 查看刚刚生成的秘钥，在 pub 下面有一长串数字和字母，这个是 ID
+4. 输入 `git config --global user.signingkey ID` 来配置使用哪个 key。
+5. 单次提交时使用 `git commit -s` 参数来开启 GPG key，或者使用 `git config --global commit.gpgsign true` 设置为全局默认使用
+
 ## git log
 
 这个命令非常常用，也非常复杂，常见的有以下几种：
