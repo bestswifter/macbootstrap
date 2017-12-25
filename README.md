@@ -33,7 +33,11 @@ curl https://raw.githubusercontent.com/bestswifter/macbootstrap/master/bootstrap
 
 ## Homebrew
 
-如果出现请 **The formula built, but is not symlinked into /usr/local** 的报错，这可能会导致 link 失败，请执行 `sudo chown -R \`whoami\` /usr/local`
+如果出现请 **The formula built, but is not symlinked into /usr/local** 的报错，这可能会导致 link 失败，请执行
+
+```shell
+sudo chown -R `whoami` /usr/local
+```
 
 目前包含以下工具：
 
