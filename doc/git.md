@@ -104,6 +104,11 @@ git checkout --track origin/feature
 
 1. 输入 `grsh` 可以查看所有的远程仓库，输入 `grsh origin` 可以查看 origin 仓库中的分支、track 信息，等价于命令 `git remote show`
 
+## git stash
+
+1. 输入命令 `gst` 可以储藏所有未提交的改动，包括已暂存的改动和未跟踪的文件，它是命令 `git stash -u` 的缩写
+2. 输入命令 `gsp` 可以恢复最近的一次暂存，它会完整恢复状态，也就是说如果储藏时这个文件已暂存，恢复后也是暂存的，它是 `git stash pop --index` 命令的缩写
+
 ## 常见工作流
 
 注意，这里说的工作流不是 git-workflow 的意思，而是一些常见命令的组合。
