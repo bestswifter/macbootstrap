@@ -43,13 +43,16 @@ brew install redis
 
 # install MacVim
 if [[ ! -e /usr/local/bin/gvim ]]; then
-    unzip software/MacVim.zip
+    unzip -q software/MacVim.zip
     mv MacVim.app /Applications/MacVim.app
     ln -s /Applications/MacVim.app/Contents/bin/gvim /usr/local/bin/gvim
     rm -rf __MACOSX
 else
     echo "You have installed macvim”"
 fi
+
+# install Snap to bind hotkeys
+unzip -qn software/Snap.zip -d /Applications
 
 # install coreutils
 if [[ ! -e /usr/local/opt/coreutils ]]; then

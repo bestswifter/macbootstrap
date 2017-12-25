@@ -1,5 +1,6 @@
 rm -rf ~/.macbootstrap/
 rm -rf /Applications/MacVim.app/
+rm -rf /Applications/Snap.app/
 rm -f /usr/local/bin/gvim
 
 brew cask uninstall iterm2
