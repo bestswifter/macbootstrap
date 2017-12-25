@@ -60,6 +60,8 @@ git checkout --track origin/feature
 
 第三中方法最简单，因为它参数少，而且功能和第二种写法一样，我给他起的别名叫 `gct`，对应 `git checkout --track`
 
+如果想为当前分支设置跟踪的远程分支，输入 `gtrack` 即可，不需要携带参数，它会自动让当前分支跟踪远程的同名分支
+
 ## git diff
 
 1. 输入 `gd` 即可查看工作区内的变动，等价于命令 `git diff`
