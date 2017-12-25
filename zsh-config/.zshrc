@@ -3,7 +3,7 @@ plugins=(git extract encode64 urltools brew zsh-syntax-highlighting)
 setopt correct_all
 ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="half-life"
+ZSH_THEME="robbyrussell"
 PROMPT=$'%{$purple%}%n%{$reset_color%} in %{$limegreen%}%~%{$reset_color%}$(ruby_prompt_info " with%{$fg[red]%} " v g "%{$reset_color%}")$vcs_info_msg_0_%{$orange%}%{$reset_color%} at %{$hotpink%}%* %{$orange%}λ%{$reset_color%} '
 
 source $ZSH/oh-my-zsh.sh
