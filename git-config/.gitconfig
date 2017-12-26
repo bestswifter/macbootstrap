@@ -20,7 +20,7 @@
     rmd = !git ls-files -d  -z | xargs -0 git rm
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -40,9 +40,3 @@
     default = current
 [grep]
     lineNumber = true
-[user]
-	name = zhangxingyu
-	email = zhangxingyu@baidu.com
-	signingkey = E50BBAB08C01624B93532ED702A776452FCD3F8E
-[commit]
-	gpgsign = true
