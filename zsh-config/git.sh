@@ -290,3 +290,23 @@ function gnext() {
 function gprevious() {
     git checkout HEAD^1
 }
+
+# show difference between some commit and its previous branch
+# First argument is the commit SHA-1 or HEAD if no argument given. Then second argument is the file name
+# Note the diff is reverted so it can be applied to revert the commit
+# Usage: gdcr or gdcr <SHA-1> or gdcr <SHA-1> <file_name> or gdcr <SHA-1> <file_name> | git apply
+gdcr () {
+	commit="$1"
+	if [ -z "$1" ]
+	then
+		commit="HEAD"
+	fi
+	if [ -z "$2" ]
+	then
+		command="git diff "$commit" "$commit"~"
+		eval $command
+	else
+		command="git diff "$commit" "$commit"~ "$2""
+		eval "$command"
+	fi
+}
