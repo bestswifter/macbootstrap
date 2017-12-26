@@ -36,7 +36,8 @@
 6. 如果只记得某次提交内容(content)里有一个词，比如 **networksetup**，可以用 `ggp -G networksetup` 来查找所有提交内容中包含 **networksetup** 的提交。-G 选项和 -S 选项主要有两个区别，
 前者可以接收正则，而后者只会查找那些导致 string 出现次数发现变动的提交，比如把 `name:0` 换成 `name:1`，用 -S 就无法搜索到 name, 因为它的出现次数并没有改变，但是用 -G 可以。
 7. 如果只记得某次提交记录(message)里有一个词，比如 **highlight**，可以用 `ggp --grep highlight` 来查找所有提交记录中包含 **highlight** 的提交
-8. 如果想查看某个文件或者文件夹的改动历史，可以输入 `gg file_name`，当然 `ggs` 和 `ggp` 也都是支持的。
+8. 如果想查看某个文件中某一段代码的提交记录，可以用 `ggp -L start,end:file_name` 命令，详情请参考 [Git grep]() 这一节的用法。
+9. 如果想查看某个文件或者文件夹的改动历史，可以输入 `gg file_name`，当然 `ggs` 和 `ggp` 也都是支持的。
 
 ## git branch
 
@@ -115,6 +116,16 @@ git checkout --track origin/feature
 
 `ggrep` 是 `git grep --break --heading -n` 命令的缩写，第一个参数表示不同文件的搜索结果间用空格分割，便于阅读。第二个参数非常有用，它不再在每一行输出前面加上文件名，而是在所有属于同一个文件的匹配之前加上一次文件名，
 这样输出结果的可读性更高，`-n` 表示输出行号。
+
+以查找 `gignore` 这个命令的历史为例，先输入 `ggrep gignore`，得到如图所示的结果，这告诉我们它定义在 `zsh-config/git.sh` 这个文件的第 25 行：
+
+![](https://diycode.b0.upaiyun.com/photo/2017/dd45040c35ab5011400c7172fbf1ff9b.png)
+
+然后输入 `ggp -L 25,25:./zsh-config/git.sh`，参数 `—L` 表示行内查找，即查找这个文件的第 25-25 行的提交记录，得到的结果如图所示：
+
+![](https://diycode.b0.upaiyun.com/photo/2017/a872cea9a13ce464e848cec8c0db3196.png)
+
+提交的 SHA-1 值、日期、提交者等信息就完全显示出来了
 
 ## 常见工作流
 
