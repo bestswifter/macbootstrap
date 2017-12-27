@@ -109,6 +109,12 @@ git submodule update --init --recursive
 
 vim -c PluginInstall -c quitall
 
+# System Configuration
+
+# Enable full keyboard access for all controls
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+killall "Finder" >/dev/null 2>&1
+
 # Gem update
 sudo gem update --system
 sudo gem install -n /usr/local/bin cocoapods
