@@ -90,7 +90,7 @@ Leader 键是逗号 `,`，按下 `,u` 触发 Unite outline:
 
 - [x] Split vim plugin configuration out.
 - [] Add keymap export/save for iTerm.
-- [] Add keymap export/save for Snap.
+- [x] Add keymap export/save for Snap.
 - [] Add more npm packages
 - [] Remove alias to number 1-9 in `~/.oh-my-zsh/lib/directories.zsh`, this is considered to be done in [h function](https://github.com/bestswifter/history)
 - [] IMPORTANT: Add demo for this project to show the convenience and advantange of this project
