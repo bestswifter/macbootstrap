@@ -146,3 +146,12 @@ echo '{"hello": "world"}' | ppjson
 ### bubu 更新 Homebrew 安装的所有软件并删除旧的版本
 
 这个命令封装了一些列琐碎的操作，可以放到 crontab 里面定时执行
+
+### bsfilename
+
+这个命令可以从完整的文件路径中获取不带后缀的文件名，比如
+
+```shell
+bsfilename ~/Desktop/test.py
+# 输出结果: test
+```
