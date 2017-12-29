@@ -155,3 +155,7 @@ echo '{"hello": "world"}' | ppjson
 bsfilename ~/Desktop/test.py
 # 输出结果: test
 ```
+
+### bszip
+
+这个命令可以快速压缩文件，用法 `bszip path_to_file`，它会读取要压缩的文件(夹)名，然后在当前目录生成同名的 zip 文件
