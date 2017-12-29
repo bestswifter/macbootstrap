@@ -31,13 +31,14 @@
    ![](http://images.bestswifter.com/QQ20171220-114134@2x.png)
 3. 输入 `ggp`，它在 gg 的基础上会展示文件的具体改动，等价于命令 `gg -p`，如图所示：
    ![](http://images.bestswifter.com/QQ20171220-120353@2x.png)
-4. 不管是`gg`，还是衍生出来的 `ggs` 和 `ggp`，后面都可以加上 `-n`，比如 `ggs -2`，或者 `ggp -1`，表示只显示前 n 个提交
-5. 如果想看某一个区间内的 log，可以输入 `gg HEAD~3..HEAD`，注意区间是左开右闭，所以这个命令会查看三次提交的记录。注意较早的提交要写在左边。
-6. 如果只记得某次提交内容(content)里有一个词，比如 **networksetup**，可以用 `ggp -G networksetup` 来查找所有提交内容中包含 **networksetup** 的提交。-G 选项和 -S 选项主要有两个区别，
+4. 输入 `gga`，可以展示所有的分支，一般建议用它代替 `gg`，它等价于命令 `gg --all`
+5. 不管是`gg`，还是衍生出来的 `ggs` 和 `ggp`，后面都可以加上 `-n`，比如 `ggs -2`，或者 `ggp -1`，表示只显示前 n 个提交
+6. 如果想看某一个区间内的 log，可以输入 `gg HEAD~3..HEAD`，注意区间是左开右闭，所以这个命令会查看三次提交的记录。注意较早的提交要写在左边。
+7. 如果只记得某次提交内容(content)里有一个词，比如 **networksetup**，可以用 `ggp -G networksetup` 来查找所有提交内容中包含 **networksetup** 的提交。-G 选项和 -S 选项主要有两个区别，
 前者可以接收正则，而后者只会查找那些导致 string 出现次数发现变动的提交，比如把 `name:0` 换成 `name:1`，用 -S 就无法搜索到 name, 因为它的出现次数并没有改变，但是用 -G 可以。
-7. 如果只记得某次提交记录(message)里有一个词，比如 **highlight**，可以用 `ggp --grep highlight` 来查找所有提交记录中包含 **highlight** 的提交
-8. 如果想查看某个文件中某一段代码的提交记录，可以用 `ggp -L start,end:file_name` 命令，详情请参考 [Git grep](https://github.com/bestswifter/macbootstrap/blob/master/doc/git.md#git-grep) 这一节的用法。
-9. 如果想查看某个文件或者文件夹的改动历史，可以输入 `gg file_name`，当然 `ggs` 和 `ggp` 也都是支持的。
+8. 如果只记得某次提交记录(message)里有一个词，比如 **highlight**，可以用 `ggp --grep highlight` 来查找所有提交记录中包含 **highlight** 的提交
+9. 如果想查看某个文件中某一段代码的提交记录，可以用 `ggp -L start,end:file_name` 命令，详情请参考 [Git grep](https://github.com/bestswifter/macbootstrap/blob/master/doc/git.md#git-grep) 这一节的用法。
+10. 如果想查看某个文件或者文件夹的改动历史，可以输入 `gg file_name`，当然 `ggs` 和 `ggp` 也都是支持的。
 
 ## git branch
 
