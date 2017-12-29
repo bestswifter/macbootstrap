@@ -39,7 +39,11 @@ else
     echo "You have installed ctags"
 fi
 
-brew install redis
+if brew ls --versions gnu-sed > /dev/null; then
+    echo "You have installed gsed"
+else
+    brew install gnu-sed
+fi
 
 # install MacVim
 if [[ ! -e /usr/local/bin/gvim ]]; then
@@ -62,12 +66,12 @@ else
     echo "You have installed coreutils"
 fi
 
+brew install redis
 brew_install cmake
 brew_install gawk
 brew_install autojump
 brew_install wget
 brew_install node
-brew_install gsed
 brew_install exiv2
 brew_install ssh-copy-id
 brew_install imagemagick
