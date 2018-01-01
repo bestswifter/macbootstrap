@@ -23,13 +23,11 @@ curl https://raw.githubusercontent.com/bestswifter/macbootstrap/master/bootstrap
  这份脚本主要包含以下几个方面的配置：
 
  1. 常用的 Homebrew 工具
- 2. 基于 zsh 的，能够提高工作效率的命令
+ 2. 基于 zsh 的，能够提高工作效率的命令，包括 git 的快捷命令
  3. Vim 配置
- 4. Git 配置
- 5. 未来会考虑加入特定软件的配置以及 npm、pip 等依赖的配置
+ 4. 未来会考虑加入特定软件的配置以及 npm、pip 等依赖的配置
 
-
- 使用文档正在逐步整理中。。。
+** 使用文档正在逐步整理中。。。**
 
 ## Homebrew
 
@@ -39,24 +37,7 @@ curl https://raw.githubusercontent.com/bestswifter/macbootstrap/master/bootstrap
 sudo chown -R `whoami` /usr/local
 ```
 
-目前包含以下工具：
-
-* iterm(cask)
-* sourcetree(cask)
-* chrome(cask)
-* wget
-* gnu-sed
-* cmake
-* autojump
-* node&npm
-* ctags
-* gawk
-* coreutils
-* exiv2 (show info about image)
-* ssh-copy-id (upload public ssh key to server)
-* imagemagick、catimg (print image in terminal)
-* redis  (通过 `redis-server /usr/local/etc/redis.conf` 启动或者 `brew services start redis` 启动并且设置为开机立即启动)
-* gpg
+具体包含的工具，以及用法请参考: [HomeBrew 工具](./doc/tools.md)
 
 ## Zsh
    
@@ -89,7 +70,7 @@ Leader 键是逗号 `,`，按下 `,u` 触发 Unite outline:
 # What's next
 
 - [x] Split vim plugin configuration out.
-- [] Add keymap export/save for iTerm.
+- [x] Add keymap export/save for iTerm.
 - [x] Add keymap export/save for Snap.
 - [] Add more npm packages
 - [] Remove alias to number 1-9 in `~/.oh-my-zsh/lib/directories.zsh`, this is considered to be done in [h function](https://github.com/bestswifter/history)
