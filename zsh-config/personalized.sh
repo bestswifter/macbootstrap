@@ -1,9 +1,3 @@
-# Find file using regex
-function bsfn () {
-    # Use -or to support multi types
-    find . \( -type f -or -type l \) | egrep --color=always $1
-}
-
 # Download youtube video to ~/Movies/Youtube
 function y () {
     if [[ ! -e /usr/local/bin/youtube-dl  ]]; then
@@ -26,5 +20,3 @@ function objctags() {
     --regex-objc='/^[[:space:]]*\@implementation[[:space:]]+(.*)$/\1/c,class/' \
     --regex-objc='/^[[:space:]]*\@interface[[:space:]]+(.*)[[:space:]]+:.*{/\1/i,interface/' -R .&> /dev/null
 }
-
-alias pi='pod install'
