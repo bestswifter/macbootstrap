@@ -176,6 +176,11 @@ mkcdir () {
     cd -P -- "$1"
 }
 
+function bsfn () {
+    # Use -or to support multi types
+    find . \( -type f -or -type l \) | egrep --color=always $1
+}
+
 # Get resolution of image
 function resolution() {
     brew_install -q exiv2

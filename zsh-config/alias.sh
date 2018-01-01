@@ -25,3 +25,5 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles -bool false &
 alias fisrt='tail -n'
 alias last='head -n'
 alias ppjson='python $BS_ZSH_TOOLS/json_pretty.py'
+alias pi='pod install'
+alias pu='pod update'
