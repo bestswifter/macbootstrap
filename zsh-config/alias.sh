@@ -17,6 +17,7 @@ alias gtrack='git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD
 alias gst='git stash -u'
 alias gga='gg --all'
 alias set-upstream='git branch --set-upstream-to=origin/`git symbolic-ref --short HEAD`'
+alias grm='git reset --mixed'
 
 # zsh
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
