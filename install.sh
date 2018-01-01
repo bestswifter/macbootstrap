@@ -10,7 +10,7 @@ fi
 if [[ ! -e /Applications/Beyond\ Compare.app ]]; then
     brew cask install beyond-compare
     rm /Applications/Beyond\ Compare.app/Contents/Resources/trial.key
-    cp /Users/zxy/.macbootstrap/tools/beyond_compare_key /Applications/Beyond\ Compare.app/Contents/Resources/trial.key
+    cp tools/beyond_compare_key /Applications/Beyond\ Compare.app/Contents/Resources/trial.key
 else
     echo "You have installed Beyond Compare"
 fi
