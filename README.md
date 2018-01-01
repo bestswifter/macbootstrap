@@ -53,19 +53,7 @@ sudo chown -R `whoami` /usr/local
 
 ## Vim
 
-Plugins are included in `~/.vimrc`, you can change them according to your favor.
-
-You can change configuration about vim itself in `~/.vim/bundle/vimrc/plugin/vimrc_wssq.vim`
-
-Configuration about vim plugins are specified in `~/.vim/bundle/vimrc/self/PluginSetting.vim`
-
-### <Leader>u
-
-Leader 键是逗号 `,`，按下 `,u` 触发 Unite outline:
-
-![Unite outline](http://images.bestswifter.com/1492167290.png)
-
-连按两次 `Ctrl-w` 可以左右切换窗口，左侧 outline 中用 j/k 上下移动，o 前往指定位置。
+详细用法与教程请参考这份说明: [Vim 使用指南](./doc/vim.md)
 
 # What's next
 
