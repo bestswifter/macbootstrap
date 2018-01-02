@@ -73,6 +73,9 @@ git checkout --track origin/feature
 3. 输入 `gdc` 可以查看最近一次提交的变动，等价于命令 `git diff HEAD^ HEAD`
 4. 输入 `gdcr` 可以倒过来查看某次提交的变动，它的第一个参数是提交的 SHA-1 值，如果不写则是 HEAD，所以 `gdcr` 和 `gdc` 是恰好相反的 diff。这样的好处是如果
 想撤销某次提交，只要用 `gdcr sha-1` 就可以获得那次提交的逆提交，如果想要精确到只恢复某个文件，第二个参数可以是文件名。比如 `gdcr sha-1 file_name | git apply`
+5. 输入 `gdt` 即可用外部 diff 工具查看 diff，它是 `git difftool --no-prompt --extcmd "icdiff --line-numbers --no-bold" "$@" | less` 命令的缩写，这个命令依赖 `icdiff` 这个工具，可以用 homebrew 安装。
+6. 输入 `gdts` 和 `gdtc` 可以对应的用外部 diff 查看已暂存和上次提交的变动，这些和 `gds` 与 `gdc` 命令基本上是一样的，区别在于使用外部 diff 工具，会更美观一些（当然速度也会更慢），效果如图所示
+    ![](http://images.bestswifter.com/MacHi-2018-01-02-19-48-29.png)
 
 ## git push
 
