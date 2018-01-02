@@ -32,13 +32,24 @@ alias grh='git reset --hard'
 alias gri='git rebase -i'
 alias gro='git rebase -i --onto'
 alias grs='git reset --soft'
-alias gs='git status'
 alias gsfrs='git stash;git fetch;git rebase;git stash pop;'
 alias gsp='git stash pop --index'
 alias gsr='git_recursive_status'
 alias gss='git status --short'
 alias gst='_git_show_commit_in_tool'
 alias cdsubmodule='GIT_ROOT=$(git rev-parse --show-toplevel 2>/dev/null) && [[ -n "$GIT_ROOT" ]] && [[ -f "$GIT_ROOT/.gitmodules" ]] && realpath=$(awk -F= "/path =/ {print substr(\$2, 2)}" "$GIT_ROOT/.gitmodules") && cd "$GIT_ROOT/$realpath"'
+
+function gs() {
+    if type scmpuff_status > /dev/null; then
+       scmpuff_status
+    else
+       echo "${YELLOW}You have not install scmpuff, use default git status instead${NC}"
+       echo "${YELLOW}Strongly recommend you to install it: brew install scmpuff${NC}"
+       echo "${YELLOW}"'And then add this line to you .zshrc: eval "$(scmpuff init -s --aliases=false)"'"${NC}"
+       echo ""
+       git status
+   fi
+}
 
 function gdt() {
     git difftool --no-prompt --extcmd "icdiff --line-numbers --no-bold" "$@" | less

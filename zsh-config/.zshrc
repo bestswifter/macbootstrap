@@ -26,6 +26,7 @@ BS_ZSH_TOOLS=${BS_ZSH_BASE}/tools
 source $BS_ZSH_BASE/basic.sh
 source $BS_ZSH_BASE/zsh-config/common.sh
 source $(brew --prefix)/etc/profile.d/autojump.sh
+eval "$(scmpuff init -s --aliases=false)"
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH:$M2_HOME/bin
