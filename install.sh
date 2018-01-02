@@ -80,6 +80,7 @@ brew_install ssh-copy-id
 brew_install imagemagick
 brew_install catimg
 brew_install gpg
+brew_install icdiff
 
 # link git config
 mv ~/.gitconfig ~/.gitconfig_backup

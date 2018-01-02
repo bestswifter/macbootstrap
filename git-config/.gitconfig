@@ -18,9 +18,6 @@
     zip = !git archive --format zip master --output
     zipHead = !git archive --format=zip HEAD --output
     rmd = !git ls-files -d  -z | xargs -0 git rm
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
