@@ -15,8 +15,6 @@ alias gd='git diff'
 alias gdc='git diff HEAD~ HEAD'
 alias gdr='git_recursive_diff'
 alias gds='git diff --staged'
-alias gdt='git difftool --dir-diff'
-alias gdiff='git difftool --dir-diff HEAD HEAD~'
 alias gf='git fetch'
 alias gfr='git fetch;git rebase;'
 alias gg='git lg'
@@ -41,6 +39,10 @@ alias gsr='git_recursive_status'
 alias gss='git status --short'
 alias gst='_git_show_commit_in_tool'
 alias cdsubmodule='GIT_ROOT=$(git rev-parse --show-toplevel 2>/dev/null) && [[ -n "$GIT_ROOT" ]] && [[ -f "$GIT_ROOT/.gitmodules" ]] && realpath=$(awk -F= "/path =/ {print substr(\$2, 2)}" "$GIT_ROOT/.gitmodules") && cd "$GIT_ROOT/$realpath"'
+
+function gdt() {
+    git difftool --no-prompt --extcmd "icdiff --line-numbers --no-bold" "$@" | less
+}
 
 function gom() {
     git ls-files -m $*|while read -r file;

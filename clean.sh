@@ -20,6 +20,7 @@ brew uninstall imagemagick
 brew uninstall catimg
 brew uninstall redis
 brew uninstall gpg
+brew uninstall icdiff
 
 rm -f ~/.zshrc
 rm -f ~/.vimrc
