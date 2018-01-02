@@ -81,6 +81,7 @@ brew_install imagemagick
 brew_install catimg
 brew_install gpg
 brew_install icdiff
+brew_install scmpuff
 
 # link git config
 mv ~/.gitconfig ~/.gitconfig_backup
