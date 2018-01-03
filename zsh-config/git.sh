@@ -52,7 +52,18 @@ function gs() {
 }
 
 function gdt() {
-    git difftool --no-prompt --extcmd "icdiff --line-numbers --no-bold" "$@" | less
+    params="$@"
+    if brew ls --versions scmpuff > /dev/null; then
+        params=`scmpuff expand "$@" 2>/dev/null`
+    fi
+
+    if [ $# -eq 0 ]; then
+        git difftool --no-prompt --extcmd "icdiff --line-numbers --no-bold" | less
+    elif [ ${#params} -eq 0 ]; then
+        git difftool --no-prompt --extcmd "icdiff --line-numbers --no-bold" "$@" | less
+    else
+        git difftool --no-prompt --extcmd "icdiff --line-numbers --no-bold" "$params" | less
+    fi
 }
 
 function gom() {
