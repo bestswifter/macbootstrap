@@ -40,7 +40,7 @@ alias gst='_git_show_commit_in_tool'
 alias cdsubmodule='GIT_ROOT=$(git rev-parse --show-toplevel 2>/dev/null) && [[ -n "$GIT_ROOT" ]] && [[ -f "$GIT_ROOT/.gitmodules" ]] && realpath=$(awk -F= "/path =/ {print substr(\$2, 2)}" "$GIT_ROOT/.gitmodules") && cd "$GIT_ROOT/$realpath"'
 
 function gs() {
-    if type scmpuff_status > /dev/null; then
+    if brew ls --versions scmpuff > /dev/null; then
        scmpuff_status
     else
        echo "${YELLOW}You have not install scmpuff, use default git status instead${NC}"
