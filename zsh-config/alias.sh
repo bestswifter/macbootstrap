@@ -26,8 +26,13 @@ alias gcam='git commit --all -m'
 # zsh
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
-alias fisrt='tail -n'
-alias last='head -n'
 alias ppjson='python $BS_ZSH_TOOLS/json_pretty.py'
 alias pi='pod install'
 alias pu='pod update'
+alias -g H='| head -n'
+alias -g T='| tail -n'
+alias -g L="| less"
+alias -g R='| row'
+alias -g C='| column'
+alias -g NE="2> /dev/null"
+alias -g NUL="> /dev/null 2>&1"

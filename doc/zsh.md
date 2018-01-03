@@ -126,14 +126,16 @@ app2ipa xxx.app | xargs ideviceinstaller -i
 
 ![](http://images.bestswifter.com/WX20171201-210038.png)
 
-### first & last 快速过滤
 
-只是简单的封装了 `head -n` 和 `tail -n`，并且更加语义化，比如：
+### 全局别名
 
-```shell
-cat xxx.txt | fisrt 3
-# 输出文本的前三行
-```
+1. 如果只想看某个输出的前 3 行，可以用 `cat xxx H 3`，这是因为 **H** 被全局重命名为 `| head -n`
+2. 如果是看输出的后 3 行，可以用 `cat xxx T 3`，其中 **T** 被全局重命名为 `| tail -n`
+3. 如果是看输出的指定行数，比如第 1、3、7 行，可以用 `cat xxx R 1 3 7`, 其中 **R** 被全局重命名为 `| row`
+4. 如果要看某个输出的某几列，比如倒数第一列，可以用 `cat xxx C -1`，其中 **C** 被全局重命名为 `| column`
+5. 如果要在 less 中查看某个超长的输出，可以用 `cat xxx L`，其中 **L** 被全局重命名为 `| L`
+6. 如果要忽略某条命令的报错，可以用 `command NE`，其中 **NE** 被全局重命名为 `2> /dev/null`
+7. 如果要某个命令完全不输出内容，可以用 `command NUL`，其中 **NUL**被全局重命名为 `> /dev/null 2>&1`
 
 ### ppjson 在终端中格式化 json
 
