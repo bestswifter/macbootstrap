@@ -58,9 +58,6 @@ else
     echo "You have installed macvim”"
 fi
 
-# install Snap to bind hotkeys
-unzip -qn software/Snap.zip -d /Applications
-
 # install coreutils
 if [[ ! -e /usr/local/opt/coreutils ]]; then
     brew install coreutils
