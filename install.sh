@@ -1,6 +1,8 @@
 #!/bin/sh
 source basic.sh
 
+./install-steps/macos.sh
+
 if [[ ! -e /usr/local/bin/brew ]]; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
@@ -114,12 +116,6 @@ git submodule update --init --recursive
 ./install.py --clang-completer --tern-completer
 
 vim -c PluginInstall -c quitall
-
-# System Configuration
-
-# Enable full keyboard access for all controls
-defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
-killall "Finder" >/dev/null 2>&1
 
 # Gem update
 sudo gem update --system
