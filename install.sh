@@ -111,11 +111,13 @@ fi
 ln -s ~/.macbootstrap/zsh-config/ssh_config ~/.ssh/config
 
 # install YCM
-cd ~/.vim/bundle/
-git clone https://github.com/Valloric/YouCompleteMe.git
-cd YouCompleteMe
-git submodule update --init --recursive
-./install.py --clang-completer --tern-completer
+if [ -e $HOME/.vim/bundle ]; then
+    cd ~/.vim/bundle/
+    git clone https://github.com/Valloric/YouCompleteMe.git
+    cd YouCompleteMe
+    git submodule update --init --recursive
+    ./install.py --clang-completer --tern-completer
+fi
 
 vim -c PluginInstall -c quitall
 
