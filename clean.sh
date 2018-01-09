@@ -22,6 +22,7 @@ brew uninstall redis
 brew uninstall gpg
 brew uninstall icdiff
 brew uninstall scmpuff
+brew uninstall fzf
 
 rm -f ~/.zshrc
 rm -f ~/.vimrc

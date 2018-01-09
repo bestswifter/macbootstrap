@@ -32,3 +32,5 @@ fi
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH:$M2_HOME/bin
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
