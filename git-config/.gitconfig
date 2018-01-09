@@ -37,9 +37,5 @@
     default = current
 [grep]
     lineNumber = true
-[user]
-	name = zhangxingyu
-	email = zhangxingyu@baidu.com
-	signingkey = E50BBAB08C01624B93532ED702A776452FCD3F8E
-[commit]
-	gpgsign = true
+
+
