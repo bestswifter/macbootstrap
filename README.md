@@ -8,6 +8,8 @@
 
 我深知，环境配置是一件非常主管的事，不同的人审美和需求不一样，所以如果不愿意使用我的这套配置，也可以看看文档，了解一些好玩的用法，看看它是怎么实现的，然后把部分函数抄走并提高自己的工作效率。
 
+**再次警告⚠️， 因为项目还处于开发中，暂时不太稳定，请谨慎在生产环境中使用此配置，对与因此造成的配置丢失和错乱，作者不负任何责任**
+
 # 安装方式
 
 你的电脑不需要任何配置，只需要执行以下代码即可：
@@ -62,4 +64,4 @@ sudo chown -R `whoami` /usr/local
 - [x] Add keymap export/save for Snap.
 - [] Add more npm packages
 - [] Remove alias to number 1-9 in `~/.oh-my-zsh/lib/directories.zsh`, this is considered to be done in [h function](https://github.com/bestswifter/history)
-- [] IMPORTANT: Add demo for this project to show the convenience and advantange of this project
+ [] IMPORTANT: Add demo for this project to show the convenience and advantange of this project
