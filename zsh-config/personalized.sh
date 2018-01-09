@@ -20,3 +20,5 @@ function objctags() {
     --regex-objc='/^[[:space:]]*\@implementation[[:space:]]+(.*)$/\1/c,class/' \
     --regex-objc='/^[[:space:]]*\@interface[[:space:]]+(.*)[[:space:]]+:.*{/\1/i,interface/' -R .&> /dev/null
 }
+
+alias gpush='git push origin HEAD:refs/for/`git_current_branch`'
