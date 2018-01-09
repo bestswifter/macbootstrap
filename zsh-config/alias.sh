@@ -22,6 +22,8 @@ alias set-upstream='git branch --set-upstream-to=origin/`git symbolic-ref --shor
 alias grm='git reset --mixed'
 alias gca='git commit --amend'
 alias gcam='git commit --all -m'
+alias gbr='git branch --remote'
+alias gba='git branch -a'
 
 # zsh
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
