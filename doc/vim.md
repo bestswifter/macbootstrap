@@ -11,10 +11,11 @@ Leader 键是 `空格 space`, NerdTree 和 Denite 专用的 Leader 键是 `;`
 首先要明确 Window 和 Buffer 的概念，和编辑器无关的外部窗口，比如 NerdTree
 这样的文件列表属于 Window。而打开的多个文件，每个都是一个 Buffer。
 
-`<Tab>` 键可以在多个 Window 间切换，切记不要使用鼠标或者触摸板。
+切记不要使用鼠标或者触摸板切换 Window，这样非常低效，常见的做法有三种：
 
-如果 Window 过多，可以按下 `-`，将会弹出所有 Window
-的缩写，输入对应的字母就可以快速切换了
+1. 按 `<Tab>` 键可以在多个 Window 间切换
+2. 如果 Window 过多，可以按下 `-`，将会弹出所有 Window 的缩写，输入对应的字母就可以快速切换了
+3. 以 `Ctrl` 为前缀，`hjkl` 为操作键，可以切换 Window，比如 `Ctrl-h` 就表示切换到左边一个 Window
 
 `g0` 表示前往第一个 Buffer，`g$` 表示前往最后一个 Buffer。
 
@@ -28,7 +29,7 @@ Leader 键是 `空格 space`, NerdTree 和 Denite 专用的 Leader 键是 `;`
 
 如果只能安装一个 vim 插件，我会选择它，因为原生的 vim
 虽然有很多快速的跳转方式，但依然不够快，而 easymotion 则是一个能让
-光标移动速度跟上你手速的神奇。
+光标移动速度跟上你手速的神器。
 
 虽然 easymotion 有很多配置，但我一般只有用到两个：
 
@@ -68,3 +69,9 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 ```
 
 把我 TagBar 配置为启动时自动打开，手动打开的快捷键是 `<leader> + o`
+
+### Commentary
+
+选中一个部分后，按下 `<Leader> v` 即可注释，如果这部分已经注释，则上述做法的效果将是取消注释。
+
+按下 `v` 会自动进入可视模式，再次按 `v` 会智能增加选中范围，但肯定不如手动选择来得精确
