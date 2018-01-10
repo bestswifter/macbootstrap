@@ -31,3 +31,14 @@ function brew_install() {
         fi
     fi
 }
+
+# Usage: mv $1 to $1_backup
+function backup_file() {
+    if [ $# != 1 ]; then
+        echo "Usage: backup_file pat_to_file"
+    fi
+
+    if [[ -e $1 ]]; then
+        mv $1 $1"_backup"
+    fi
+}
