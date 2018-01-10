@@ -98,11 +98,13 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 ln -s ~/.macbootstrap/zsh-config/.zshrc ~/.zshrc
 
 # vim configuration
-git clone https://github.com/bestswifter/.vim.git --recursive ~/.vim
-if [[ -e ~/.vimrc ]]; then
-    mv ~/.vimrc ~/.vimrc_backup
-fi
-ln -s ~/.vim/.vimrc ~/.vimrc
+backup_file ~/.vim
+backup_file ~/.config/nvim/
+git clone git://github.com/bestswifter/vim-config.git ~/.config/nvim
+ln -s ~/.vim ~/.config/nvim
+pip3 install --trusted-host pypi.python.org neovim jedi
+pip3 install --user --upgrade --trusted-host pypi.python.org PyYAML
+
 
 # ssh configuration
 backup_file ~/.ssh/config
