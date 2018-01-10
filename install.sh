@@ -93,8 +93,8 @@ if [[ ! -e ~/.oh-my-zsh ]]; then
 fi
 
 # zshrc setup
+backup_file ~/.zshrc
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-mv ~/.zshrc ~/.zshrc_backup
 ln -s ~/.macbootstrap/zsh-config/.zshrc ~/.zshrc
 
 # vim configuration
@@ -105,9 +105,7 @@ fi
 ln -s ~/.vim/.vimrc ~/.vimrc
 
 # ssh configuration
-if [[ -e ~/.ssh/config ]]; then
-    mv ~/.ssh/config ~/.ssh/config_backup
-fi
+backup_file ~/.ssh/config
 ln -s ~/.macbootstrap/zsh-config/ssh_config ~/.ssh/config
 
 # install YCM
