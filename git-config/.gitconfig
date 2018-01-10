@@ -24,10 +24,10 @@
 [log]
     date = local
 [core]
-	excludesfile = ~/.gitignore_global
+    excludesfile = ~/.gitignore_global
     whitespace = cr-at-eol
     quotepath = false
-	editor = /usr/bin/vim
+    editor = /usr/local/bin/nvim
 [i18n]
     commitencoding = utf-8
     logoutputencoding = utf-8
