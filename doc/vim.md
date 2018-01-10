@@ -1,5 +1,9 @@
 # Vim 使用简介
 
+![](http://blog.bestswifter.com/WX20180110-204528@2x.png)
+
+基本效果如图所示。
+
 Leader 键是 `空格 space`, NerdTree 和 Denite 专用的 Leader 键是 `;`
 
 ## Window 和 Buffer
@@ -17,6 +21,20 @@ Leader 键是 `空格 space`, NerdTree 和 Denite 专用的 Leader 键是 `;`
 `gr` 表示前一个 Buffer，`gn` 表示后一个 Buffer
 
 ## 常见插件的用法
+
+受篇幅所限，这里只介绍一些 Life-Changing 系列的插件
+
+### easymotion
+
+如果只能安装一个 vim 插件，我会选择它，因为原生的 vim
+虽然有很多快速的跳转方式，但依然不够快，而 easymotion 则是一个能让
+光标移动速度跟上你手速的神奇。
+
+虽然 easymotion 有很多配置，但我一般只有用到两个：
+
+1. `sw`，全局以单词为单位跳转，
+   屏幕内的每个单词都会显示高亮的缩写，只要输入缩写就可以快速跳转了。
+2. `sl`，在行内跳转， 速度更快，更准确，但使用场景肯定略小一些
 
 ### NerdTree
 
