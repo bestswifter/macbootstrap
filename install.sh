@@ -64,6 +64,7 @@ fi
 
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew install redis
+brew install python3
 brew_install cmake
 brew_install gawk
 brew_install autojump
@@ -103,18 +104,10 @@ pip3 install --user --upgrade --trusted-host pypi.python.org PyYAML
 
 # ssh configuration
 backup_file ~/.ssh/config
-ln -s ~/.macbootstrap/zsh-config/ssh_config ~/.ssh/config
-
-# install YCM
-if [ -e $HOME/.vim/bundle ]; then
-    cd ~/.vim/bundle/
-    git clone https://github.com/Valloric/YouCompleteMe.git
-    cd YouCompleteMe
-    git submodule update --init --recursive
-    ./install.py --clang-completer --tern-completer
+if [[ ! -e ~/.ssh ]]; then
+    mkdir ~/.ssh
 fi
-
-vim -c PluginInstall -c quitall
+ln -s ~/.macbootstrap/zsh-config/ssh_config ~/.ssh/config
 
 # Gem update
 sudo gem update --system
