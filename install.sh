@@ -38,12 +38,6 @@ else
     echo "You have installed chrome"
 fi
 
-if [[ ! -e /usr/bin/ctags ]]; then
-    brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-else
-    echo "You have installed ctags"
-fi
-
 if brew ls --versions gnu-sed > /dev/null; then
     echo "You have installed gsed"
 else
@@ -68,6 +62,7 @@ else
     echo "You have installed coreutils"
 fi
 
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew install redis
 brew_install cmake
 brew_install gawk
@@ -82,7 +77,6 @@ brew_install gpg
 brew_install icdiff
 brew_install scmpuff
 brew_install fzf
-$(brew --prefix)/opt/fzf/install
 
 # link git config
 mv ~/.gitconfig ~/.gitconfig_backup
