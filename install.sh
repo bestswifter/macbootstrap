@@ -9,13 +9,14 @@ else
     echo "You have installed brew"
 fi
 
-if [[ ! -e /Applications/Beyond\ Compare.app ]]; then
-    brew cask install beyond-compare
-    rm /Applications/Beyond\ Compare.app/Contents/Resources/trial.key
-    cp tools/beyond_compare_key /Applications/Beyond\ Compare.app/Contents/Resources/trial.key
-else
-    echo "You have installed Beyond Compare"
-fi
+# icdiff can take place of BC
+#if [[ ! -e /Applications/Beyond\ Compare.app ]]; then
+#    brew cask install beyond-compare
+#    rm /Applications/Beyond\ Compare.app/Contents/Resources/trial.key
+#    cp tools/beyond_compare_key /Applications/Beyond\ Compare.app/Contents/Resources/trial.key
+#else
+#    echo "You have installed Beyond Compare"
+#fi
 
 if [[ ! -e /Applications/iTerm.app ]]; then
     brew cask install iterm2
