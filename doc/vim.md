@@ -17,9 +17,10 @@ Leader 键是 `空格 space`, NerdTree 和 Denite 专用的 Leader 键是 `;`
 2. 如果 Window 过多，可以按下 `-`，将会弹出所有 Window 的缩写，输入对应的字母就可以快速切换了
 3. 以 `Ctrl` 为前缀，`hjkl` 为操作键，可以切换 Window，比如 `Ctrl-h` 就表示切换到左边一个 Window
 
-`g0` 表示前往第一个 Buffer，`g$` 表示前往最后一个 Buffer。
+当打开多个 Buffer 时，以下快捷键有助于快速在 Buffer 间切换：
 
-`gr` 表示前一个 Buffer，`gn` 表示后一个 Buffer
+1. `g0` 表示前往第一个 Buffer，`g$` 表示前往最后一个 Buffer。
+2. <F9> 表示前一个 Buffer，<F10> 表示后一个 Buffer
 
 ## 常见插件的用法
 
