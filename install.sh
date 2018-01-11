@@ -77,6 +77,7 @@ brew_install gpg
 brew_install icdiff
 brew_install scmpuff
 brew_install fzf
+$(brew --prefix)/opt/fzf/install --all
 
 # link git config
 mv ~/.gitconfig ~/.gitconfig_backup
