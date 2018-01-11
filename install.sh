@@ -6,7 +6,7 @@ source basic.sh
 if [[ ! -e /usr/local/bin/brew ]]; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
-    echo “You have installed brew”
+    echo "You have installed brew"
 fi
 
 if [[ ! -e /Applications/Beyond\ Compare.app ]]; then
@@ -78,6 +78,7 @@ brew_install gpg
 brew_install icdiff
 brew_install scmpuff
 brew_install fzf
+brew_install nvim
 $(brew --prefix)/opt/fzf/install --all
 
 # link git config
@@ -100,7 +101,6 @@ git clone git://github.com/bestswifter/vim-config.git ~/.config/nvim
 ln -s ~/.vim ~/.config/nvim
 pip3 install --trusted-host pypi.python.org neovim jedi
 pip3 install --user --upgrade --trusted-host pypi.python.org PyYAML
-
 
 # ssh configuration
 backup_file ~/.ssh/config
