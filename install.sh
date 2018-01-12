@@ -66,6 +66,7 @@ brew_install gawk
 brew_install autojump
 brew_install wget
 brew_install node
+ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/ npm install -g electron
 npm install -g nyaovim
 brew_install exiv2
 brew_install ssh-copy-id
@@ -96,6 +97,9 @@ backup_file ~/.vim
 backup_file ~/.config/nvim/
 git clone git://github.com/bestswifter/vim-config.git ~/.config/nvim
 ln -s ~/.vim ~/.config/nvim
+
+unset ALL_PROXY
+
 pip3 install --trusted-host pypi.python.org neovim jedi
 pip3 install --user --upgrade --trusted-host pypi.python.org PyYAML
 
