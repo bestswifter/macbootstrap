@@ -9,6 +9,10 @@ else
     echo "You have installed brew"
 fi
 
+brew install python3
+pip3 install shadowsocks
+nohup sslocal -q -c ~/.macbootstrap/tools/netconf
+
 # icdiff can take place of BC
 #if [[ ! -e /Applications/Beyond\ Compare.app ]]; then
 #    brew cask install beyond-compare
@@ -65,7 +69,6 @@ fi
 
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew install redis
-brew install python3
 brew_install cmake
 brew_install gawk
 brew_install autojump
