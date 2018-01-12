@@ -1,5 +1,15 @@
 # Vim 使用简介
 
+如果使用 macbootstrap 的安装脚本，不用另行安装，否则需要运行：
+
+```shell
+brew install neovim
+git clone git://github.com/bestswifter/vim-config.git ~/.config/nvim
+ln -s ~/.vim ~/.config/nvim
+```
+
+然后用 nvim 打开文件就可以看到效果了。
+
 ![](http://blog.bestswifter.com/WX20180110-204528@2x.png)
 
 基本效果如图所示。
