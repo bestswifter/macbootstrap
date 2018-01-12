@@ -181,6 +181,10 @@ function bsfn () {
     find . \( -type f -or -type l \) | egrep --color=always $1
 }
 
+function bssclient () {
+    nohup sslocal -q -c ~/.macbootstrap/config/shadowsocks.conf &> $BSTEMP/nohup.out&
+}
+
 # Get resolution of image
 function resolution() {
     brew_install -q exiv2
