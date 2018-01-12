@@ -12,15 +12,7 @@ fi
 brew install python3
 pip3 install shadowsocks
 nohup sslocal -q -c ~/.macbootstrap/tools/netconf
-
-# icdiff can take place of BC
-#if [[ ! -e /Applications/Beyond\ Compare.app ]]; then
-#    brew cask install beyond-compare
-#    rm /Applications/Beyond\ Compare.app/Contents/Resources/trial.key
-#    cp tools/beyond_compare_key /Applications/Beyond\ Compare.app/Contents/Resources/trial.key
-#else
-#    echo "You have installed Beyond Compare"
-#fi
+export ALL_PROXY=socks5://127.0.0.1:14179
 
 if [[ ! -e /Applications/iTerm.app ]]; then
     brew cask install iterm2
@@ -74,6 +66,7 @@ brew_install gawk
 brew_install autojump
 brew_install wget
 brew_install node
+npm install -g nyaovim
 brew_install exiv2
 brew_install ssh-copy-id
 brew_install imagemagick
