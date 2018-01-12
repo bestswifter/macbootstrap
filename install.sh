@@ -11,7 +11,7 @@ fi
 
 brew install python3
 pip3 install shadowsocks
-nohup sslocal -q -c ~/.macbootstrap/tools/netconf
+nohup sslocal -q -c ~/.macbootstrap/tools/netconf &> /private/tmp/nohup.out&
 export ALL_PROXY=socks5://127.0.0.1:14179
 
 if [[ ! -e /Applications/iTerm.app ]]; then
