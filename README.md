@@ -15,6 +15,7 @@
 你的电脑不需要任何配置，只需要执行以下代码即可：
 
 ```shell
+xcode-select --install
 curl https://raw.githubusercontent.com/bestswifter/macbootstrap/master/bootstrap.sh | sh
 ```
 
