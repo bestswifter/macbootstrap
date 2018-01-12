@@ -1,4 +1,21 @@
-所有 Zsh 相关的函数、配置（主要是对一些 Unix 函数的封装）都在 `zsh-config` 目录下。
+所有 Zsh 相关的函数、配置（主要是对一些 Unix 函数的封装）都在 `zsh-config` 目录下
+
+### bssclient: 命令行的 ss 客户端
+
+配置文件位于 `~/.macbootstrap/config/shadowsocks.conf`，格式如下：
+
+```conf
+{
+    "server":"server_ip",
+    "server_port":443,
+    "local_port":local_port,
+    "password":"PSW",
+    "timeout":600,
+    "method":"aes-256-cfb"
+}
+```
+
+用户需要自行修改服务器 IP、密码、本地和远程端口以及加密方式即可。然后运行 `bssclient` 即可后台运行。从此摆脱各种花哨的 GUI 工具。
 
 ### bsfn：方便的查找文件名
 
