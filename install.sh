@@ -66,8 +66,6 @@ brew_install gawk
 brew_install autojump
 brew_install wget
 brew_install node
-ELECTRON_MIRROR=http://npm.taobao.org/mirrors/electron/ npm install -g electron
-npm install -g nyaovim
 brew_install exiv2
 brew_install ssh-copy-id
 brew_install imagemagick
