@@ -178,3 +178,15 @@ bsfilename ~/Desktop/test.py
 ### bszip
 
 这个命令可以快速压缩文件，用法 `bszip path_to_file`，它会读取要压缩的文件(夹)名，然后在当前目录生成同名的 zip 文件
+
+### qn: 七牛图床上传工具
+
+这个工具会自动把剪贴板里面的图片拷贝出来，存储为临时文件，上传后会自动删除。
+
+使用这个工具前需要先配置七牛的 AK、SK，以及文件上传到哪个 Bucket 中，还有最终图床地址的前缀。
+
+```shell
+qnconf sk ak pictures http://images.bestswifter.com
+```
+
+以后每次截图完，只要输入命令 `qn`，图片就会自动上传并且把 Markdown 格式的地址拷贝到剪贴板中。
