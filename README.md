@@ -28,12 +28,19 @@ curl https://raw.githubusercontent.com/bestswifter/macbootstrap/master/bootstrap
 
  这份脚本主要包含以下几个方面的配置：
 
- 1. 常用的 Homebrew 工具
- 2. 基于 zsh 的，能够提高工作效率的命令，包括 git 的快捷命令
- 3. Vim 配置
- 4. 未来会考虑加入特定软件的配置以及 npm、pip 等依赖的配置
+ 1. 对系统选项的一些基本修改
+ 2. 常用的 Homebrew 工具
+ 3. 基于 zsh 的，能够提高工作效率的命令，包括 git 的快捷命令
+ 4. Vim 配置
+ 5. 未来会考虑加入特定软件的配置以及 npm、pip 等依赖的配置
 
 **使用文档正在逐步整理中。。。**
+
+## 系统配置
+
+为了增强 Mac OS X 的使用体验，我对系统原生的配置做了一些基本的、必备的修改。
+
+详细的原因、改动方式和效果请参考 [系统配置优化](./doc/system.md) 这一节。
 
 ## Homebrew
 
@@ -44,7 +51,7 @@ sudo chown -R `whoami` /usr/local
 ```
 
 具体包含的工具，以及用法请参考: [HomeBrew 工具](./doc/tools.md)
-
+ 
 ## Zsh
    
 所有 Zsh 相关的函数、配置（主要是对一些 Unix 函数的封装）都在 `zsh-config` 目录下。
