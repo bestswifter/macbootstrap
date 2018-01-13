@@ -26,6 +26,7 @@ alias gbr='git branch --remote'
 alias gba='git branch -a'
 
 # zsh
+alias cpu='sysctl -n machdep.cpu.brand_string'
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
 alias ppjson='python $BS_ZSH_TOOLS/json_pretty.py'

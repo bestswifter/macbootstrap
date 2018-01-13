@@ -185,6 +185,11 @@ function bssclient () {
     nohup sslocal -q -c ~/.macbootstrap/config/shadowsocks.conf &> $BSTEMP/nohup.out&
 }
 
+function wifipassword () {
+    SSID=`/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'`
+    security find-generic-password -D "AirPort network password" -a "$SSID" -gw
+}
+
 # Get resolution of image
 function resolution() {
     brew_install -q exiv2
