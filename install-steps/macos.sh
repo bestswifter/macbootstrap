@@ -13,6 +13,28 @@ defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 # Disable menu bar transparency
 defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
-# Make configurations works
-killall "Finder" >/dev/null 2>&1
+# Optimize window resize speed
+defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
+# Always show filename extension
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Skip image verify
+defaults write com.apple.frameworks.diskimages skip-verify -bool true
+defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
+defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
+
+# Enable clickpad Tap to click
+defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+[ -e ~/Library/Application\ Support/Dock/*.db ] && rm ~/Library/Application\ Support/Dock/*.db
+
+# Show the ~/Library Directory
+chflags nohidden ~/Library
+
+# hide the useless icons
+sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
+
+# Make configurations works
+for app in Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
