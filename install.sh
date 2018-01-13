@@ -97,9 +97,7 @@ git clone git://github.com/bestswifter/vim-config.git ~/.config/nvim
 ln -s ~/.vim ~/.config/nvim
 
 unset ALL_PROXY
-
-pip3 install --trusted-host pypi.python.org neovim jedi ipython
-pip3 install --user --upgrade --trusted-host pypi.python.org PyYAML
+./install-steps/dependencies.after.sh
 
 # ssh configuration
 backup_file ~/.ssh/config
@@ -107,8 +105,3 @@ if [[ ! -e ~/.ssh ]]; then
     mkdir ~/.ssh
 fi
 ln -s ~/.macbootstrap/zsh-config/ssh_config ~/.ssh/config
-
-# Gem update
-sudo gem update --system
-sudo gem install -n /usr/local/bin cocoapods
-sudo gem install colored
