@@ -12,9 +12,11 @@ ln -s ~/.vim ~/.config/nvim
 
 ![](http://blog.bestswifter.com/WX20180110-204528@2x.png)
 
-基本效果如图所示。
+## 基础用法
 
-Leader 键是 `空格 space`, NerdTree 和 Denite 专用的 Leader 键是 `;`
+1. Leader 键是 `空格 space`, NerdTree 和 Denite 专用的 Leader 键是 `;`
+2. 替换字母时，`s` 键时无效的，需要用 `r` 加上替换后的内容。
+3. 在普通模式下，输入 q 可以快速关闭无修改的文件，`Ctrl-s` 可以保存文件，等价于 `:w`
 
 ## Window 和 Buffer
 
@@ -44,8 +46,7 @@ Leader 键是 `空格 space`, NerdTree 和 Denite 专用的 Leader 键是 `;`
 
 虽然 easymotion 有很多配置，但我一般只有用到两个：
 
-1. `sw`，全局以单词为单位跳转，
-   屏幕内的每个单词都会显示高亮的缩写，只要输入缩写就可以快速跳转了。
+1. `；w`，全局以单词为单位跳转，屏幕内的每个单词都会显示高亮的缩写，只要输入缩写就可以快速跳转了。
 2. `sl`，在行内跳转， 速度更快，更准确，但使用场景肯定略小一些
 
 ### Denite
