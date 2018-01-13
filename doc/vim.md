@@ -66,13 +66,6 @@ Leader 键是 `空格 space`, NerdTree 和 Denite 专用的 Leader 键是 `;`
 
 如果不想搜索了，可以在选择模式中按下 `q` 退出。
 
-### NerdTree
-
-在这份配置中，NerdTree 会在打开文件时自动打开，在关闭最后一个文件时自动关闭，也可以用 `;a` 手动打开
-
-在 NerdTree 中，使用 `hjkl` 操作，`jk` 表示上下移动，`hl`
-表示展开或者折叠文件夹。
-
 ### Vim-Operator-Surround
 
 我们知道 Vim 中有文本对象（Text Object）的功能，比如 `ciw` 可以删除光标下的单词并进入编辑模式，再比如 `di"` 可以删除双引号内部的内容。这个插件就是用来拓展 Text Object 功能的。
@@ -98,6 +91,21 @@ Leader 键是 `空格 space`, NerdTree 和 Denite 专用的 Leader 键是 `;`
 2. 一共有三种处理方式，分别是添加(append)、替换(replace)和删除(delete)，对应命令 `sa`、`sr` 和 `sd`
 3. 高级模式会自动选择 surrounding，所以命令更简单，但无法自定义哪一组 surrounding。
 
+### Terminal
+
+可以在 Vim 中直接打开终端，快捷键是 `t<Enter>`，会在底部打开一个 10 行高的终端。这个终端是一个单独的 Window，所以上述切换 Window 的规则同样适用。
+
+此外，所有 iTerm 的配置和 .zshrc 的配置都会生效，功能非常强大，比如我们可以在 Vim 里面编辑脚本，在终端里面运行。
+
+注意，这个终端也是个 Vim 窗口，所以输入状态下是无法切换 Window 的，要先按 <Esc> 退出编辑状态。
+
+### NerdTree
+
+在这份配置中，NerdTree 会在打开文件时自动打开，在关闭最后一个文件时自动关闭，也可以用 `;a` 手动打开
+
+在 NerdTree 中，使用 `hjkl` 操作，`jk` 表示上下移动，`hl` 表示展开或者折叠文件夹。
+表示展开或者折叠文件夹。
+
 ### TagBar
 
 这个插件依赖于 ctags，在配置脚本中会自动安装，否则需要使用下面的命令来安装：
@@ -108,16 +116,35 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
 把我 TagBar 配置为启动时自动打开，手动打开的快捷键是 `<leader> + o`
 
-### Terminal
-
-可以在 Vim 中直接打开终端，快捷键是 `t<Enter>`，会在底部打开一个 10 行高的终端。这个终端是一个单独的 Window，所以上述切换 Window 的规则同样适用。
-
-此外，所有 iTerm 的配置和 .zshrc 的配置都会生效，功能非常强大，比如我们可以在 Vim 里面编辑脚本，在终端里面运行。
-
-注意，这个终端也是个 Vim 窗口，所以输入状态下是无法切换 Window 的，要先按 <Esc> 退出编辑状态。
-
 ### Commentary
 
 选中一个部分后，按下 `<Leader> v` 即可注释，如果这部分已经注释，则上述做法的效果将是取消注释。
 
 按下 `v` 会自动进入可视模式，再次按 `v` 会智能增加选中范围，但肯定不如手动选择来得精确
+
+## 特定语言的支持
+
+由于本项目使用 [dein](https://github.com/Shougo/dein.vim) 来管理插件，所以插件可以按需加载。比如下面这行配置：
+
+```yaml
+- { repo: vim-python/python-syntax, on_ft: python }
+```
+
+就表示 `python-syntax` 这个插件只在打开 Python 文件时才加载。
+
+目前本项目提供了对 HTML/CSS/JS/Python/Go 语言的语法支持，我会逐步整理出来。
+
+### Python
+
+Python 的效果如图所示：
+
+![](http://images.bestswifter.com/2018-01-13-5.39.32.png)
+
+配置中主要用到了 [Python-mode] 这个插件，可以在 vim 中输入 `:help pymode` 查看更多选项和用法。对 Python 的拓展主要有以下几点：
+
+1. 提供了基于语法的补全，这是 [deoplete-jedi](https://github.com/zchee/deoplete-jedi) 插件提供的能力
+2. 提供了运行 Python 的能力，快捷键是 `rr`。r 的意思是 run，为了避免和替换(replace) 键冲突，所以需要快速按两次。
+3. 提供了语法校验的能力，每次保存文件（Ctrl + S) 时会自动触发，当光标停留在有问题的那一行时，底部会有提示。
+4. 文本对象(Text Object)的拓展，C 表示类（Class），M 表示方法（包括 Method 和 Function），所以想要删除整个函数时，可以用快捷键 `daM` 来处理
+
+
