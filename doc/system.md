@@ -35,3 +35,11 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 ```shell
 defaults write com.apple.dock autohide -bool true
 ```
+
+## 显示电池电量百分比
+
+使用这行命令可以显示电量百分比：
+
+```shell
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+```
