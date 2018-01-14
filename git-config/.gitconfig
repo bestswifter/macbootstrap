@@ -28,6 +28,7 @@
     whitespace = cr-at-eol
     quotepath = false
     editor = /usr/local/bin/nvim
+    attributesfile = ~/.gitattributes
 [i18n]
     commitencoding = utf-8
     logoutputencoding = utf-8
@@ -37,5 +38,7 @@
     default = current
 [grep]
     lineNumber = true
+[diff "exif"]
+     textconv = exiftool
 
 

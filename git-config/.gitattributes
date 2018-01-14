@@ -1,0 +1,2 @@
+*.png diff=exif
+*.jpg diff=exif

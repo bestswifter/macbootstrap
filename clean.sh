@@ -23,6 +23,7 @@ brew uninstall gpg
 brew uninstall icdiff
 brew uninstall scmpuff
 brew uninstall fzf
+brew uninstall exiftool
 
 rm -f ~/.zshrc
 rm -f ~/.vimrc
