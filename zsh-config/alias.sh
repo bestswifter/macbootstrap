@@ -1,4 +1,5 @@
 # git
+alias gbd='git branch -d'
 alias gpo='git push origin'
 alias gcn='git config user.name'
 alias gcng='git config --global user.name'
