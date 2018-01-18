@@ -12,7 +12,9 @@
 
 # 安装方式
 
-只需要执行以下代码即可：
+请先确保安装了 Mac 命令行工具，可以使用 `xcode-select –install` 命令。如果无法安装，需要去[苹果官网](https://developer.apple.com/download/more/)手动下载安装
+
+然后只需要执行以下代码即可：
 
 ```shell
 curl https://raw.githubusercontent.com/bestswifter/macbootstrap/master/bootstrap.sh | sh
