@@ -36,5 +36,8 @@ chflags nohidden ~/Library
 # hide the useless icons
 sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 
+# Hide Siri Icon in menu bar
+cp config/com.apple.Siri.plist ~/Library/Preferences/
+
 # Make configurations works
 for app in Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
