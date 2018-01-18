@@ -12,13 +12,7 @@
 
 # 安装方式
 
-新的电脑没有 git，需要运行下面这行命令：
-
-```shell
-xcode-select --install
-```
-
-等到安装完后，只需要执行以下代码即可：
+只需要执行以下代码即可：
 
 ```shell
 curl https://raw.githubusercontent.com/bestswifter/macbootstrap/master/bootstrap.sh | sh
