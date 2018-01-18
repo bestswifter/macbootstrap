@@ -85,6 +85,7 @@ ln -s ~/.vim ~/.config/nvim
 
 unset ALL_PROXY
 ./install-steps/dependencies.after.sh
+./install-steps/sogou_sync.sh
 
 # ssh configuration
 backup_file ~/.ssh/config

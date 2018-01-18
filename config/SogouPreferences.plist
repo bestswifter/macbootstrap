@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AutoPBCounts</key>
+	<string>0</string>
+	<key>ToDaySecondsForAutoPingBack</key>
+	<string>2018118</string>
+	<key>kSGAutoUpdatePicface</key>
+	<string>2018118</string>
+	<key>kSGAutoUpdatePicfaceCounts</key>
+	<string>0</string>
+	<key>keyAddPlanSwitch</key>
+	<string>0</string>
+	<key>keyAddressInBrower</key>
+	<string>1</string>
+	<key>keyAutoEngMode</key>
+	<string>1</string>
+	<key>keyAutoSpaces</key>
+	<string>1</string>
+	<key>keyCandAnimation</key>
+	<string>0</string>
+	<key>keyCnUseCnSymbol</key>
+	<string>1</string>
+	<key>keyDefaultCnEn</key>
+	<string>1</string>
+	<key>keyDefaultJianFan</key>
+	<string>0</string>
+	<key>keyDefaultScrollCandi</key>
+	<string>1</string>
+	<key>keyDefaultShape</key>
+	<string>0</string>
+	<key>keyEnableShowTouchBar</key>
+	<string>1</string>
+	<key>keyEnableTableFilter</key>
+	<string>0</string>
+	<key>keyEnglisInputMethod</key>
+	<string>0</string>
+	<key>keyHideInline</key>
+	<string>0</string>
+	<key>keyInsertWordSpaceEIM</key>
+	<string>1</string>
+	<key>keyNewPhraseAlert</key>
+	<string>1</string>
+	<key>keyPunctuationMatch</key>
+	<string>1</string>
+	<key>keySkinPath</key>
+	<string>/Library/Input Methods/SogouInput.app/Contents/Resources/Skins/记事本</string>
+	<key>keySpeechStatusItem</key>
+	<string>0</string>
+	<key>keyStatusItem</key>
+	<string>0</string>
+	<key>keySuperJP</key>
+	<string>1</string>
+	<key>pinYinMode</key>
+	<string>0</string>
+	<key>singleLineMode</key>
+	<string>0</string>
+	<key>spUseQuanPin</key>
+	<string>0</string>
+	<key>upSoftMode</key>
+	<string>1</string>
+</dict>
+</plist>
