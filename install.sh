@@ -3,12 +3,6 @@ source basic.sh
 
 ./install-steps/macos.sh
 
-if [[ ! -e /usr/local/bin/brew ]]; then
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-else
-    echo "You have installed brew"
-fi
-
 brew install python3
 pip3 install shadowsocks
 nohup sslocal -q -c ~/.macbootstrap/tools/netconf &> /private/tmp/nohup.out&
