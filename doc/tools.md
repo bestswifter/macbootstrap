@@ -30,6 +30,8 @@
 1. 配置了快捷键 Command + ←, 可以向左回退一个单词
 2. 配置了快捷键 Command + →，可以向右前进一个单词
 3. 配置了快捷键 Command + delete，不管光标在哪里都可以删除当前行，相当于 `Ctrl + A` 再加一个 `Ctrl + K`
+4. Command + d 垂直切分屏幕，Command + Shift + d 水平切分屏幕，Command + [ 或 ] 切换分屏
+5. F1 可以快速召唤一个半透明的 iTerm 窗口，方便做一些简单的操作。
 
 ## fzf
 
