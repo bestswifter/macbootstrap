@@ -83,6 +83,8 @@ backup_file ~/.config/nvim/
 git clone https://github.com/bestswifter/vim-config.git ~/.config/nvim
 ln -s ~/.vim ~/.config/nvim
 
+./install-steps/dependencies.before.sh
+
 unset ALL_PROXY
 ./install-steps/dependencies.after.sh
 ./install-steps/sogou_sync.sh
