@@ -6,6 +6,8 @@
 * sourcetree(cask)
 * chrome(cask)
 * coderunner(cask)
+* Charles(curl from qiniu)
+* Dash(curl from qiniu)
 * wget
 * gnu-sed
 * cmake
