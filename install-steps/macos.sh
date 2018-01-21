@@ -42,5 +42,9 @@ cp config/com.apple.Siri.plist ~/Library/Preferences/
 # Hide input source Icon in menu bar
 cp config/com.apple.systemuiserver.plist ~/Library/Preferences/
 
+# Disable app verifying
+sudo spctl --master-disable
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
 # Make configurations works
 for app in Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done

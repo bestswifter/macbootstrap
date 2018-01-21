@@ -89,3 +89,12 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 ```shell
 chflags nohidden ~/Library
 ```
+
+## 禁用 App 验证
+
+默认情况下系统禁止安装第三方的App，打开前也会有弹窗让用户确认，通过以下两行代码可以 绕过：
+
+```shell
+sudo spctl --master-disable
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+```
