@@ -8,6 +8,9 @@ sogou_version="$sogou_base/"`ls "$sogou_base"`
 sogou_app="$sogou_version/"`ls $sogou_version | grep .app | tail -n 1`
 open "$sogou_app"
 
+# Extension for preview
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package qlvideo provisionql quicklookapk
+
 # Install applications
 # ---------------
 

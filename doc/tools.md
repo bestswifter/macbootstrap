@@ -42,3 +42,20 @@ fzf 是一个模糊搜搜工具，通过 homebrew 安装后还会自动执行另
 3. 如果想杀死某个进程，输入 kill -9, 按下 tab 就可以自动补全了
 4. 如果想要 ssh 连接某个远程主机，输入 `ssh **` 再按 tab 键即可自动补全
 5. fzf 可以结合 vim 使用，但暂时还没有研究，后续更新上来
+
+## Preview 插件
+
+这里有一系列插件，完整介绍可以参考：[quick-look-plugins](https://github.com/sindresorhus/quick-look-plugins#toc12)
+
+主要包括：
+
+1. qlcolorcode: 代码文件预览时高亮
+2. qlstephen: 以纯文本的形式预览无拓展名或者未知拓展名的文件
+3. qlmarkdown: 预览渲染后的 markdown 文件
+4. quicklook-json: 预览格式化后的 json 文件
+5. qlimagesize: 预览图片时显示图片大小
+6. webpquicklook: 预览 webp 格式的图片
+7. suspicious-package: 预览 Mac OX 安装包类型的文件
+8. qlvideo: 预览视频文件
+9. provisionql: 预览 iOS 开发时用到的 provisionfile 文件
+10. quicklookapk: 预览安卓的 apk 文件
