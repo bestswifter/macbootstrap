@@ -9,3 +9,7 @@ else
         echo "command script import /usr/local/opt/chisel/libexec/fblldb.py" >> ~/.lldbinit
     fi
 fi
+
+# CodeRunner
+# ---------------
+brew cask install coderunner

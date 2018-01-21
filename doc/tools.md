@@ -5,6 +5,7 @@
 * iterm(cask)
 * sourcetree(cask)
 * chrome(cask)
+* coderunner(cask)
 * wget
 * gnu-sed
 * cmake
