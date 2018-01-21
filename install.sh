@@ -1,7 +1,7 @@
 #!/bin/sh
 source basic.sh
 
-./install-steps/macos.sh
+sudo ./install-steps/macos.sh
 
 brew install python3
 pip3 install shadowsocks

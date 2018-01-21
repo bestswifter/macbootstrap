@@ -1,3 +1,6 @@
+# Disable guest account
+sudo bash install-steps/guest_account.sh disable
+
 # Use F1-F12 as standard function keys
 defaults write -globalDomain com.apple.keyboard.fnState -int 1
 
