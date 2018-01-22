@@ -20,7 +20,7 @@ ln -s ~/.vim ~/.config/nvim
    `:w`，`Ctrl-q` 可以忽略改动强行退出，`Ctrl-x` 可以保存改动并退出。
 4. 在输入状态下，`Ctrl-q` 可以忽略改动强行退出，`Ctrl-x` 可以保存改动并退出。
 
-## Window 和 Buffer
+### Window 和 Buffer
 
 首先要明确 Window 和 Buffer 的概念，和编辑器无关的外部窗口，比如 NerdTree
 这样的文件列表属于 Window。而打开的多个文件，每个都是一个 Buffer。
@@ -35,6 +35,13 @@ ln -s ~/.vim ~/.config/nvim
 
 1. `g0` 表示前往第一个 Buffer，`g$` 表示前往最后一个 Buffer。
 2. <F9> 表示前一个 Buffer，<F10> 表示后一个 Buffer
+
+### 大小写切换
+
+1. guu 当前行全部小写，gUU 当前行全部大写
+2. ~ 当前光标下的字符切换大小写, 3~ 当前光标下后面三个字符切换大小写
+3. guiw 当前单词全部小写，gUiw 当前单词全部大写
+4. g~iw 当前单词每个字符大小写交换
 
 ## 常见插件的用法
 
