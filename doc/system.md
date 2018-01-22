@@ -82,6 +82,15 @@ defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 ```
 
+## 开启三指拖动
+
+开启这个功能后，我们可以用三个手指拖动非全屏窗口，改变他们的位置。主要靠这两行命令实现：
+
+```shell
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+```
+
 ## 显示~/Library/ 目录
 
 这个目录默认是隐藏的，我们可以在不显示所有隐藏文件的前提下单独显示它：
