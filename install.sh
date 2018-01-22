@@ -12,7 +12,7 @@ if [[ ! -e /Applications/iTerm.app ]]; then
     brew cask install iterm2
     defaults delete com.googlecode.iterm2
     cp config/com.googlecode.iterm2.plist $HOME/Library/Preferences
-    defaults read -app iTerm
+    defaults read -app iTerm >/dev/null
 else
     echo "You have installed iTerm2"
 fi
