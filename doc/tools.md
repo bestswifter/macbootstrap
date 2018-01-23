@@ -2,12 +2,13 @@
 
 目前包含以下工具：
 
-* iterm(cask)
-* sourcetree(cask)
+* iterm(cask)：用于替换系统的终端，附带了我自己的配置
+* sourcetree(cask)：git 可视化管理工具
 * chrome(cask)
-* coderunner(cask)
-* Charles(curl from qiniu)
-* Dash(curl from qiniu)
+* coderunner(cask)：轻量级、快速执行任何脚本的 IDE
+* the-unarchiver(cask)：用于解压缩文件
+* Charles(curl from qiniu)：用于网络抓包调试
+* Dash(curl from qiniu)：用于快速查找文档
 * wget
 * gnu-sed
 * cmake
@@ -20,7 +21,7 @@
 * ssh-copy-id (upload public ssh key to server)
 * imagemagick、catimg (print image in terminal)
 * redis  (通过 `redis-server /usr/local/etc/redis.conf` 启动或者 `brew services start redis` 启动并且设置为开机立即启动)
-* gpg
+* gpg：git 提交加密工具
 * fzf
 
 ## iterm2

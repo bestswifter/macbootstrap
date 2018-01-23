@@ -7,6 +7,7 @@ brew cask uninstall iterm2
 brew cask uninstall sourcetree
 brew cask uninstall google-chrome
 brew cask uninstall coderunner
+brew cask uninstall the-unarchiver
 brew uninstall wget
 brew uninstall gnu-sed
 brew uninstall autojump

@@ -11,6 +11,9 @@ open "$sogou_app"
 # Extension for preview
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize webpquicklook suspicious-package qlvideo provisionql quicklookapk
 
+# Zip tool
+brew cask install the-unarchiver
+
 # Install applications
 # ---------------
 
