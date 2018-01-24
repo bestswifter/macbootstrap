@@ -190,3 +190,7 @@ qnconf sk ak pictures http://images.bestswifter.com
 ```
 
 以后每次截图完，只要输入命令 `qn`，图片就会自动上传并且把 Markdown 格式的地址拷贝到剪贴板中。
+
+### xcodepath
+
+如果你当前运行了 Xcode 进程，输入此命令可以快速查看 Xcode 可执行文件的路径

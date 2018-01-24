@@ -196,6 +196,11 @@ function resolution() {
     exiv2 $1 | grep 'Image size' | column 4 5 6
 }
 
+# Show path of xcode(Xcode must be running)
+function xcodepath() {
+    ps `pgrep -x Xcode` R 2 C -1
+}
+
 # Android
 function aupdate() {
      cd /tmp/1
