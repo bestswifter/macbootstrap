@@ -39,6 +39,6 @@
 [grep]
     lineNumber = true
 [diff "exif"]
-     textconv = exiftool
-
-
+    textconv = exiftool
+[diff "plist"]
+    textconv = plutil -convert xml1 -o -

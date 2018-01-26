@@ -1,2 +1,3 @@
 *.png diff=exif
 *.jpg diff=exif
+*.plist diff=plist
