@@ -109,6 +109,8 @@ urldecode https%3A%2F%2Fbaidu.com
 
 如果当期目录下存在 xcodeproj 文件或者 xcworkspace 文件，可以用 ow 命令快速打开，如果要打开的工程在别的目录，则使用  `ow path_to_project` 的命令打开
 
+如果 wcworkspace 和 Xcodeproj 文件同时存在，优先打开前者。
+
 ### x 快速解压
 
 使用命令 `x` 可以快速解压任何压缩文件
