@@ -10,6 +10,10 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # Auto hide and show Dock
 defaults write com.apple.dock autohide -bool true
 
+# Hide some app icons in Dock and make dock lays left
+clang -framework Foundation tools/DockIconHider_source.m -o tools/DockIconHider
+./tools/DockIconHider
+
 # Show battery percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 

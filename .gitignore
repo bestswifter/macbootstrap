@@ -1,4 +1,6 @@
 .DS_Store
 .histfile_color_result
+config/shadowsocks.conf
 git-config/.gitconfig
 autoEngUserSet.plist
+tools/DockIconHider
