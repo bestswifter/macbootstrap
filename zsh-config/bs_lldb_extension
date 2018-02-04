@@ -1,0 +1,10 @@
+# command alias
+command alias -H "Documentation for usage" -h "Documentation for help" -- bs_self expression -O -- self
+command alias -- bs_autolayout expression -l objc -O -- [[[[[UIApplication sharedApplication] keyWindow] rootViewController] view] recursiveDescription]
+command alias -- Yay_Autolayout expression -l objc -O -- [[[[[UIApplication sharedApplication] keyWindow] rootViewController] view] recursiveDescription]
+command alias -H Print value in ObjC context in hexadecimal -h Print in hex -- cpx expression -f x -l objc --
+
+# settings
+settings set target.x86-disassembly-flavor intel
+settings set target.skip-prologue false
+

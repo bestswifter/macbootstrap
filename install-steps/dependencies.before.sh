@@ -8,6 +8,11 @@ else
     else
         echo "command script import /usr/local/opt/chisel/libexec/fblldb.py" >> ~/.lldbinit
     fi
+
+    # import my own lldb configuration
+    echo "" >> ~/.lldbinit
+    echo "# load lldb commmand alias and configuration provided by bestswifter" >> ~/.lldbinit
+    echo "command source ~/.macbootstrap/zsh-config/bs_lldb_extension" >> ~/.lldbinit
 fi
 
 # CodeRunner
