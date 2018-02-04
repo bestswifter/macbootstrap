@@ -64,5 +64,10 @@ cp config/com.apple.systemuiserver.plist ~/Library/Preferences/
 sudo spctl --master-disable
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
+# Disable auto correct
+defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+
 # Make configurations works
 for app in Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done

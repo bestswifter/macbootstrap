@@ -107,3 +107,19 @@ chflags nohidden ~/Library
 sudo spctl --master-disable
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 ```
+
+## 禁用文字自动更正
+
+很多时候系统的自动改正功能反而会帮倒忙，比如：
+
+1. 明明每行第一个字母我就是要小写，结果自动改成大写
+2. 有时候明明要输入普通的引号，`'` 或者`"`，结果被自动改成斜体的 `“`，导致各种解析错误
+3. 有时候输入两个连字符(dash) `--` 被自动改成为长的(emdash) `—`
+
+这些自动改正可以用以下命令来禁止：
+
+```shell
+defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+```
