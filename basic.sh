@@ -42,3 +42,12 @@ function backup_file() {
         mv $1 $1"_backup"
     fi
 }
+
+# copy to path and create this path if not exist
+function bs_cp() {
+    if [ $# != 2 ]; then
+        echo "Usage: bs_cp file destination"
+    fi
+
+    test -d "$2" || mkdir -p "$2" && cp "$1" "$2"
+}
