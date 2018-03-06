@@ -26,6 +26,8 @@ alias gca='git commit --amend'
 alias gcam='git commit --all -m'
 alias gbr='git branch --remote'
 alias gba='git branch -a'
+alias gt='git tag'
+alias gtd='git tag -d'
 
 # zsh
 alias cpu='sysctl -n machdep.cpu.brand_string'

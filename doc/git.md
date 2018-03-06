@@ -134,6 +134,11 @@ git checkout --track origin/feature
 
 提交的 SHA-1 值、日期、提交者等信息就完全显示出来了
 
+## git tag
+
+1. 输入命令 `gt` 可以打标签，等价于命令 `git tag`
+2. 输入命令 `gtd` 可以删除**本地标签**，等价于命令 `git tag -d`
+
 ## 常见工作流
 
 注意，这里说的工作流不是 git-workflow 的意思，而是一些常见命令的组合。
