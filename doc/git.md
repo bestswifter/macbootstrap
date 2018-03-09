@@ -111,6 +111,7 @@ git checkout --track origin/feature
 ## git remote
 
 1. 输入 `grsh` 可以查看所有的远程仓库，输入 `grsh origin` 可以查看 origin 仓库中的分支、track 信息，等价于命令 `git remote show`
+2. 输入 `grv` 可以查看远程仓库的地址，等价于命令 `git remote -v`
 
 ## git stash
 
