@@ -69,6 +69,19 @@ VSCode 集成了一个终端，可以直接读取 .zshrc 中的配置（也就�
 
 ## 插件的用法
 
+### 综合性插件
+
+1. [Dash](https://marketplace.visualstudio.com/items?itemName=deerawan.vscode-dash)
+
+    按下 `ctrl + H` 会自动在 dash 中搜索当前光标下的单词
+    按下 `option + H` 会打开 dash 搜索自定义的单词
+
+2. [Beautify](https://github.com/HookyQR/VSCodeBeautify)
+
+    按下 `ctrl + B` 会美化当前文件，尤其适用于 JSON/HTML/CSS/JS 这类文件
+
+3. [Project-Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)
+
 ### 前端相关
 
 1. AutoRenameTag：当修改一个 Tag 时，自动修改与它对应的另一个 Tag。
