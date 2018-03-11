@@ -83,6 +83,11 @@ backup_file ~/.config/nvim/
 git clone https://github.com/bestswifter/vim-config.git ~/.config/nvim
 ln -s ~/.vim ~/.config/nvim
 
+# ESLint configuration
+backup_file ~/.eslintrc.js
+backup_file ~/.eslintrc
+ln -s ~/.macbootstrap/.eslintrc.js ~/.eslintrc.js
+
 ./install-steps/dependencies.before.sh
 
 unset ALL_PROXY
