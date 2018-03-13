@@ -98,3 +98,6 @@ sudo gem update --system
 sudo gem install -n /usr/local/bin cocoapods
 sudo gem install -n /usr/local/bin cocoapods-plugins
 sudo gem install colored
+
+# npm install
+npm install -g gnomon

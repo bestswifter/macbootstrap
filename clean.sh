@@ -27,6 +27,9 @@ brew uninstall scmpuff
 brew uninstall fzf
 brew uninstall exiftool
 
+# npm clean
+npm uninstall -g gnomon
+
 rm -f ~/.zshrc
 rm -f ~/.vimrc
 rm -f ~/.gitconfig
