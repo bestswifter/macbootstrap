@@ -27,9 +27,13 @@ VSCode 集成了一个终端，可以直接读取 .zshrc 中的配置（也就�
 
 1. `cmd + E`：隐藏/显示侧边栏（资源管理器）
 2. `cmd + shift + E`：在侧边栏和编辑器之间切换焦点
-3. `cmd + D`：显示/隐藏 输出
-4. `Shift + Option + F`：格式化文件（各种类型的文件需要对应插件的支持）
-5. `cmd + B`：美化（Beautify）
+3. `cmd + J`：显示隐藏底部 Panel
+4. `cmd + D`：显示/隐藏 输出
+5. `Shift + Option + F`：格式化文件（各种类型的文件需要对应插件的支持）
+6. `cmd + B`：美化（Beautify）
+7. `cmd + shift + X`：打开 Extension 列表
+8. `cmd + shift + D`：打开 Debug 列表
+9. `cmd + shift + F`：打开 Search 列表
 
 ## Vim
 
