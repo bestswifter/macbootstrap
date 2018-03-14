@@ -31,6 +31,10 @@ if brew ls --versions scmpuff > /dev/null; then
 fi
 
 fpath=(/usr/local/share/zsh-completions $fpath)
+
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH:$M2_HOME/bin
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
