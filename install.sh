@@ -4,9 +4,15 @@ source basic.sh
 sudo ./install-steps/macos.sh
 
 brew install python3
-pip3 install shadowsocks
-nohup sslocal -q -c ~/.macbootstrap/tools/netconf &> /private/tmp/nohup.out&
-export ALL_PROXY=socks5://127.0.0.1:14179
+
+# install and use shadowsocks
+if not_tt_network; then
+    pip3 install shadowsocks
+    nohup sslocal -q -c ~/.macbootstrap/tools/netconf &> /private/tmp/nohup.out&
+    export ALL_PROXY=socks5://127.0.0.1:14179
+else
+    echo "You are in toutiao network, no need to install shadowsocks"
+fi
 
 if [[ ! -e /Applications/iTerm.app ]]; then
     brew cask install iterm2

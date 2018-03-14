@@ -51,3 +51,13 @@ function bs_cp() {
 
     test -d "$2" || mkdir -p "$2" && cp "$1" "$2"
 }
+
+# fanqiang is not necessary in tt network
+function not_tt_network() {
+    ssid=$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}')
+    if [[ $ssid = *"Bytedance"* ]]; then
+        return 1
+    else
+        return 0
+    fi
+}
