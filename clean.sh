@@ -29,6 +29,8 @@ brew uninstall exiftool
 
 # npm clean
 npm uninstall -g gnomon
+npm uninstall -g vue-cli
+npm uninstall -g eslint-plugin-html
 
 rm -f ~/.zshrc
 rm -f ~/.vimrc

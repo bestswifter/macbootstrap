@@ -101,3 +101,5 @@ sudo gem install colored
 
 # npm install
 npm install -g gnomon
+npm install -g vue-cli
+npm install -g eslint-plugin-html
