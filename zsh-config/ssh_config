@@ -26,9 +26,8 @@ Host qcloud
     Port 22
     IdentityFile ~/.ssh/id_rsa
 
-Host macpro
-    HostName ci-macpro.redbet.red
-    User fcclient
+Host dev
+    HostName 10.8.124.82
+    User zhangxingyu.bs
     Port 22
     IdentityFile ~/.ssh/id_rsa
-
