@@ -12,7 +12,7 @@ brew uninstall wget
 brew uninstall gnu-sed
 brew uninstall autojump
 brew uninstall cmake
-brew uninstall node
+brew uninstall nvm
 brew uninstall ctags
 brew uninstall gawk
 brew uninstall coreutils
@@ -31,6 +31,8 @@ brew uninstall exiftool
 npm uninstall -g gnomon
 npm uninstall -g vue-cli
 npm uninstall -g eslint-plugin-html
+npm uninstall -g sequelize-auto
+npm uninstall -g bash-language-server
 
 rm -f ~/.zshrc
 rm -f ~/.vimrc

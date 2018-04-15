@@ -100,6 +100,5 @@ sudo gem install -n /usr/local/bin cocoapods-plugins
 sudo gem install colored
 
 # npm install
-npm install -g gnomon
-npm install -g vue-cli
-npm install -g eslint-plugin-html
+nvm install 9.11.1
+./node_global.sh

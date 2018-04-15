@@ -32,9 +32,17 @@ fi
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+# GO
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH:$M2_HOME/bin
+
+# Homebrew
+export PATH="/usr/local/sbin:$PATH"
+
+# for nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
