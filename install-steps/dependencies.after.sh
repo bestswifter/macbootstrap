@@ -102,3 +102,6 @@ sudo gem install colored
 # npm install
 nvm install 9.11.1
 ./node_global.sh
+
+# hook login
+./hook_login.sh
