@@ -1,7 +1,6 @@
 source $HOME/.macbootstrap/basic.sh
 
-SCRIPT=$(readlink -f "$0")
-CUR_DIR=$(dirname "$SCRIPT")
+CUR_DIR=$HOME/.macbootstrap/vscode
 VSCODE_PATH="/Users/""$(whoami)""/Library/Application Support/Code/User"
 
 function link() {
