@@ -56,7 +56,7 @@ else
 
     # sync configuration
     rm -rf "$HOME/Library/Application Support/Alfred 3/Alfred.alfredpreferences"
-    curl http://p2w4johvr.bkt.clouddn.com/Alfred.alfredpreferences.zip -o "$HOME/Downloads/Alfred.alfredpreferences.zip"
+    curl http://p2w4johvr.bkt.clouddn.com/Alfred.alfredpreferences2.zip -o "$HOME/Downloads/Alfred.alfredpreferences.zip"
     unzip -q "$HOME/Downloads/Alfred.alfredpreferences.zip" -d "$HOME/Library/Application Support/Alfred 3"
     rm "$HOME/Downloads/Alfred.alfredpreferences.zip"
 fi
