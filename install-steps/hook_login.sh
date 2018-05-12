@@ -1,4 +1,4 @@
-if [[ -e $HOME/Library/LaunchAgents ]]; then
+if [[ ! -f $HOME/Library/LaunchAgents ]]; then
     mkdir $HOME/Library/LaunchAgents
 fi
 
