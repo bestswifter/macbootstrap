@@ -38,6 +38,12 @@ else
     echo "You have installed chrome"
 fi
 
+if [[ ! -e /Applications/Visual Studio Code.app ]]; then
+    brew cask install visual-studio-code
+else
+    echo "You have installed vscode"
+fi
+
 if brew ls --versions gnu-sed > /dev/null; then
     echo "You have installed gsed"
 else
