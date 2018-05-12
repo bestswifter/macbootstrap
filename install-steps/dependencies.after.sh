@@ -100,6 +100,7 @@ if [[ ! -d $HOME/.nvm ]]; then
 fi
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 nvm install 9.11.0
 ./install-steps/node_global.sh
 

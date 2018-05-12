@@ -1,3 +1,5 @@
+npm config -g set registry https://registry.npm.taobao.org
+
 npm install -g gnomon
 npm install -g vue-cli
 npm install -g eslint-plugin-html
