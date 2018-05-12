@@ -1,4 +1,4 @@
-source $BS_ZSH_BASE/basic.sh
+source $HOME/.macbootstrap/basic.sh
 
 SCRIPT=$(readlink -f "$0")
 CUR_DIR=$(dirname "$SCRIPT")
@@ -12,6 +12,9 @@ function link() {
 }
 
 # Sync config
+if [[ ! -d "$VSCODE_PATH" ]]; then
+    mkdir -p "$VSCODE_PATH"
+fi
 link keybindings.json
 link locale.json
 link settings.json
