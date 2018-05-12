@@ -100,7 +100,7 @@ if [[ ! -d $HOME/.nvm ]]; then
 fi
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
-nvm install 10.0.0
+nvm install 9.11.0
 ./install-steps/node_global.sh
 
 # hook login
