@@ -26,7 +26,7 @@ else
     echo "You have installed iTerm2"
 fi
 
-if [[ ! -e /Applications/SourceTree.app/ ]]; then
+if [[ ! -e /Applications/SourceTree.app ]]; then
     brew cask install sourcetree
 else
     echo "You have installed SourceTree"
@@ -38,7 +38,7 @@ else
     echo "You have installed chrome"
 fi
 
-if [[ ! -e /Applications/Visual Studio Code.app ]]; then
+if [[ ! -e /Applications/Visual\ Studio\ Code.app ]]; then
     brew cask install visual-studio-code
 else
     echo "You have installed vscode"
