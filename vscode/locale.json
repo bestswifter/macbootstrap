@@ -1,0 +1,6 @@
+{
+    // 定义 VSCode 的显示语言。
+    // 请参阅 https://go.microsoft.com/fwlink/?LinkId=761051，了解支持的语言列表。
+    // 更改此值需要重启 VSCode。
+    "locale": "en"
+}

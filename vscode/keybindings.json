@@ -1,0 +1,235 @@
+// 将键绑定放入此文件中以覆盖默认值
+[
+    {
+        "key": "cmd+l",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+l",
+        "command": "workbench.action.terminal.focus",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "cmd+0",
+        "command": "workbench.action.openLastEditorInGroup",
+        "when": "editorFocus",
+    },
+    {
+        "key": "cmd+1",
+        "command": "workbench.action.openEditorAtIndex1",
+        "when": "editorFocus",
+    },
+    {
+        "key": "cmd+2",
+        "command": "workbench.action.openEditorAtIndex2",
+        "when": "editorFocus",
+    },
+    {
+        "key": "cmd+3",
+        "command": "workbench.action.openEditorAtIndex3",
+        "when": "editorFocus",
+    },
+    {
+        "key": "cmd+4",
+        "command": "workbench.action.openEditorAtIndex4",
+        "when": "editorFocus",
+    },
+    {
+        "key": "cmd+5",
+        "command": "workbench.action.openEditorAtIndex5",
+        "when": "editorFocus",
+    },
+    {
+        "key": "cmd+6",
+        "command": "workbench.action.openEditorAtIndex6",
+        "when": "editorFocus",
+    },
+    {
+        "key": "cmd+7",
+        "command": "workbench.action.openEditorAtIndex7",
+        "when": "editorFocus",
+    },
+    {
+        "key": "cmd+8",
+        "command": "workbench.action.openEditorAtIndex8",
+        "when": "editorFocus",
+    },
+    {
+        "key": "cmd+9",
+        "command": "workbench.action.openEditorAtIndex9",
+        "when": "editorFocus",
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "type",
+        "args": {
+            "text": "\t"
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+1",
+        "command": "workbench.action.terminal.focusAtIndex1",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+2",
+        "command": "workbench.action.terminal.focusAtIndex2",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+3",
+        "command": "workbench.action.terminal.focusAtIndex3",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+4",
+        "command": "workbench.action.terminal.focusAtIndex4",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+5",
+        "command": "workbench.action.terminal.focusAtIndex5",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+6",
+        "command": "workbench.action.terminal.focusAtIndex6",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+7",
+        "command": "workbench.action.terminal.focusAtIndex7",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+8",
+        "command": "workbench.action.terminal.focusAtIndex8",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+9",
+        "command": "workbench.action.terminal.focusAtIndex9",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+w",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+t",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+`",
+        "command": "-workbench.action.terminal.new"
+    },
+    {
+        "key": "cmd+d",
+        "command": "workbench.action.output.toggleOutput"
+    },
+    {
+        "key": "shift+cmd+u",
+        "command": "-workbench.action.output.toggleOutput"
+    },
+    {
+        "key": "cmd+e",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "cmd+b",
+        "command": "HookyQR.beautifyFile",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+r",
+        "command": "-code-runner.run",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "-code-runner.run"
+    },
+    {
+        "key": "shift+cmd+r",
+        "command": "code-runner.runCustomCommand"
+    },
+    {
+        "key": "ctrl+alt+k",
+        "command": "-code-runner.runCustomCommand"
+    },
+    {
+        "key": "cmd+enter",
+        "command": "workbench.action.toggleFullScreen"
+    },
+    {
+        "key": "ctrl+cmd+f",
+        "command": "-workbench.action.toggleFullScreen"
+    },
+    {
+        "key": "cmd+r cmd+r",
+        "command": "code-runner.runByLanguage"
+    },
+    {
+        "key": "ctrl+alt+j",
+        "command": "-code-runner.runByLanguage"
+    },
+    {
+        "key": "cmd+r",
+        "command": "code-runner.run"
+    },
+    {
+        "key": "cmd+h",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+k cmd+i",
+        "command": "-editor.action.showHover",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "rest-client.history",
+        "when": "editorLangId != http"
+    },
+    {
+        "key": "alt+cmd+h",
+        "command": "-rest-client.history"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "rest-client.request",
+        "when": "editorTextFocus && editorLangId == 'plaintext'"
+    },
+    {
+        "key": "alt+cmd+r",
+        "command": "-rest-client.request",
+        "when": "editorTextFocus && editorLangId == 'plaintext'"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "rest-client.request",
+        "when": "editorTextFocus && editorLangId == 'http'"
+    },
+    {
+        "key": "alt+cmd+r",
+        "command": "-rest-client.request",
+        "when": "editorTextFocus && editorLangId == 'http'"
+    },
+    {
+        "key": "alt+p",
+        "command": "projectManager.listProjects"
+    },
+    {
+        "key": "alt+cmd+p",
+        "command": "-projectManager.listProjects"
+    }
+]

@@ -1,0 +1,237 @@
+{
+    // Gitlens config
+    "gitlens.keymap": "none",
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": true,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
+    // Sync config
+    "sync.gist": "c11618d4ff8f1831f279d3a0249bf9e2",
+    "sync.lastUpload": "2018-05-12T07:37:19.966Z",
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.lastDownload": "",
+    "sync.forceDownload": false,
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": false,
+    "sync.askGistName": false,
+    "sync.removeExtensions": true,
+    "sync.syncExtensions": true,
+    // Vim Config
+    "vim.easymotion": true,
+    "vim.sneak": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.visualstar": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+        {
+            "before": [
+                "k",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        },
+        {
+            "before": [
+                "h",
+                "h"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "g",
+                "c"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.commentLine",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "C"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.commentBlock",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "s"
+            ],
+            "after": [
+                "leader",
+                "leader",
+                "s"
+            ]
+        },
+        {
+            "before": [
+                ":"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.showCommands",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<C-x>"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                },
+                {
+                    "command": "workbench.action.closeActiveEditor",
+                    "args": []
+                }
+            ]
+        }
+    ],
+    "vim.handleKeys": {
+        "<C-n>": false,
+        "<C-f>": false,
+        "<C-d>": false
+    },
+    "vim.leader": ";",
+    // Vim - EasyMotion
+    "vim.easymotionMarkerBackgroundColor": "#000000",
+    "vim.easymotionMarkerForegroundColorOneChar": "#ff0000",
+    // Vim - Surround
+    "vim.surround": true,
+    // VSCode Config
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.iconTheme": "vscode-icons",
+    // Editor setting
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": true,
+    "editor.renderWhitespace": "all",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.quickSuggestionsDelay": 10,
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.wordBasedSuggestions": true,
+    "editor.parameterHints": true,
+    "editor.wordWrap": "on",
+    "editor.renderLineHighlight": "line",
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "workbench.editor.enablePreview": false,
+    // Window setting
+    "window.title": "${activeEditorLong}",
+    "window.zoomLevel": 0,
+    // File setting
+    "files.autoSave": "onWindowChange",
+    "files.associations": {
+        "*.vue": "vue"
+    },
+    // ESLint
+    "eslint.autoFixOnSave": true,
+    "eslint.options": {
+        "plugins": [
+            "html"
+        ]
+    },
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "html",
+        {
+            "language": "vue",
+            "autoFix": true
+        }
+    ],
+    //
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "vetur.format.defaultFormatter.css": "prettier",
+    "vetur.format.defaultFormatter.postcss": "prettier",
+    "vetur.format.defaultFormatter.scss": "prettier",
+    "vetur.format.defaultFormatter.less": "prettier",
+    "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
+    "vetur.format.defaultFormatter.js": "prettier",
+    "vetur.format.defaultFormatter.ts": "prettier",
+    "prettier.eslintIntegration": true,
+    // Code Runner
+    "code-runner.runInTerminal": true,
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.executorMapByFileExtension": {
+        ".go": "go"
+    },
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "php": "C:\\php\\php.exe",
+        "python": "python",
+        "perl": "perl",
+        "ruby": "C:\\Ruby23-x64\\bin\\ruby.exe",
+        "go": "go run",
+        "html": "\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+    },
+    // Go configuration
+    "go.useLanguageServer": true,
+    "go.buildOnSave": "package",
+    "go.lintOnSave": "package",
+    "go.vetOnSave": "package",
+    "go.buildTags": "",
+    "go.buildFlags": [],
+    "go.lintTool": "golint", //使用 golint 库来执行 lint操作，你也可以选择使用gometalinter
+    "go.lintFlags": [],
+    "go.vetFlags": [],
+    "go.coverOnSave": false, //在保存代码时执行测试，并显示测试覆盖率
+    "go.useCodeSnippetsOnFunctionSuggest": true, //使用代码片段作为提示
+    "go.formatTool": "goimports", //使用 goimports 工具进行代码格式化，或者使用 goreturns和gofmt
+    "go.formatFlags": [],
+    "go.gocodeAutoBuild": true,
+    "workbench.colorTheme": "One Dark Pro",
+    // File path
+    "ActiveFileInStatusBar.fullpath": false,
+}
