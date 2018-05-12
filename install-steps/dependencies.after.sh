@@ -45,19 +45,14 @@ fi
 if [[ -e "/Applications/Alfred 3.app" ]]; then
     echo "You have installed Alfred"
 else
-    if [[ ! -e $HOME/Downloads/Alfred.app.zip ]]; then
-        curl "http://p2w4johvr.bkt.clouddn.com/Alfred%203.app.zip" -o "$HOME/Downloads/Alfred 3.app.zip"
-    fi
-
     if [[ ! -e "$HOME/Library/Application Support/Alfred 3" ]]; then
         mkdir -p "$HOME/Library/Application Support/Alfred 3"
     fi
 
     # patch alfred
-    unzip -q "$HOME/Downloads/Alfred 3.app.zip" -d /Applications
     sudo codesign -f -d -s - "/Applications/Alfred 3.app/Contents/Frameworks/Alfred Framework.framework/Versions/A/Alfred Framework"
     cp tools/alfred.license.plist "$HOME/Library/Application Support/Alfred 3/license.plist"
-    rm "$HOME/Downloads/Alfred 3.app.zip"
+    brew cask install alfred
 
     # sync configuration
     rm -rf "$HOME/Library/Application Support/Alfred 3/Alfred.alfredpreferences"
