@@ -99,8 +99,13 @@ sudo gem install -n /usr/local/bin cocoapods
 sudo gem install -n /usr/local/bin cocoapods-plugins
 sudo gem install colored
 
-# npm install
-nvm install 9.11.1
+# nvm & npm install
+if [[ ! -d $HOME/.nvm ]]; then
+    mkdir $HOME/.nvm
+fi
+export NVM_DIR="$HOME/.nvm"
+source $(brew --prefix nvm)/nvm.sh
+nvm install 10.0.0
 ./install-steps/node_global.sh
 
 # hook login
