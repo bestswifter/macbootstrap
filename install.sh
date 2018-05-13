@@ -2,6 +2,7 @@
 source basic.sh
 
 sudo ./install-steps/macos.sh
+./install-steps/personal.sh
 
 brew install python3
 
