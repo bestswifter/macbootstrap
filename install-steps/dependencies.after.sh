@@ -9,8 +9,8 @@ sogou_app="$sogou_version/"`ls $sogou_version | grep .app | tail -n 1`
 open "$sogou_app"
 
 # Extension for preview
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json webpquicklook qlvideo provisionql quicklookapk
-brew cask install --appdir='/usr/local/bin' qlimagesize # Avoid password
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json webpquicklook provisionql quicklookapk
+brew cask install --appdir='/usr/local/bin' qlimagesize qlvideo # Avoid password
 
 # Zip tool
 brew cask install the-unarchiver
