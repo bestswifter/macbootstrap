@@ -51,9 +51,9 @@ else
     fi
 
     # patch alfred
+    brew cask install alfred
     sudo codesign -f -d -s - "/Applications/Alfred 3.app/Contents/Frameworks/Alfred Framework.framework/Versions/A/Alfred Framework"
     cp tools/alfred.license.plist "$HOME/Library/Application Support/Alfred 3/license.plist"
-    brew cask install alfred
 
     # sync configuration
     rm -rf "$HOME/Library/Application Support/Alfred 3/Alfred.alfredpreferences"
