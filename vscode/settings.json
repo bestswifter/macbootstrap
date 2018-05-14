@@ -98,7 +98,61 @@
             "after": [
                 "leader",
                 "leader",
-                "s"
+                "/"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "l"
+            ],
+            "after": [
+                "leader",
+                "leader",
+                "leader",
+                "b",
+                "d",
+                "j",
+                "k"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "c"
+            ],
+            "after": [
+                "leader",
+                "leader",
+                "c"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "w"
+            ],
+            "after": [
+                "leader",
+                "leader",
+                "leader",
+                "b",
+                "d",
+                "w"
+            ]
+        },
+        {
+            "before": [
+                "leader",
+                "e"
+            ],
+            "after": [
+                "leader",
+                "leader",
+                "leader",
+                "b",
+                "d",
+                "e"
             ]
         },
         {
@@ -130,11 +184,7 @@
             ]
         }
     ],
-    "vim.handleKeys": {
-        "<C-n>": false,
-        "<C-f>": false,
-        "<C-d>": false
-    },
+    "vim.handleKeys": {},
     "vim.leader": ";",
     // Vim - EasyMotion
     "vim.easymotionMarkerBackgroundColor": "#000000",
