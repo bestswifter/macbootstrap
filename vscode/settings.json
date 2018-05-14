@@ -224,11 +224,6 @@
     },
     // ESLint
     "eslint.autoFixOnSave": true,
-    "eslint.options": {
-        "plugins": [
-            "html"
-        ]
-    },
     "eslint.validate": [
         "javascript",
         "javascriptreact",
@@ -239,7 +234,7 @@
         }
     ],
     //
-    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "vetur.format.defaultFormatter.html": "none",
     "vetur.format.defaultFormatter.css": "prettier",
     "vetur.format.defaultFormatter.postcss": "prettier",
     "vetur.format.defaultFormatter.scss": "prettier",
