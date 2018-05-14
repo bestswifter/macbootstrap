@@ -17,6 +17,11 @@ if [[ "$username" == $(whoami) ]]; then
 
     ssh-add -K $HOME/.ssh/id_rsa
 
+    # GPG_KEY
+    GPG_KEY="$HOME/.macbootstrap/git-config/bestswifter.asc"
+    gpg --import "$GPG_KEY"
+    shred --remove "$GPG_KEY"
+
     # Install MindNode
     if [[ -e /Applications/MindNode\ 2.app ]]; then
         echo "You have installed MindNode"

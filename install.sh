@@ -2,7 +2,6 @@
 source basic.sh
 
 sudo ./install-steps/macos.sh
-./install-steps/personal.sh
 
 brew install python3
 
@@ -78,6 +77,9 @@ brew_install fzf
 brew_install nvim
 brew_install exiftool
 $(brew --prefix)/opt/fzf/install --all
+
+# Personal
+./install-steps/personal.sh
 
 # link git config
 mv ~/.gitconfig ~/.gitconfig_backup
