@@ -6,6 +6,10 @@ if [[ "$username" == $(whoami) ]]; then
     git config --global user.name bestswifter
     git config --global user.email ktzhang@bestswifter.com
 
+    if [[ ! -d $HOME/.ssh ]]; then
+        mkdir $HOME/.ssh
+    fi
+
     # ssh key
     if [[ ! -f $HOME/.ssh/id_rsa ]]; then
         ln -s $HOME/.macbootstrap/config/id_rsa $HOME/.ssh/
