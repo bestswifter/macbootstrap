@@ -12,6 +12,7 @@ if [[ "$username" == $(whoami) ]]; then
 
     # ssh key
     if [[ ! -f $HOME/.ssh/id_rsa ]]; then
+        chmod 400 $HOME/.macbootstrap/config/id_rsa
         ln -s $HOME/.macbootstrap/config/id_rsa $HOME/.ssh/
     fi
 
