@@ -185,6 +185,22 @@ function bssclient () {
     nohup sslocal -q -c ~/.macbootstrap/config/shadowsocks.conf &> $BSTEMP/nohup.out&
 }
 
+function c() {
+    if [ "$#" -eq 0 ]; then
+        code .
+    elif [ "$#" -eq 1 ]; then
+        if [ -f $1 ]; then
+            code $1
+        elif [ -d $1 ]; then
+            (cd $1 && code .)
+        else
+            (j $1 && code .)
+        fi
+    else
+        echo "Usage: c or c path"
+    fi
+}
+
 function wifipassword () {
     SSID=`/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'`
     security find-generic-password -D "AirPort network password" -a "$SSID" -gw
