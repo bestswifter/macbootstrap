@@ -124,7 +124,7 @@
             "after": [
                 "leader",
                 "leader",
-                "s"
+                "c"
             ]
         },
         {
@@ -184,7 +184,9 @@
             ]
         }
     ],
-    "vim.handleKeys": {},
+    "vim.handleKeys": {
+        "<C-h>": false
+    },
     "vim.leader": ";",
     // Vim - EasyMotion
     "vim.easymotionMarkerBackgroundColor": "#000000",
@@ -261,6 +263,14 @@
         "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
         "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
     },
+    // CSS peek
+    "css_peek.activeLanguages": [
+        "html",
+        "vue"
+    ],
+    "css_peek.searchFileExtensions": [
+        ".vue"
+    ],
     // Go configuration
     "go.useLanguageServer": true,
     "go.buildOnSave": "package",
@@ -279,4 +289,5 @@
     "workbench.colorTheme": "One Dark Pro",
     // File path
     "ActiveFileInStatusBar.fullpath": false,
+    "gitlens.historyExplorer.enabled": true,
 }
