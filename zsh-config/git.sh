@@ -38,6 +38,8 @@ alias gsr='git_recursive_status'
 alias gss='git status --short'
 alias gst='_git_show_commit_in_tool'
 alias cdsubmodule='GIT_ROOT=$(git rev-parse --show-toplevel 2>/dev/null) && [[ -n "$GIT_ROOT" ]] && [[ -f "$GIT_ROOT/.gitmodules" ]] && realpath=$(awk -F= "/path =/ {print substr(\$2, 2)}" "$GIT_ROOT/.gitmodules") && cd "$GIT_ROOT/$realpath"'
+alias whyignore='git check-ignore -v'
+alias reignore='git rm -r --cached . && git add .'
 
 function gs() {
     if brew ls --versions scmpuff > /dev/null; then
