@@ -201,6 +201,15 @@ function c() {
     fi
 }
 
+function bswhich() {
+    if `type $1 | grep -q 'is a shell function'`; then
+        type $1
+        which $1
+    elif `type $1 | grep -q 'is an alias'`; then
+        PS4='+%x:%I>' zsh -i -x -c '' |& grep '>alias ' | grep "${1}="
+    fi
+}
+
 function wifipassword () {
     SSID=`/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'`
     security find-generic-password -D "AirPort network password" -a "$SSID" -gw
