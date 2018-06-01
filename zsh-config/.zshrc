@@ -43,6 +43,7 @@ export PATH="/usr/local/sbin:$PATH"
 
 # for nvm
 export NVM_DIR=~/.nvm
+export EDITOR="nvim"
 source $(brew --prefix nvm)/nvm.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
