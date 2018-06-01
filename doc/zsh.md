@@ -196,3 +196,12 @@ qnconf sk ak pictures http://images.bestswifter.com
 ### xcodepath
 
 如果你当前运行了 Xcode 进程，输入此命令可以快速查看 Xcode 可执行文件的路径
+
+### bswhich
+
+如果拿到别人的配置脚本，想自行定制。显然只知道定义是不够的，还得知道这个 alias 或者函数是在哪个文件里被定义的，这样才好去修改，此时建议使用我配置的 `bswhich` 命令：
+
+```shell
+bswhich ip
+bswhich gg
+```
