@@ -68,9 +68,5 @@ sudo chown -R `whoami` /usr/local
 
 # What's next
 
-- [x] Split vim plugin configuration out.
-- [x] Add keymap export/save for iTerm.
-- [x] Add keymap export/save for Snap.
 - [] Add more npm packages
-- [] Remove alias to number 1-9 in `~/.oh-my-zsh/lib/directories.zsh`, this is considered to be done in [h function](https://github.com/bestswifter/history)
- [] IMPORTANT: Add demo for this project to show the convenience and advantange of this project
+- [] IMPORTANT: Add demo for this project to show the convenience and advantange of this project
