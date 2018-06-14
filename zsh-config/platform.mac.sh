@@ -124,6 +124,13 @@ function bsgrep() {
 }
 
 function h(){
+    # Remove zsh defualt numbe alias
+    if `alias | grep -q "1="`; then
+        for i in {1..9}; do
+            unalias $i
+        done
+    fi
+
     history | grep --color=always -i $1 | awk '{$1="";print $0}' | grep -v '^ h' | # 查找关键字，去掉左侧的数字和 h 命令自身 \
     sort | uniq -c | sort -rn | awk '{$1="";print NR " " $0}' | # 先去重（需要排序）然后根据次数排序，再去掉次数 \
     tee ~/.macbootstrap/.histfile_color_result | gsed -r "s/\x1B\[([0-9]{1,3}((;[0-9]{1,3})*)?)?[m|K]//g" |  # 把带有颜色的结果写入临时文件，然后去除颜色 \
