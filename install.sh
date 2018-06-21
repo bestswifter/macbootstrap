@@ -34,6 +34,11 @@ fi
 
 if [[ ! -e /Applications/Google\ Chrome.app ]]; then
     brew cask install google-chrome
+
+    # Set Chrome as default browser
+    git clone https://github.com/kerma/defaultbrowser ./tools
+    (cd ./tools/defaultbrowser && make && make install)
+    defaultbrowser chrome
 else
     echo "You have installed chrome"
 fi
