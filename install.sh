@@ -76,6 +76,7 @@ brew_install scmpuff
 brew_install fzf
 brew_install nvim
 brew_install exiftool
+brew_install archey
 $(brew --prefix)/opt/fzf/install --all
 
 # Personal
