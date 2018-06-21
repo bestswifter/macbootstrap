@@ -37,6 +37,7 @@ if [[ "$username" == $(whoami) ]]; then
             curl "http://app.bestswifter.com/MindNode501.app.zip" -o ~/Downloads/MindNode.app.zip
         fi
 
+        echo "Install mindnode"
         unzip -q $HOME/Downloads/MindNode.app.zip -d /Applications/MindNode\ 2.app
         rm $HOME/Downloads/MindNode.app.zip
     fi
