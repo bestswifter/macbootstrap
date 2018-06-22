@@ -70,5 +70,8 @@ defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Allow full screen mode of simulator
+defaults write com.apple.iphonesimulator AllowFullscreenMode -bool YES
+
 # Make configurations works
 for app in Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
