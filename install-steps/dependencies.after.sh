@@ -78,7 +78,7 @@ bs_cp config/bs_aotu_fq.ppx "$HOME/Library/Application Support/Proxifier/Profile
 
 # Powerline-font
 # ---------------
-git clone https://github.com/powerline/fonts.git --depth=1
+git clone --depth=1 https://github.com/powerline/fonts.git --depth=1
 cd fonts
 ./install.sh
 cd ..
