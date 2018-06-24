@@ -36,7 +36,7 @@ if [[ ! -e /Applications/Google\ Chrome.app ]]; then
     brew cask install google-chrome
 
     # Set Chrome as default browser
-    git clone https://github.com/kerma/defaultbrowser ./tools
+    git clone https://github.com/kerma/defaultbrowser ./tools/defaultbrowser
     (cd ./tools/defaultbrowser && make && make install)
     defaultbrowser chrome
 else
@@ -125,4 +125,5 @@ ln -s ~/.macbootstrap/zsh-config/ssh_config ~/.ssh/config
 
 # Personal
 ./install-steps/personal.sh
+./personal.sh
 
