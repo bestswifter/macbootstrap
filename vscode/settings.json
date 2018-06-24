@@ -13,19 +13,6 @@
         "suppressUpdateNotice": false,
         "suppressWelcomeNotice": true
     },
-    // Sync config
-    "sync.gist": "c11618d4ff8f1831f279d3a0249bf9e2",
-    "sync.lastUpload": "2018-05-12T07:37:19.966Z",
-    "sync.autoDownload": false,
-    "sync.autoUpload": false,
-    "sync.lastDownload": "",
-    "sync.forceDownload": false,
-    "sync.host": "",
-    "sync.pathPrefix": "",
-    "sync.quietSync": false,
-    "sync.askGistName": false,
-    "sync.removeExtensions": true,
-    "sync.syncExtensions": true,
     // Vim Config
     "vim.easymotion": true,
     "vim.sneak": true,
@@ -34,8 +21,7 @@
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
     "vim.visualstar": true,
-    "vim.insertModeKeyBindings": [
-        {
+    "vim.insertModeKeyBindings": [{
             "before": [
                 "j",
                 "j"
@@ -63,19 +49,16 @@
             ]
         }
     ],
-    "vim.otherModesKeyBindingsNonRecursive": [
-        {
+    "vim.normalModeKeyBindingsNonRecursive": [{
             "before": [
                 "g",
                 "c"
             ],
             "after": [],
-            "commands": [
-                {
-                    "command": "editor.action.commentLine",
-                    "args": []
-                }
-            ]
+            "commands": [{
+                "command": "editor.action.commentLine",
+                "args": []
+            }]
         },
         {
             "before": [
@@ -83,12 +66,10 @@
                 "C"
             ],
             "after": [],
-            "commands": [
-                {
-                    "command": "editor.action.commentBlock",
-                    "args": []
-                }
-            ]
+            "commands": [{
+                "command": "editor.action.commentBlock",
+                "args": []
+            }]
         },
         {
             "before": [
@@ -160,28 +141,10 @@
                 ":"
             ],
             "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.showCommands",
-                    "args": []
-                }
-            ]
-        },
-        {
-            "before": [
-                "<C-x>"
-            ],
-            "after": [],
-            "commands": [
-                {
-                    "command": "workbench.action.files.save",
-                    "args": []
-                },
-                {
-                    "command": "workbench.action.closeActiveEditor",
-                    "args": []
-                }
-            ]
+            "commands": [{
+                "command": "workbench.action.showCommands",
+                "args": []
+            }]
         }
     ],
     "vim.handleKeys": {
@@ -289,5 +252,10 @@
     "workbench.colorTheme": "One Dark Pro",
     // File path
     "ActiveFileInStatusBar.fullpath": false,
+    "path-intellisense.absolutePathToWorkspace": false,
     "gitlens.historyExplorer.enabled": true,
+    // Comment
+    "better-comments.multilineComments": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "dart.flutterSdkPath": "/Users/zxy/dev/code/flutter"
 }
