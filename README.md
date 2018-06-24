@@ -66,12 +66,6 @@ sudo chown -R `whoami` /usr/local
 
 详细用法与教程请参考这份说明: [Vim 使用指南](./doc/vim.md)
 
-## 讨论交流
-
-扫描下方二维码，添加好友会自动通过，然后根据提示输入 **`mac`** 加入本书讨论群
-
-![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LBLo0eP1FW2IkggnToa%2F-LC8xkrdAI4AC8V9t-Rn%2F-LC8y5t6niJNM8_vKrlt%2Fimage.png?alt=media&token=e424e92c-c093-4008-8f80-cc80288217cc)
-
 ## 内推招聘
 
 头条北京、上海、深圳等地急缺各种开发、运营、产品岗位，点击 此链接 或扫描下发二维码投递简历即可享受内推福利。
