@@ -84,9 +84,6 @@ brew_install exiftool
 brew_install archey
 $(brew --prefix)/opt/fzf/install --all
 
-# Personal
-./install-steps/personal.sh
-
 # link git config
 mv ~/.gitconfig ~/.gitconfig_backup
 backup_file ~/.gitattributes
@@ -125,3 +122,7 @@ if [[ ! -e ~/.ssh ]]; then
     mkdir ~/.ssh
 fi
 ln -s ~/.macbootstrap/zsh-config/ssh_config ~/.ssh/config
+
+# Personal
+./install-steps/personal.sh
+
