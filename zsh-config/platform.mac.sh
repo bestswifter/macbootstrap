@@ -183,6 +183,11 @@ mkcdir () {
     cd -P -- "$1"
 }
 
+function autojump_with_fzf() {
+    local dir
+    dir=$(cat ~/Library/autojump/autojump.txt | sort -nr | awk '{print $2}' | fzf +s) && cd "$dir"
+}
+
 function bsfn () {
     # Use -or to support multi types
     find . \( -type f -or -type l \) | egrep --color=always $1
