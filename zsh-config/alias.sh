@@ -40,6 +40,7 @@ alias pu='pod update'
 alias vim='nvim'
 alias vimf='vim $(fzf)'
 alias ns='npm start'
+alias nb='npm run build'
 alias -g H='| head -n'
 alias -g T='| tail -n'
 alias -g L="| less"
