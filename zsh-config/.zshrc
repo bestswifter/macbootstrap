@@ -1,4 +1,4 @@
-plugins=(extract encode64 urltools brew zsh-syntax-highlighting)
+plugins=(extract encode64 urltools brew zsh-syntax-highlighting zsh-autosuggestions)
 
 ZSH=$HOME/.oh-my-zsh
 
@@ -19,6 +19,8 @@ HISTFILE=~/.histfile
 HISTSIZE=10000000
 HISTFILESIZE=10000000
 SAVEHIST=10000000
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=magenta'
+ZSH_AUTOSUGGEST_STRATEGY="match_prev_cmd"
 
 BS_ZSH_BASE="$HOME/.macbootstrap"
 BS_ZSH_TOOLS=${BS_ZSH_BASE}/tools
@@ -47,5 +49,8 @@ export EDITOR="nvim"
 source $(brew --prefix nvm)/nvm.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Bind key
+bindkey ';' autosuggest-execute
 
 archey -o
