@@ -49,10 +49,7 @@ export NVM_DIR=~/.nvm
 export EDITOR="nvim"
 source $(brew --prefix nvm)/nvm.sh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 # Bind key
 bindkey ';' autosuggest-execute
-bindkey -s '^g' 'autojump_with_fzf \n'
 
 archey -o

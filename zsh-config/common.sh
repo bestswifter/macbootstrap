@@ -8,6 +8,7 @@ source $BS_ZSH_BASE/zsh-config/misc.sh
 source $BS_ZSH_BASE/zsh-config/tools.sh
 source $BS_ZSH_BASE/zsh-config/zsh-interactive-cd.plugin.zsh
 source $BS_ZSH_BASE/zsh-config/alias.sh
+source $BS_ZSH_BASE/zsh-config/fzf.sh
 source $BS_ZSH_BASE/software/qiniu/qiniu.sh
 for f in $BS_ZSH_BASE/zsh-config/functions/*.sh; do source $f; done
 
