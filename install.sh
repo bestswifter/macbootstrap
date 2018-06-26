@@ -79,6 +79,8 @@ brew_install gpg
 brew_install icdiff
 brew_install scmpuff
 brew_install fzf
+brew_install fd
+brew_install the_silver_searcher
 brew_install nvim
 brew_install exiftool
 brew_install archey
