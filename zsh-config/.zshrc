@@ -39,7 +39,6 @@ export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH:$M2_HOME/bin
-export PATH=/Users/zxy/dev/code/flutter/bin:$PATH
 
 # Homebrew
 export PATH="/usr/local/sbin:$PATH"
