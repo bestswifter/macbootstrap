@@ -11,7 +11,8 @@ FZF-EOF"
 }
 
 export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
-export FZF_DEFAULT_COMMAND='fd --type f --exclude .git'
+export FZF_DEFAULT_COMMAND='git ls-tree -r --name-only HEAD || fd --color=always--type f --follow --hidden --exclude .git'
+export FZF_DEFAULT_OPTS="--ansi"
 
 typeset -A FZF_PER_CMD_COMPLETION_TRIGGERS=(ssh '' vim '*')
 export FZF_PER_CMD_COMPLETION_TRIGGERS
