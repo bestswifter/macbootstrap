@@ -66,6 +66,10 @@ sudo chown -R `whoami` /usr/local
 
 详细用法与教程请参考这份说明: [Vim 使用指南](./doc/vim.md)
 
+## 讨论交流
+
+为了避免无意义的加群，请发送邮件到 [bestswifter@gmail.com](mailto:bestswifter@gmail.com)，介绍你对本书的看法和期待，字数不限，我会回复微信号并拉你进群。
+
 ## 内推招聘
 
 头条北京、上海、深圳等地急缺各种开发、运营、产品岗位，点击 此链接 或扫描下发二维码投递简历即可享受内推福利。
