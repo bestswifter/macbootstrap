@@ -20,6 +20,7 @@
 5. 输入 `git config --global user.signingkey ID` 来配置使用哪个 key。
 6. 单次提交时使用 `git commit -S` 参数来开启 GPG key，或者使用 `git config --global commit.gpgsign true` 设置为全局默认使用
 7. 输入 `gvc <commit_hash>` 来检查某次提交的 GPG 签名情况，如果没有输出，说明没有签名。它是`git verify-commit` 命令的缩写
+8. 如果遇见签名失败的情况,可尝试将 `export GPG_TTY=$(tty)` 添加到自己的 shell 配置文件中  
 
 ## git log
 
