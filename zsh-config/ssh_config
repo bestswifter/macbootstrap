@@ -31,3 +31,15 @@ Host dev
     User zhangxingyu.bs
     Port 22
     IdentityFile ~/.ssh/id_rsa
+
+Host macpro
+    HostName 10.2.9.89
+    User iosarch
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
+
+Host ies_mac_pro
+    HostName 10.1.0.59
+    User iesqa
+    Port 22
+    IdentityFile ~/.ssh/id_rsa
