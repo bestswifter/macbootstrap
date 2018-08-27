@@ -32,6 +32,12 @@ else
     echo "You have installed SourceTree"
 fi
 
+if [[ ! -e /Applications/WeChat.app ]]; then
+    brew cask install wechat
+else
+    echo "You have installed WeChat"
+fi
+
 if [[ ! -e /Applications/Google\ Chrome.app ]]; then
     brew cask install google-chrome
 
