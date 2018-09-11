@@ -336,3 +336,19 @@ gdcr () {
 		eval "$command"
 	fi
 }
+
+fzf-down() {
+  fzf --height 80% "$@" --border
+}
+
+_fzf_complete_gbdr() {
+    # 把 origin/branch 转换成 branch
+    local temp
+    temp=$(git branch --remote | awk -F / '{ $1=""; print $0}' OFS="/" | cut -c2- | fzf-down --multi --preview-window right:70% --preview 'git show --color=always origin/{1} | head -'$LINES)
+    LBUFFER="$1$temp"
+    zle redisplay
+}
+
+gbdr() {
+    git push origin :$1
+}

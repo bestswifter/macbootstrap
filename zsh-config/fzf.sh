@@ -14,7 +14,7 @@ export FZF_CTRL_T_OPTS="--preview '(highlight -O ansi -l {} 2> /dev/null || cat 
 export FZF_DEFAULT_COMMAND='git ls-tree -r --name-only HEAD || fd --color=always--type f --follow --hidden --exclude .git'
 export FZF_DEFAULT_OPTS="--ansi"
 
-typeset -A FZF_PER_CMD_COMPLETION_TRIGGERS=(ssh '' vim '*')
+typeset -A FZF_PER_CMD_COMPLETION_TRIGGERS=(ssh '' vim '*' gbdr '')
 export FZF_PER_CMD_COMPLETION_TRIGGERS
 
 fzf-completion() {

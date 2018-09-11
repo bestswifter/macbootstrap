@@ -20,7 +20,7 @@
 5. 输入 `git config --global user.signingkey ID` 来配置使用哪个 key。
 6. 单次提交时使用 `git commit -S` 参数来开启 GPG key，或者使用 `git config --global commit.gpgsign true` 设置为全局默认使用
 7. 输入 `gvc <commit_hash>` 来检查某次提交的 GPG 签名情况，如果没有输出，说明没有签名。它是`git verify-commit` 命令的缩写
-8. 如果遇见签名失败的情况,可尝试将 `export GPG_TTY=$(tty)` 添加到自己的 shell 配置文件中  
+8. 如果遇见签名失败的情况,可尝试将 `export GPG_TTY=$(tty)` 添加到自己的 shell 配置文件中
 
 ## git log
 
@@ -36,7 +36,7 @@
 5. 不管是`gg`，还是衍生出来的 `ggs` 和 `ggp`，后面都可以加上 `-n`，比如 `ggs -2`，或者 `ggp -1`，表示只显示前 n 个提交
 6. 如果想看某一个区间内的 log，可以输入 `gg HEAD~3..HEAD`，注意区间是左开右闭，所以这个命令会查看三次提交的记录。注意较早的提交要写在左边。
 7. 如果只记得某次提交内容(content)里有一个词，比如 **networksetup**，可以用 `ggp -G networksetup` 来查找所有提交内容中包含 **networksetup** 的提交。-G 选项和 -S 选项主要有两个区别，
-前者可以接收正则，而后者只会查找那些导致 string 出现次数发现变动的提交，比如把 `name:0` 换成 `name:1`，用 -S 就无法搜索到 name, 因为它的出现次数并没有改变，但是用 -G 可以。
+   前者可以接收正则，而后者只会查找那些导致 string 出现次数发现变动的提交，比如把 `name:0` 换成 `name:1`，用 -S 就无法搜索到 name, 因为它的出现次数并没有改变，但是用 -G 可以。
 8. 如果只记得某次提交记录(message)里有一个词，比如 **highlight**，可以用 `ggp --grep highlight` 来查找所有提交记录中包含 **highlight** 的提交
 9. 如果想查看某个文件中某一段代码的提交记录，可以用 `ggp -L start,end:file_name` 命令，详情请参考 [Git grep](https://github.com/bestswifter/macbootstrap/blob/master/doc/git.md#git-grep) 这一节的用法。
 10. 如果想查看某个文件或者文件夹的改动历史，可以输入 `gg file_name`，当然 `ggs` 和 `ggp` 也都是支持的。
@@ -52,6 +52,7 @@
 7. 并非所有分支都可以通过 `gbd` 命令删除，可以通过 `git branch --merged` 来查看已经合入到某个指针(默认是 HEAD)的分支，换句话说是可以通过这个指针回溯到的分支。这个命令也简写为 `gbm`
 8. `gbm` 列出的分支都是**可以抵达**的，因此可用 `gbd` 删除，而 `gbnm` 列出的则是不可达的分支，因此不能用 `gbd` 删除，它是 `git branch --no-merged` 命令的简写
 9. 如果真的要强行删除，可以用 `gbD` 命令，它是 `git branch -D` 的简写
+10. 输入命令 `gbdr` 可以删除远程分支
 
 有时候我们要从远程仓库检出一个新的分支，比如叫 feature 吧，有几种思路：
 
@@ -75,10 +76,10 @@ git checkout --track origin/feature
 2. 输入 `gds` 可以查看暂存区的变动，也就是查看那些被 `git add` 了的文件的变动，等价于命令 `git diff --staged`
 3. 输入 `gdc` 可以查看最近一次提交的变动，等价于命令 `git diff HEAD^ HEAD`
 4. 输入 `gdcr` 可以倒过来查看某次提交的变动，它的第一个参数是提交的 SHA-1 值，如果不写则是 HEAD，所以 `gdcr` 和 `gdc` 是恰好相反的 diff。这样的好处是如果
-想撤销某次提交，只要用 `gdcr sha-1` 就可以获得那次提交的逆提交，如果想要精确到只恢复某个文件，第二个参数可以是文件名。比如 `gdcr sha-1 file_name | git apply`
+   想撤销某次提交，只要用 `gdcr sha-1` 就可以获得那次提交的逆提交，如果想要精确到只恢复某个文件，第二个参数可以是文件名。比如 `gdcr sha-1 file_name | git apply`
 5. 输入 `gdt` 即可用外部 diff 工具查看 diff，它是 `git difftool --no-prompt --extcmd "icdiff --line-numbers --no-bold" "$@" | less` 命令的缩写，这个命令依赖 `icdiff` 这个工具，可以用 homebrew 安装。
 6. 输入 `gdts` 和 `gdtc` 可以对应的用外部 diff 查看已暂存和上次提交的变动，这些和 `gds` 与 `gdc` 命令基本上是一样的，区别在于使用外部 diff 工具，会更美观一些（当然速度也会更慢），效果如图所示
-    ![](http://images.bestswifter.com/MacHi-2018-01-02-19-48-29.png)
+   ![](http://images.bestswifter.com/MacHi-2018-01-02-19-48-29.png)
 
 ## git push
 
@@ -122,7 +123,7 @@ git checkout --track origin/feature
 
 ## git grep
 
-这个命令和 grep 的区别在于运行更快，而且可以指定搜索范围（比如是否搜索未跟踪文件，搜索某个特定的 tag等），如果当前目录是 git 目录，可以用 `ggrep` 来替代 `grep`
+这个命令和 grep 的区别在于运行更快，而且可以指定搜索范围（比如是否搜索未跟踪文件，搜索某个特定的 tag 等），如果当前目录是 git 目录，可以用 `ggrep` 来替代 `grep`
 
 `ggrep` 是 `git grep --break --heading -n` 命令的缩写，第一个参数表示不同文件的搜索结果间用空格分割，便于阅读。第二个参数非常有用，它不再在每一行输出前面加上文件名，而是在所有属于同一个文件的匹配之前加上一次文件名，
 这样输出结果的可读性更高，`-n` 表示输出行号。
@@ -146,7 +147,7 @@ git checkout --track origin/feature
 
 注意，这里说的工作流不是 git-workflow 的意思，而是一些常见命令的组合。
 
-1. 输入 `gsfrs` 可以先暂存(stash) 当前改动，拉取远程代码，rebase 以后再应用暂存，等价于命令 `git stash;git fetch;git rebase;git stash pop;`。**警告⚠️** 如果 rebase 的过程中遇到冲突，不会自动 pop 暂存，需要手动执行命令
+1. 输入 `gsfrs` 可以先暂存(stash) 当前改动，拉取远程代码，rebase 以后再应用暂存，等价于命令 `git stash;git fetch;git rebase;git stash pop;`。**警告 ⚠️** 如果 rebase 的过程中遇到冲突，不会自动 pop 暂存，需要手动执行命令
 
 ## 其他
 
