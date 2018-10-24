@@ -2,6 +2,9 @@ username='bestswifter'
 
 # Write script you want to use in the `if` block
 if [[ "$username" == $(whoami) ]]; then
+    # HomeBrew
+    brew cask install google-drive-file-stream
+
     # Git config
     git config --global user.name bestswifter
     git config --global user.email ktzhang@bestswifter.com
