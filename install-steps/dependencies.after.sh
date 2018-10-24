@@ -90,7 +90,7 @@ pip3 install --trusted-host pypi.python.org neovim jedi ipython
 pip3 install --user --upgrade --trusted-host pypi.python.org PyYAML
 
 # Gem update
-sudo gem update --system
+sudo gem update --system 2.7.6
 sudo gem install -n /usr/local/bin cocoapods
 sudo gem install -n /usr/local/bin cocoapods-plugins
 sudo gem install colored
