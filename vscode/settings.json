@@ -179,6 +179,9 @@
     "editor.renderLineHighlight": "line",
     "editor.suggestSelection": "recentlyUsedByPrefix",
     "workbench.editor.enablePreview": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "search.showLineNumbers": true,
+
     // Window setting
     "window.title": "${activeEditorLong}",
     "window.zoomLevel": 0,
