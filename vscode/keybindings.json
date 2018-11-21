@@ -1,6 +1,5 @@
 // 将键绑定放入此文件中以覆盖默认值
-[
-    {
+[{
         "key": "cmd+l",
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "terminalFocus"
@@ -231,5 +230,33 @@
     {
         "key": "alt+cmd+p",
         "command": "-projectManager.listProjects"
+    },
+    {
+        "key": "cmd+]",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "cmd+[",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "cmd+]",
+        "command": "workbench.action.nextSideBarView",
+        "when": "sideBarFocus"
+    },
+    {
+        "key": "cmd+[",
+        "command": "workbench.action.previousSideBarView",
+        "when": "sideBarFocus"
+    },
+    {
+        "key": "cmd+]",
+        "command": "workbench.action.nextPanelView",
+        "when": "panelFocus"
+    },
+    {
+        "key": "cmd+[",
+        "command": "workbench.action.previousPanelView",
+        "when": "panelFocus"
     }
 ]
