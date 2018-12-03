@@ -1,4 +1,5 @@
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH:$M2_HOME/bin
+export LANG=en_US.UTF-8
 plugins=(extract encode64 urltools brew zsh-syntax-highlighting zsh-autosuggestions)
 ZSH=$HOME/.oh-my-zsh
 
