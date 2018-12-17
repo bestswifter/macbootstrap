@@ -247,3 +247,19 @@ function aupdate() {
     wget "http://ci.tieba.baidu.com/view/TBPP_Android/job/FC_Native_Android_Build_ICODE/""$1""/artifact/gen_apks/tieba-release.apk"
     adb install -rg tieba-release.apk
 }
+
+function bssync() {
+    local from
+    local to
+    if [ "$#" -eq 1 ]; then
+        from='.'
+        to=${1}
+    elif [ "$# -eq 2"]; then
+        from=${1}
+        to=${2}
+    else
+        echo 'Usage: bssync ${destination} or bssync ${source} ${destination}'
+        return 1
+    fi
+    rsync -avz --delete --exclude=.git --exclude-from="$(git -C ${from} ls-files --exclude-standard -oi --directory > /tmp/excludes; echo /tmp/excludes)" ${from} ${to}
+}
