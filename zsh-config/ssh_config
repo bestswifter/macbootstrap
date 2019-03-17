@@ -1,7 +1,11 @@
+Host 10.*
+	GSSAPIAuthentication yes
+	GSSAPIDelegateCredentials no
+
 Host *
 	ForwardAgent yes
 	ServerAliveInterval 3
-	ServerAliveCountMax 20
+	ServerAliveCountMax 999
 	TCPKeepAlive no
 	ControlMaster auto
 	ControlPath ~/.ssh/%h-%p-%r
@@ -9,37 +13,67 @@ Host *
 	Compression yes
 
 Host bwh
-    HostName 172.96.215.73
-    User root
-    Port 27850
-    IdentityFile ~/.ssh/id_rsa
+	HostName 172.96.215.73
+	User root
+	Port 27850
+	IdentityFile ~/.ssh/id_rsa
 
-Host pi
-    HostName 172.23.237.55
-    User pi
-    Port 22
-    IdentityFile ~/.ssh/id_rsa
+Host bwh_new
+	HostName 104.224.191.118
+	User root
+	Port 27850
+	IdentityFile ~/.ssh/id_rsa
 
 Host qcloud
-    HostName 115.159.123.174
-    User root
-    Port 22
-    IdentityFile ~/.ssh/id_rsa
+	HostName 115.159.123.174
+	User root
+	Port 22
+	IdentityFile ~/.ssh/id_rsa
 
 Host dev
-    HostName 10.8.124.82
-    User zhangxingyu.bs
-    Port 22
-    IdentityFile ~/.ssh/id_rsa
+	HostName 10.8.124.82
+	User zhangxingyu.bs
+	Port 22
+	IdentityFile ~/.ssh/id_rsa
 
-Host macpro
-    HostName 10.2.9.89
-    User iosarch
-    Port 22
-    IdentityFile ~/.ssh/id_rsa
+Host iosarch
+	HostName 10.2.198.18
+	User iosarch
+	Port 22
+	IdentityFile ~/.ssh/id_rsa
+
+Host ies_imac_pro_aweme
+	HostName 10.1.11.84
+	User Aweme
+	Port 22
+	IdentityFile ~/.ssh/id_rsa
 
 Host ies_mac_pro
-    HostName 10.1.0.59
-    User iesqa
-    Port 22
-    IdentityFile ~/.ssh/id_rsa
+	HostName 10.1.0.59
+	User iesqa
+	Port 22
+	IdentityFile ~/.ssh/id_rsa
+
+Host iosarch2
+	HostName 10.2.212.128
+	User iosarch
+	Port 22
+	IdentityFile ~/.ssh/id_rsa
+
+Host SoulKillerSlave2
+	HostName 10.2.8.63
+	User bytedance
+	Port 22
+	IdentityFile ~/.ssh/id_rsa
+
+Host iosarch3
+	HostName 10.2.197.8
+	User iosarch3
+	Port 22
+	IdentityFile ~/.ssh/id_rsa
+
+Host ios_arch3
+	HostName 10.2.212.136
+	User ios_arch3
+	Port 22
+	IdentityFile ~/.ssh/id_rsa

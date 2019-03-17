@@ -63,6 +63,13 @@ else
     brew install gnu-sed
 fi
 
+# install sz/rz
+if brew ls --versions lrzsz > /dev/null; then
+    echo "You have installed lrzsz"
+else
+    brew install lrzsz
+fi
+
 # install coreutils
 if [[ ! -e /usr/local/opt/coreutils ]]; then
     brew install coreutils
