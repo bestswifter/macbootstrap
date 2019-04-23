@@ -4,8 +4,8 @@ Host 10.*
 
 Host *
 	ForwardAgent yes
-	ServerAliveInterval 3
-	ServerAliveCountMax 999
+	ServerAliveInterval 60
+	ServerAliveCountMax 99999
 	TCPKeepAlive no
 	ControlMaster auto
 	ControlPath ~/.ssh/%h-%p-%r
