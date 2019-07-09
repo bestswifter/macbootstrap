@@ -1,6 +1,7 @@
 alias o='open'
 alias oo='open .'
-alias ll='ls -alhG'
+alias ll='ls -alhG --color=auto'
+alias ls='ls --color=auto'
 alias src='source ~/.zshrc'
 
 export BSTEMP='/private/tmp'
