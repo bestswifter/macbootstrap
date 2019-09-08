@@ -38,7 +38,7 @@ VSCode 集成了一个终端，可以直接读取 .zshrc 中的配置（也就�
 
 ## 代码相关通用快捷键
 
-1. `ctrp + ]`：跳转到定义
+1. `ctrl + ]`：跳转到定义
 2. `ctrl + O`：光标回到上一次的位置
 3. `cmd + p`：快速搜索文件名，搜索范围是项目内的文件 + 最近打开的文件
 4. `cmd + H`：显示 Hover，相当于模拟光标停在这个位置，可以查看某些函数的定义
@@ -78,7 +78,7 @@ VSCode 集成了一个终端，可以直接读取 .zshrc 中的配置（也就�
 
 2. [Beautify](https://github.com/HookyQR/VSCodeBeautify)
 
-    按下 `ctrl + B` 会美化当前文件，尤其适用于 JSON/HTML/CSS/JS 这类文件
+    按下 `cmd + B` 会美化当前文件，尤其适用于 JSON/HTML/CSS/JS 这类文件
 
 3. [Project-Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)
 
