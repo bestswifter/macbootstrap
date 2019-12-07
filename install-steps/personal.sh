@@ -2,9 +2,20 @@ username='bestswifter'
 
 # Write script you want to use in the `if` block
 if [[ "$username" == $(whoami) ]]; then
-    # HomeBrew
-    brew cask install google-drive-file-stream
+    # initialize git
+    init_git
 
+    # 一定要在 ssh 身份认证后，再安装 private 仓库
+    git submodule init
+
+    # install my apps
+    install_personal_apps
+
+    # setup mysql 5.6
+    setup_mysql
+fi
+
+function init_git() {
     # Git config
     git config --global user.name bestswifter
     git config --global user.email ktzhang@bestswifter.com
@@ -31,27 +42,16 @@ if [[ "$username" == $(whoami) ]]; then
     shred --remove "$GPG_KEY"
     git config --global user.signingkey 368B0D29D38D4B4EEE5BF51EB2468CF4358BF1CF
     git config --global commit.gpgsign true
+}
 
-    # Install MindNode
-    if [[ -e /Applications/MindNode\ 2.app ]]; then
-        echo "You have installed MindNode"
-    else
-        if [[ ! -e $HOME/Downloads/MindNode.app.zip ]]; then
-            curl "http://app.bestswifter.com/MindNode501.app.zip" -o ~/Downloads/MindNode.app.zip
-        fi
-
-        echo "Install mindnode"
-        unzip -q $HOME/Downloads/MindNode.app.zip -d /Applications/MindNode\ 2.app
-        rm $HOME/Downloads/MindNode.app.zip
-    fi
-
-    # Install setapp
+function install_personal_apps() {
+    # install setapp
     brew cask install setapp
     open "$(find /usr/local/Caskroom/setapp/ -name "*.app")"
 
-    # setup mysql 5.6
-    setup_mysql
-fi
+    # install google drive file stream
+    brew cask install google-drive-file-stream
+}
 
 function setup_mysql() {
     brew install mysql@5.6
