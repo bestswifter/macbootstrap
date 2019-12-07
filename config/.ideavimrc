@@ -1,0 +1,30 @@
+set hlsearch
+set surround
+set incsearch
+set ignorecase
+set smartcase
+set showmode
+set scrolloff=3
+set history=100000
+set clipboard+=unnamed
+
+" Press `f` to activate AceJump
+map f :action AceAction<CR>
+" Press `w` to activate AceJump
+map w :action AceWordAction<CR>
+" Press `Ctrl-l` to activate Line Mode
+map <C-l> :action AceLineAction<CR>
+
+" " 映射到idea快捷键
+" 弹出输入框，可以跳到指定类
+nnoremap gc :action GotoClass<CR>
+" 跳转到指定的文件
+nnoremap gf :action GotoFile<CR>
+" 显示使用
+nnoremap gu :action ShowUsages<CR>
+" 后退，go out，同 vim 中的 Ctrl-i
+nnoremap go :action Back<CR>
+" 跳转到实现，go in
+nnoremap gi :action GotoImplementation<CR>
+" 跳转到测试
+nnoremap gt :action GotoTest<CR>
