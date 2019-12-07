@@ -78,6 +78,13 @@ else
     echo "You have installed coreutils"
 fi
 
+# install jetbrain toolbox
+if [[ ! -e /Applications/JetBrains Toolbox.app/ ]]; then
+    echo "You have installed JetBrains Toolbox"
+else
+    brew cask install jetbrains-toolbox
+fi
+
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew install redis
 brew_install cmake

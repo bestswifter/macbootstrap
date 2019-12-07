@@ -9,6 +9,7 @@
 * the-unarchiver(cask)：用于解压缩文件
 * Charles(curl from qiniu)：用于网络抓包调试
 * Dash(curl from qiniu)：用于快速查找文档
+* Jetbrains Toolbox(cask)：用于安装 Jetbrains 家的 IDE
 * wget
 * gnu-sed
 * cmake

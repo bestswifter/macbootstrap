@@ -9,6 +9,7 @@ brew cask uninstall google-chrome
 brew cask uninstall coderunner
 brew cask uninstall the-unarchiver
 brew cask uninstall visual-studio-code
+brew cask uninstall jetbrains-toolbox
 brew uninstall wget
 brew uninstall gnu-sed
 brew uninstall autojump
