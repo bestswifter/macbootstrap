@@ -44,4 +44,8 @@ if [[ "$username" == $(whoami) ]]; then
         unzip -q $HOME/Downloads/MindNode.app.zip -d /Applications/MindNode\ 2.app
         rm $HOME/Downloads/MindNode.app.zip
     fi
+
+    # Install setapp
+    brew cask install setapp
+    open "$(find /usr/local/Caskroom/setapp/ -name "*.app")"
 fi
