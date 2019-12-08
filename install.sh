@@ -4,7 +4,14 @@ source basic.sh
 sudo ./install-steps/macos.sh
 
 brew install python3
-pip3 install shadowsocks
+
+if [[ ! -e /usr/local/bin/sslocal ]]; then
+    brew install shadowsocks-libev
+    ln -s /usr/local/opt/shadowsocks-libev/bin/ss-local /usr/local/bin/sslocal
+    ln -s /usr/local/opt/shadowsocks-libev/bin/ss-server /usr/local/bin/ss-server
+else
+    echo "You have installed shadowsocks"
+fi
 
 # install and use shadowsocks
 if not_tt_network; then

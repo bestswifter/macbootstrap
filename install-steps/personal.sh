@@ -13,6 +13,9 @@ if [[ "$username" == $(whoami) ]]; then
 
     # setup mysql 5.6
     setup_mysql
+
+    # cp ss conf
+    ln -s ~/.macbootstrap/tools/netconf ~/.macbootstrap/config/shadowsocks.conf
 fi
 
 function init_git() {
