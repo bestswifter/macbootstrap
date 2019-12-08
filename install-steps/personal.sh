@@ -50,7 +50,7 @@ if [[ "$username" == $(whoami) ]]; then
     init_git
 
     # 一定要在 ssh 身份认证后，再安装 private 仓库
-    git submodule init
+    git submodule update
 
     # install my apps
     install_personal_apps
