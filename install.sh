@@ -7,6 +7,7 @@ brew install python3
 
 if [[ ! -e /usr/local/bin/sslocal ]]; then
     brew install shadowsocks-libev
+    brew services start shadowsocks-libev
     ln -s /usr/local/opt/shadowsocks-libev/bin/ss-local /usr/local/bin/sslocal
     ln -s /usr/local/opt/shadowsocks-libev/bin/ss-server /usr/local/bin/ss-server
 else
