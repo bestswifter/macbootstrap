@@ -44,13 +44,25 @@ function setup_mysql() {
     /usr/local/opt/mysql@5.6/bin/mysqladmin -u root password "12345678"
 }
 
+function handle_person_profile() {
+    # copy histfile
+    if [[ -e ~/.histfile ]];
+        rm ~/.histfile
+        ln -s ~/.macbootstrap/profile/.histfile ~/.histfile
+    fi
+}
+
 # Write script you want to use in the `if` block
 if [[ "$username" == $(whoami) ]]; then
     # initialize git
     init_git
 
     # 一定要在 ssh 身份认证后，再安装 private 仓库
+    git submodule init
     git submodule update
+
+    # 处理个人数据
+    handle_person_profile
 
     # install my apps
     install_personal_apps
