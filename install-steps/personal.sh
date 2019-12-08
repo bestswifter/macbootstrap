@@ -41,7 +41,7 @@ function install_personal_apps() {
 function setup_mysql() {
     brew install mysql@5.6
     brew services start mysql@5.6
-    /usr/local/opt/mysql@5.6/bin/mysqladmin -u root password "12345678”
+    /usr/local/opt/mysql@5.6/bin/mysqladmin -u root password "12345678"
 }
 
 # Write script you want to use in the `if` block
