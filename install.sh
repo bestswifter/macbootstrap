@@ -87,7 +87,7 @@ else
 fi
 
 # install jetbrain toolbox
-if [[ ! -e /Applications/JetBrains Toolbox.app/ ]]; then
+if [[ ! -e /Applications/JetBrains\ Toolbox.app ]]; then
     echo "You have installed JetBrains Toolbox"
 else
     brew cask install jetbrains-toolbox
