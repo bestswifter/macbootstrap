@@ -81,7 +81,7 @@ fi
 # install coreutils
 if [[ ! -e /usr/local/opt/coreutils ]]; then
     brew install coreutils
-    mv /usr/local/opt/coreutils/libexec/gnubin/ls /usr/local/opt/coreutils/libexec/gnubin/gls
+    cp /usr/local/opt/coreutils/libexec/gnubin/gls /usr/local/opt/coreutils/libexec/gnubin/ls
 else
     echo "You have installed coreutils"
 fi
@@ -139,7 +139,7 @@ backup_file ~/.config/nvim/
 git clone https://github.com/bestswifter/vim-config.git ~/.config/nvim
 ln -s ~/.config/nvim ~/.vim
 backup_file ~/.ideavimrc
-ls -s ~/.config/ideavimrc ~/.ideavimrc
+ln -s ~/.config/ideavimrc ~/.ideavimrc
 
 # ESLint configuration
 backup_file ~/.eslintrc.js
