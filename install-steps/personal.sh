@@ -1,23 +1,5 @@
 username='bestswifter'
 
-# Write script you want to use in the `if` block
-if [[ "$username" == $(whoami) ]]; then
-    # initialize git
-    init_git
-
-    # 一定要在 ssh 身份认证后，再安装 private 仓库
-    git submodule init
-
-    # install my apps
-    install_personal_apps
-
-    # setup mysql 5.6
-    setup_mysql
-
-    # cp ss conf
-    ln -s ~/.macbootstrap/tools/netconf ~/.macbootstrap/config/shadowsocks.conf
-fi
-
 function init_git() {
     # Git config
     git config --global user.name bestswifter
@@ -61,3 +43,21 @@ function setup_mysql() {
     brew services start mysql@5.6
     /usr/local/opt/mysql@5.6/bin/mysqladmin -u root password "12345678”
 }
+
+# Write script you want to use in the `if` block
+if [[ "$username" == $(whoami) ]]; then
+    # initialize git
+    init_git
+
+    # 一定要在 ssh 身份认证后，再安装 private 仓库
+    git submodule init
+
+    # install my apps
+    install_personal_apps
+
+    # setup mysql 5.6
+    setup_mysql
+
+    # cp ss conf
+    ln -s ~/.macbootstrap/tools/netconf ~/.macbootstrap/config/shadowsocks.conf
+fi
