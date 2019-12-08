@@ -67,3 +67,7 @@ bindkey ';' autosuggest-execute
 #archey -o
 autoload -U bashcompinit
 bashcompinit
+
+if [[ -e /usr/local/opt/mysql@5.6/bin/mysql ]]; then
+  export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+fi
