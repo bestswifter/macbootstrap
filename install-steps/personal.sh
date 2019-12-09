@@ -35,7 +35,7 @@ function install_personal_apps() {
     open "$(find /usr/local/Caskroom/setapp/ -name "*.app")"
 
     # install google drive file stream
-    brew cask install google-drive-file-stream
+    # brew cask install google-drive-file-stream
 }
 
 function setup_mysql() {
