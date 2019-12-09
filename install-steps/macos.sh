@@ -11,9 +11,8 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 defaults write com.apple.dock autohide -bool true
 
 # Hide some app icons in Dock and make dock lays left
-clang -framework Foundation tools/DockIconHider_source.m -o DockIconHider
-./DockIconHider
-rm ./DockIconHider
+defaults write com.apple.dock persistent-apps -array
+defaults write com.apple.dock orientation -string left
 
 # Show battery percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
@@ -40,9 +39,8 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -boolean false;
 defaults write com.apple.finder FXEnableExtensionChangeWarning -boolean false;
 
 # Enable clickpad Tap to click
-defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 [ -e ~/Library/Application\ Support/Dock/*.db ] && rm ~/Library/Application\ Support/Dock/*.db
 
 # Enable three finger to drag
@@ -60,6 +58,15 @@ cp config/com.apple.Siri.plist ~/Library/Preferences/
 
 # Hide input source Icon in menu bar
 cp config/com.apple.systemuiserver.plist ~/Library/Preferences/
+
+# Remove airplay icon in menubar
+defaults write com.apple.airplay showInMenuBarIfPresent -bool false
+
+# Disable smart quotes as they’re annoying when typing code
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+# Disable smart dashes as they’re annoying when typing code
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 # Disable app verifying
 sudo spctl --master-disable
