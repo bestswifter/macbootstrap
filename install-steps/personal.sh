@@ -46,7 +46,7 @@ function setup_mysql() {
 
 function handle_person_profile() {
     # copy histfile
-    if [[ -e ~/.histfile ]];
+    if [[ -e ~/.histfile ]]; then
         rm ~/.histfile
         ln -s ~/.macbootstrap/profile/.histfile ~/.histfile
     fi
