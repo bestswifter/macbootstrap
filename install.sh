@@ -25,10 +25,11 @@ fi
 if [[ ! -e /Applications/iTerm.app ]]; then
     brew cask install iterm2
     defaults delete com.googlecode.iterm2
-    ln -s config/com.googlecode.iterm2.plist $HOME/Library/Preferences
+    ln -s ~/.macbootstrap/config/com.googlecode.iterm2.plist $HOME/Library/Preferences
     # config background image location
     command="set :New\ Bookmarks:0:Background\ Image\ Location /Users/""$(whoami)""/.macbootstrap/assets/iterm-background.jpg"
-    /usr/libexec/PlistBuddy -c "$command" $HOME/Library/Preferences/com.googlecode.iterm2.plist
+    # Disable Background for performance issue
+    #/usr/libexec/PlistBuddy -c "$command" $HOME/Library/Preferences/com.googlecode.iterm2.plist
     defaults read -app iTerm >/dev/null
 else
     echo "You have installed iTerm2"
