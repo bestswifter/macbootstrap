@@ -24,7 +24,7 @@ function init_git() {
     # GPG_KEY
     GPG_KEY="$HOME/.macbootstrap/git-config/bestswifter.asc"
     gpg --import "$GPG_KEY"
-    shred --remove "$GPG_KEY"
+    #shred --remove "$GPG_KEY"
     git config --global user.signingkey 368B0D29D38D4B4EEE5BF51EB2468CF4358BF1CF
     git config --global commit.gpgsign true
 }
@@ -41,6 +41,7 @@ function install_personal_apps() {
 function setup_mysql() {
     brew install mysql@5.6
     brew services start mysql@5.6
+    sleep 3 # Wait for mysql to start
     /usr/local/opt/mysql@5.6/bin/mysqladmin -u root password "12345678"
 }
 
@@ -48,8 +49,8 @@ function handle_person_profile() {
     # copy histfile
     if [[ -e ~/.histfile ]]; then
         rm ~/.histfile
-        ln -s ~/.macbootstrap/profile/.histfile ~/.histfile
     fi
+    ln -s ~/.macbootstrap/profile/.histfile ~/.histfile
 }
 
 # Write script you want to use in the `if` block
