@@ -1,10 +1,6 @@
 #!/bin/sh
 source basic.sh
 
-sudo ./install-steps/macos.sh
-
-brew install python3
-
 if [[ ! -e /usr/local/bin/sslocal ]]; then
     brew install shadowsocks-libev
     brew services start shadowsocks-libev
@@ -96,6 +92,7 @@ fi
 
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew install redis
+brew_install python3
 brew_install cmake
 brew_install gawk
 brew_install autojump
@@ -162,6 +159,7 @@ ln -s ~/.macbootstrap/config/ranger/rc.conf "$old_rc_conf"
 
 unset ALL_PROXY
 ./install-steps/dependencies.after.sh
+sudo ./install-steps/macos.sh
 ./install-steps/sogou_sync.sh
 
 # ssh configuration
