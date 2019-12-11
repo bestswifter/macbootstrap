@@ -23,10 +23,11 @@ if [[ -e /Applications/Charles.app ]]; then
     echo "You have installed Charles"
 else
     if [[ ! -e $HOME/Downloads/Charles.app.zip ]]; then
-        curl "http://p2w4johvr.bkt.clouddn.com/Charles.app.zip" -o ~/Downloads/Charles.app.zip
+        curl "http://app.bestswifter.com/Charles.app.zip" -o ~/Downloads/Charles.app.zip
     fi
 
     unzip -q $HOME/Downloads/Charles.app.zip -d /Applications
+    xattr -d com.apple.quarantine /Applications/Charles.app
     rm $HOME/Downloads/Charles.app.zip
 fi
 
@@ -35,7 +36,7 @@ if [[ -e /Applications/Dash.app ]]; then
     echo "You have installed Dash"
 else
     if [[ ! -e $HOME/Downloads/Dash.app.zip ]]; then
-        curl "http://p2w4johvr.bkt.clouddn.com/Dash.app.zip" -o ~/Downloads/Dash.app.zip
+        curl "http://app.bestswifter.com/Dash.2019.12.app.zip" -o ~/Downloads/Dash.app.zip
     fi
 
     unzip -q $HOME/Downloads/Dash.app.zip -d /Applications
@@ -43,20 +44,20 @@ else
 fi
 
 # Install Alfred
-if [[ -e "/Applications/Alfred 3.app" ]]; then
+if [[ -e "/Applications/Alfred\ 4/.app" ]]; then
     echo "You have installed Alfred"
 else
-    if [[ ! -e "$HOME/Library/Application Support/Alfred 3" ]]; then
-        mkdir -p "$HOME/Library/Application Support/Alfred 3"
+    if [[ ! -e "$HOME/Library/Application Support/Alfred 4" ]]; then
+        mkdir -p "$HOME/Library/Application Support/Alfred 4"
     fi
 
-    # patch alfred
-    brew cask install alfred
-    sudo codesign -f -d -s - "/Applications/Alfred 3.app/Contents/Frameworks/Alfred Framework.framework/Versions/A/Alfred Framework"
-    cp tools/alfred.license.plist "$HOME/Library/Application Support/Alfred 3/license.plist"
+    if [[ ! -e $HOME/Downloads/Alfred.app.zip ]]; then
+        curl "http://app.bestswifter.com/Alfred4.0.7.app.zip" -o ~/Downloads/Alfred.app.zip
+    fi
+    unzip -q $HOME/Downloads/Alfred.app.zip -d /Applications
 
     # sync configuration
-    rm -rf "$HOME/Library/Application Support/Alfred 3/Alfred.alfredpreferences"
+    rm -rf "$HOME/Library/Application Support/Alfred 4/Alfred.alfredpreferences"
     curl http://p2w4johvr.bkt.clouddn.com/Alfred.alfredpreferences2.zip -o "$HOME/Downloads/Alfred.alfredpreferences.zip"
     unzip -q "$HOME/Downloads/Alfred.alfredpreferences.zip" -d "$HOME/Library/Application Support/Alfred 3"
     rm "$HOME/Downloads/Alfred.alfredpreferences.zip"
