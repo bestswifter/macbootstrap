@@ -47,8 +47,8 @@ fi
 if [[ -e "/Applications/Alfred\ 4/.app" ]]; then
     echo "You have installed Alfred"
 else
-    if [[ ! -e "$HOME/Library/Application Support/Alfred 4" ]]; then
-        mkdir -p "$HOME/Library/Application Support/Alfred 4"
+    if [[ ! -e "$HOME/Library/Application Support/Alfred" ]]; then
+        mkdir -p "$HOME/Library/Application Support/Alfred"
     fi
 
     if [[ ! -e $HOME/Downloads/Alfred.app.zip ]]; then
@@ -57,9 +57,9 @@ else
     unzip -q $HOME/Downloads/Alfred.app.zip -d /Applications
 
     # sync configuration
-    rm -rf "$HOME/Library/Application Support/Alfred 4/Alfred.alfredpreferences"
-    curl http://p2w4johvr.bkt.clouddn.com/Alfred.alfredpreferences2.zip -o "$HOME/Downloads/Alfred.alfredpreferences.zip"
-    unzip -q "$HOME/Downloads/Alfred.alfredpreferences.zip" -d "$HOME/Library/Application Support/Alfred 3"
+    rm -rf "$HOME/Library/Application Support/Alfred/Alfred.alfredpreferences"
+    curl http://p2w4johvr.bkt.clouddn.com/Alfred.zip -o "$HOME/Downloads/Alfred.alfredpreferences.zip"
+    unzip -q "$HOME/Downloads/Alfred.alfredpreferences.zip" -d "$HOME/Library/Application Support/Alfred"
     rm "$HOME/Downloads/Alfred.alfredpreferences.zip"
 fi
 
