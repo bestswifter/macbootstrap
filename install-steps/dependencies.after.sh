@@ -64,7 +64,7 @@ else
 fi
 
 # Install iStatMenus
-if [[ -e "/Applications/iStat Menus.app" ]]; then
+if [[ -e "/Applications/iStat\ Menus.app" ]]; then
     echo "You have installed iStat Menus"
 else
     curl "http://app.bestswifter.com/iStatMenus.app.zip" -o ~/Downloads/iStatMenus.app.zip
