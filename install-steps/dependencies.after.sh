@@ -63,6 +63,15 @@ else
     rm "$HOME/Downloads/Alfred.alfredpreferences.zip"
 fi
 
+# Install iStatMenus
+if [[ -e "/Applications/iStat Menus.app" ]]; then
+    echo "You have installed iStat Menus"
+else
+    curl "http://app.bestswifter.com/iStatMenus.app.zip" -o ~/Downloads/iStatMenus.app.zip
+    unzip -q $HOME/Downloads/iStatMenus.app.zip id /Applications
+    rm $HOME/Downloads/iStatMenus.app.zip
+fi
+
 # Powerline-font
 # ---------------
 git clone --depth=1 https://github.com/powerline/fonts.git --depth=1
