@@ -113,6 +113,7 @@ brew_install exiftool
 brew_install archey
 brew_install ranger
 brew_install git-lfs && git lfs install
+brew_install cloc
 $(brew --prefix)/opt/fzf/install --all
 
 # link git config

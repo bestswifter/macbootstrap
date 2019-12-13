@@ -29,6 +29,7 @@ brew uninstall scmpuff
 brew uninstall fzf
 brew uninstall exiftool
 brew uninstall git-lfs
+brew uninstall cloc
 
 # npm clean
 npm uninstall -g gnomon

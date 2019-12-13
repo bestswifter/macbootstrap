@@ -24,6 +24,7 @@
 * redis  (通过 `redis-server /usr/local/etc/redis.conf` 启动或者 `brew services start redis` 启动并且设置为开机立即启动)
 * gpg：git 提交加密工具
 * fzf
+* cloc
 
 ## iterm2
 
