@@ -1,5 +1,5 @@
 # Disable guest account
-bash install-steps/guest_account.sh disable
+sudo bash install-steps/guest_account.sh disable
 
 # Use F1-F12 as standard function keys
 defaults write -globalDomain com.apple.keyboard.fnState -int 1
@@ -78,4 +78,5 @@ defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write com.apple.iphonesimulator AllowFullscreenMode -bool YES
 
 # Make configurations works
+echo "Restart Finder Dock Mail SystemUIServer"
 for app in Finder Dock Mail SystemUIServer; do killall "$app" >/dev/null 2>&1; done
