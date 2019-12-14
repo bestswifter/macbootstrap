@@ -69,6 +69,15 @@ else
     rm $HOME/Downloads/iStatMenus.app.zip
 fi
 
+# Install CleanMyMac X
+if [[ -e "/Applications/CleanMyMac X.app" ]]; then
+    echo "You have installed CleanMyMac X"
+else
+    curl "http://app.bestswifter.com/CleanMyMacX.zip" -o $HOME/Downloads/CleanMyMacX.app.zip
+    unzip -q $HOME/Downloads/CleanMyMacX.app.zip -d /Applications
+    rm $HOME/Downloads/CleanMyMacX.app.zip
+fi
+
 # Powerline-font
 # ---------------
 git clone --depth=1 https://github.com/powerline/fonts.git --depth=1
