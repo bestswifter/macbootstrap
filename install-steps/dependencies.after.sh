@@ -44,7 +44,7 @@ else
 fi
 
 # Install Alfred
-if [[ -e "/Applications/Alfred\ 4/.app" ]]; then
+if [[ -e "/Applications/Alfred 4/.app" ]]; then
     echo "You have installed Alfred"
 else
     if [[ ! -e "$HOME/Library/Application Support/Alfred" ]]; then
