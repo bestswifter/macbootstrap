@@ -51,6 +51,12 @@ function handle_person_profile() {
         rm ~/.histfile
     fi
     ln -s ~/.macbootstrap/profile/.histfile ~/.histfile
+
+    # sync alfred configuration
+    rm -rf "$HOME/Library/Application Support/Alfred"
+    curl "http://app.bestswifter.com/Alfred.zip" -o "$HOME/Downloads/Alfred.alfredpreferences.zip"
+    unzip -q "$HOME/Downloads/Alfred.alfredpreferences.zip" -d "$HOME/Library/Application Support"
+    rm "$HOME/Downloads/Alfred.alfredpreferences.zip"
 }
 
 # Write script you want to use in the `if` block

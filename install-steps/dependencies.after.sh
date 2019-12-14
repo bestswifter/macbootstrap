@@ -55,12 +55,6 @@ else
         curl "http://app.bestswifter.com/Alfred4.0.7.app.zip" -o ~/Downloads/Alfred.app.zip
     fi
     unzip -q $HOME/Downloads/Alfred.app.zip -d /Applications
-
-    # sync configuration
-    rm -rf "$HOME/Library/Application Support/Alfred/Alfred.alfredpreferences"
-    curl http://p2w4johvr.bkt.clouddn.com/Alfred.zip -o "$HOME/Downloads/Alfred.alfredpreferences.zip"
-    unzip -q "$HOME/Downloads/Alfred.alfredpreferences.zip" -d "$HOME/Library/Application Support/Alfred"
-    rm "$HOME/Downloads/Alfred.alfredpreferences.zip"
 fi
 
 # Install iStatMenus
