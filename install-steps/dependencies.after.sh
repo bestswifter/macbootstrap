@@ -58,11 +58,14 @@ else
 fi
 
 # Install iStatMenus
-if [[ -e "/Applications/iStat\ Menus.app" ]]; then
+if [[ -e "/Applications/iStat Menus.app" ]]; then
     echo "You have installed iStat Menus"
 else
     curl "http://app.bestswifter.com/iStatMenus.app.zip" -o ~/Downloads/iStatMenus.app.zip
-    unzip -q $HOME/Downloads/iStatMenus.app.zip id /Applications
+    unzip -q $HOME/Downloads/iStatMenus.app.zip -d /Applications
+    cp $HOME/.macbootstrap/config/com.bjango.istatmenus.plist ~/Library/Preferences/
+    rm ~/Library/Preferences/com.bjango.istatmenus6.extras.plist
+    ln -s $HOME/.macbootstrap/config/com.bjango.istatmenus6.extras.plist ~/Library/Preferences/
     rm $HOME/Downloads/iStatMenus.app.zip
 fi
 
