@@ -31,7 +31,7 @@ Host qcloud
 	IdentityFile ~/.ssh/id_rsa
 
 Host dev
-	HostName 10.8.124.82
+	HostName 10.224.28.10
 	User zhangxingyu.bs
 	Port 22
 	IdentityFile ~/.ssh/id_rsa
