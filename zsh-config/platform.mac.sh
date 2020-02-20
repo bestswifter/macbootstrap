@@ -264,3 +264,9 @@ function bssync() {
     fi
     rsync -avz --delete --exclude=.git --exclude-from="$(git -C ${from} ls-files --exclude-standard -oi --directory > /tmp/excludes; echo /tmp/excludes)" ${from} ${to}
 }
+
+_fzf_complete_make() {
+  _fzf_complete "--multi --reverse" "$@" < <(
+    grep '^[^\.][-a-zA-Z\.0-9_\/]*:' ./Makefile | sed 's/:.*//g' | uniq
+  )
+}
