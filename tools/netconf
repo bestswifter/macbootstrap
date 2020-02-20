@@ -1,8 +1,8 @@
 {
-    "server":"139.224.27.189",
-    "server_port":51519,
+    "server":"123.56.88.99",
+    "server_port":37601,
     "local_port":14179,
-    "password":"PCx3OyZViY4C",
+    "password":"W0FffT",
     "timeout":600,
-    "method":"chacha20-ietf-poly1305"
+    "method":"rc4-md5"
 }
