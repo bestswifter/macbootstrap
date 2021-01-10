@@ -260,7 +260,12 @@
     "better-comments.multilineComments": true,
     "workbench.startupEditor": "newUntitledFile",
     "dart.flutterSdkPath": "/Users/zxy/dev/code/flutter"
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
-    }
+    },
+    "editor.insertSpaces": false,
+    "editor.detectIndentation": false
 }
