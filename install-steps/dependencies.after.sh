@@ -36,7 +36,7 @@ if [[ -e /Applications/Dash.app ]]; then
     echo "You have installed Dash"
 else
     if [[ ! -e $HOME/Downloads/Dash.app.zip ]]; then
-        curl "http://app.bestswifter.com/Dash.2019.12.app.zip" -o ~/Downloads/Dash.app.zip
+        curl "http://tokyo.kapeli.com/downloads/v6/Dash.zip" -o ~/Downloads/Dash.app.zip
     fi
 
     unzip -q $HOME/Downloads/Dash.app.zip -d /Applications
