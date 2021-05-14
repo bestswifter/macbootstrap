@@ -19,7 +19,7 @@ else
 fi
 
 if [[ ! -e /Applications/iTerm.app ]]; then
-    brew cask install iterm2
+    brew install --cask iterm2
     defaults delete com.googlecode.iterm2
     ln -s ~/.macbootstrap/config/com.googlecode.iterm2.plist $HOME/Library/Preferences
     # config background image location
@@ -32,19 +32,19 @@ else
 fi
 
 if [[ ! -e /Applications/SourceTree.app ]]; then
-    brew cask install sourcetree
+    brew install --cask sourcetree
 else
     echo "You have installed SourceTree"
 fi
 
 if [[ ! -e /Applications/WeChat.app ]]; then
-    brew cask install wechat
+    brew install --cask wechat
 else
     echo "You have installed WeChat"
 fi
 
 if [[ ! -e /Applications/Google\ Chrome.app ]]; then
-    brew cask install google-chrome
+    brew install --cask google-chrome
 
     # Set Chrome as default browser
     git clone https://github.com/kerma/defaultbrowser ./tools/defaultbrowser
@@ -56,7 +56,7 @@ else
 fi
 
 if [[ ! -e /Applications/Visual\ Studio\ Code.app ]]; then
-    brew cask install visual-studio-code
+    brew install --cask visual-studio-code
     sh ./vscode/setup.sh
 else
     echo "You have installed vscode"
@@ -85,7 +85,7 @@ fi
 
 # install jetbrain toolbox
 if [[ ! -e /Applications/JetBrains\ Toolbox.app ]]; then
-    brew cask install jetbrains-toolbox
+    brew install --cask jetbrains-toolbox
 else
     echo "You have installed JetBrains Toolbox"
 fi

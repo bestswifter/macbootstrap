@@ -17,4 +17,4 @@ fi
 
 # CodeRunner
 # ---------------
-brew cask install coderunner
+brew install --cask coderunner
