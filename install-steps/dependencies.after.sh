@@ -4,8 +4,8 @@ source basic.sh
 # ---------------
 brew cask install sogouinput
 sogou_base="/usr/local/Caskroom/sogouinput"
-sogou_version="$sogou_base/"`ls "$sogou_base"`
-sogou_app="$sogou_version/"`ls $sogou_version | grep .app | tail -n 1`
+sogou_version="$sogou_base/"$(ls "$sogou_base")
+sogou_app="$sogou_version/"$(ls $sogou_version | grep .app | tail -n 1)
 open "$sogou_app"
 
 # Extension for preview
@@ -70,13 +70,13 @@ else
 fi
 
 # Install CleanMyMac X
-if [[ -e "/Applications/CleanMyMac X.app" ]]; then
-    echo "You have installed CleanMyMac X"
-else
-    curl "http://app.bestswifter.com/CleanMyMacX.zip" -o $HOME/Downloads/CleanMyMacX.app.zip
-    unzip -q $HOME/Downloads/CleanMyMacX.app.zip -d /Applications
-    rm $HOME/Downloads/CleanMyMacX.app.zip
-fi
+# if [[ -e "/Applications/CleanMyMac X.app" ]]; then
+#     echo "You have installed CleanMyMac X"
+# else
+#     curl "http://app.bestswifter.com/CleanMyMacX.zip" -o $HOME/Downloads/CleanMyMacX.app.zip
+#     unzip -q $HOME/Downloads/CleanMyMacX.app.zip -d /Applications
+#     rm $HOME/Downloads/CleanMyMacX.app.zip
+# fi
 
 # Powerline-font
 # ---------------

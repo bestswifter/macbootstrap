@@ -8,7 +8,7 @@ defaults write -globalDomain com.apple.keyboard.fnState -int 1
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Auto hide and show Dock
-defaults write com.apple.dock autohide -bool true
+# defaults write com.apple.dock autohide -bool true
 
 # Hide some app icons in Dock and make dock lays left
 defaults write com.apple.dock persistent-apps -array
@@ -33,10 +33,11 @@ defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 
 # Config Finder
 defaults write com.apple.finder CreateDesktop false
-defaults write com.apple.finder QLEnableTextSelection -boolean true;
-defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -boolean false;
-defaults write com.apple.finder ShowRemovableMediaOnDesktop -boolean false;
-defaults write com.apple.finder FXEnableExtensionChangeWarning -boolean false;
+defaults write com.apple.finder QLEnableTextSelection -boolean true
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -boolean false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -boolean false
+defaults write com.apple.finder FXEnableExtensionChangeWarning -boolean false
+defaults write com.apple.finder AppleShowAllFiles -boolean true
 
 # Enable clickpad Tap to click
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true

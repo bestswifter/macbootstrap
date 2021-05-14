@@ -12,26 +12,27 @@ Host *
 	ControlPersist 4h
 	Compression yes
 
-Host bwh
-	HostName 172.96.215.73
-	User root
-	Port 27850
-	IdentityFile ~/.ssh/id_rsa
-
-Host bwh_new
-	HostName 104.224.191.118
-	User root
-	Port 27850
-	IdentityFile ~/.ssh/id_rsa
-
-Host qcloud
-	HostName 115.159.123.174
-	User root
-	Port 22
-	IdentityFile ~/.ssh/id_rsa
-
-Host dev
-	HostName 10.227.20.92
-	User zhangxingyu.bs
-	Port 22
-	IdentityFile ~/.ssh/id_rsa
+# Host bwh
+# 	HostName 172.96.215.73
+# 	User root
+# 	Port 27850
+# 	IdentityFile ~/.ssh/id_rsa
+# 
+# Host bwh_new
+# 	HostName 104.224.191.118
+# 	User root
+# 	Port 27850
+# 	IdentityFile ~/.ssh/id_rsa
+# 
+# Host qcloud
+# 	HostName 115.159.123.174
+# 	User root
+# 	Port 22
+# 	IdentityFile ~/.ssh/id_rsa
+# 
+# Host dev
+# 	HostName 10.227.20.92
+# 	User zhangxingyu.bs
+# 	Port 22
+# 	IdentityFile ~/.ssh/id_rsa
+# 

@@ -71,3 +71,22 @@ bashcompinit
 if [[ -e /usr/local/opt/mysql@5.6/bin/mysql ]]; then
   export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 fi
+
+# This speeds up pasting w/ autosuggest
+# https://github.com/zsh-users/zsh-autosuggestions/issues/238
+pasteinit() {
+  OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
+  zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
+}
+
+pastefinish() {
+  zle -N self-insert $OLD_SELF_INSERT
+}
+zstyle :bracketed-paste-magic paste-init pasteinit
+zstyle :bracketed-paste-magic paste-finish pastefinish
+
+# mysqlclient
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl/include"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
+export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"

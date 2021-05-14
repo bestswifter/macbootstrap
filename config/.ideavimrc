@@ -4,7 +4,7 @@ set incsearch
 set ignorecase
 set smartcase
 set showmode
-set scrolloff=3
+set scrolloff=5
 set history=100000
 set clipboard+=unnamed
 
@@ -28,3 +28,57 @@ nnoremap go :action Back<CR>
 nnoremap gi :action GotoImplementation<CR>
 " 跳转到测试
 nnoremap gt :action GotoTest<CR>
+
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+map s <nop>
+
+" tab 向左切换
+nnoremap R gt
+" tab 向右切换
+nnoremap E gT
+" Move to the start of line
+nnoremap H ^
+" Move to the end of line
+nnoremap L $
+
+" 输入法插件`ideaVimExtension`: 自动切换为英文输入法，进入编辑模式，又切换原来的输入法
+set keep-english-in-normal-and-restore-in-insert
+
+" 按下回车键后，下一行的缩进会自动跟上一行的缩进保持一致
+set autoindent
+" 由于 Tab 键在不同的编辑器缩进不一致，该设置自动将 Tab 转为空格
+set expandtab
+
+let mapleader = " "
+set easymotion
+set surround
+nnoremap <leader>y "ay
+nnoremap <leader>p "ap
+nnoremap <leader><leader>y "+y
+nnoremap <leader><leader>p "+p
+
+" split window
+map si :set splitright<CR>:vsplit<CR>
+map sn :set nosplitright<CR>:vsplit<CR>
+map su :set nosplitbelow<CR>:split<CR>
+map se :set splitbelow<CR>:split<CR>
+
+map <LEADER>i <C-w>l
+map <LEADER>u <C-w>k
+map <LEADER>n <C-w>h
+map <LEADER>e <C-w>j
+
+map <up> :res +5<CR>
+map <down> :res -5<CR>
+map <left> :vertical resize-5<CR>
+map <right> :vertical resize+5<CR>
+
+map tu :tabe<CR>
+map tn :-tabnext<CR>
+map ti :+tabnext<CR>
+
+map sv <C-w>t<C-w>H
+map sh <C-w>t<C-w>K

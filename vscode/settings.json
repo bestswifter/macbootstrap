@@ -17,140 +17,119 @@
     "vim.easymotion": true,
     "vim.sneak": true,
     "vim.incsearch": true,
-    "vim.useSystemClipboard": true,
+    "vim.useSystemClipboard": false,
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
     "vim.visualstar": true,
-    "vim.insertModeKeyBindings": [{
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ]
+    // "vim.insertModeKeyBindings": [{
+    //         "before": [
+    //             "j",
+    //             "j"
+    //         ],
+    //         "after": [
+    //             "<Esc>"
+    //         ]
+    //     },
+    //     {
+    //         "before": [
+    //             "k",
+    //             "k"
+    //         ],
+    //         "after": [
+    //             "<Esc>"
+    //         ]
+    //     },
+    //     {
+    //         "before": [
+    //             "h",
+    //             "h"
+    //         ],
+    //         "after": [
+    //             "<Esc>"
+    //         ]
+    //     }
+    // ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+          // gc 注释 line
+          "before": ["g", "c"],
+          "after": [],
+          "commands": [
+            {
+              "command": "editor.action.commentLine",
+              "args": []
+            }
+          ]
         },
         {
-            "before": [
-                "k",
-                "k"
-            ],
-            "after": [
-                "<Esc>"
-            ]
+          // gC 注释 block
+          "before": ["g", "C"],
+          "after": [],
+          "commands": [
+            {
+              "command": "editor.action.commentBlock",
+              "args": []
+            }
+          ]
         },
         {
-            "before": [
-                "h",
-                "h"
-            ],
-            "after": [
-                "<Esc>"
-            ]
+          // tab 向后
+          "before": ["E"],
+          "after": ["g", "T"]
+        },
+        {
+          // tab 向前
+          "before": ["R"],
+          "after": ["g", "t"]
+        },
+    
+        {
+          // add a bookmark: Bookmarks Extension
+          "before": ["<leader>", "m"],
+          "commands": ["bookmarks.toggle"]
+        },
+        {
+          // open the list of all bookmarks: Bookmarks Extension
+          "before": ["<leader>", "b"],
+          "commands": ["bookmarks.list"]
+        },
+        // easy motion
+        {
+          "before": ["leader", "s"],
+          "after": ["leader", "leader", "/"]
+        },
+        {
+          "before": ["leader", "l"],
+          "after": ["leader", "leader", "leader", "b", "d", "j", "k"]
+        },
+        // {
+        //   "before": ["leader", "c"],
+        //   "after": ["leader", "leader", "c"]
+        // },
+        {
+          "before": ["leader", "w"],
+          "after": ["leader", "leader", "leader", "b", "d", "w"]
+        },
+        {
+          "before": ["leader", "e"],
+          "after": ["leader", "leader", "leader", "b", "d", "e"]
         }
+        // {
+        //   "before": [":"],
+        //   "after": [],
+        //   "commands": [
+        //     {
+        //       "command": "workbench.action.showCommands",
+        //       "args": []
+        //     }
+        //   ]
+        // }
     ],
-    "vim.normalModeKeyBindingsNonRecursive": [{
-            "before": [
-                "g",
-                "c"
-            ],
-            "after": [],
-            "commands": [{
-                "command": "editor.action.commentLine",
-                "args": []
-            }]
-        },
-        {
-            "before": [
-                "g",
-                "C"
-            ],
-            "after": [],
-            "commands": [{
-                "command": "editor.action.commentBlock",
-                "args": []
-            }]
-        },
-        {
-            "before": [
-                "leader",
-                "s"
-            ],
-            "after": [
-                "leader",
-                "leader",
-                "/"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "l"
-            ],
-            "after": [
-                "leader",
-                "leader",
-                "leader",
-                "b",
-                "d",
-                "j",
-                "k"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "c"
-            ],
-            "after": [
-                "leader",
-                "leader",
-                "c"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "w"
-            ],
-            "after": [
-                "leader",
-                "leader",
-                "leader",
-                "b",
-                "d",
-                "w"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "e"
-            ],
-            "after": [
-                "leader",
-                "leader",
-                "leader",
-                "b",
-                "d",
-                "e"
-            ]
-        },
-        {
-            "before": [
-                ":"
-            ],
-            "after": [],
-            "commands": [{
-                "command": "workbench.action.showCommands",
-                "args": []
-            }]
-        }
-    ],
+    // 取消 vim 中的快捷键（不让在 vim 中生效）
     "vim.handleKeys": {
         "<C-h>": false
     },
-    "vim.leader": ";",
+    "vim.leader": "<space>",
     // Vim - EasyMotion
     "vim.easymotionMarkerBackgroundColor": "#000000",
     "vim.easymotionMarkerForegroundColorOneChar": "#ff0000",
@@ -191,16 +170,16 @@
         "*.vue": "vue"
     },
     // ESLint
-    "eslint.autoFixOnSave": true,
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "html",
-        {
-            "language": "vue",
-            "autoFix": true
-        }
-    ],
+    // "eslint.autoFixOnSave": true,
+    // "eslint.validate": [
+    //     "javascript",
+    //     "javascriptreact",
+    //     "html",
+    //     {
+    //         "language": "vue",
+    //         "autoFix": true
+    //     }
+    // ],
     //
     "vetur.format.defaultFormatter.html": "none",
     "vetur.format.defaultFormatter.css": "prettier",
@@ -210,6 +189,11 @@
     "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
     "vetur.format.defaultFormatter.js": "prettier",
     "vetur.format.defaultFormatter.ts": "prettier",
+    // 启用在 VS Code 中重命名或移动文件时自动更新 import 语句的路径。
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "git.enableSmartCommit": true,
+
     // Code Runner
     "code-runner.runInTerminal": true,
     "code-runner.saveFileBeforeRun": true,
@@ -259,7 +243,7 @@
     // Comment
     "better-comments.multilineComments": true,
     "workbench.startupEditor": "newUntitledFile",
-    "dart.flutterSdkPath": "/Users/zxy/dev/code/flutter"
+    // "dart.flutterSdkPath": "/Users/zxy/dev/code/flutter"
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
@@ -267,5 +251,29 @@
         "source.fixAll.eslint": true
     },
     "editor.insertSpaces": false,
-    "editor.detectIndentation": false
+    "editor.detectIndentation": false,
+    // 自定义主题皮肤
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontWeight": "normal",
+    "editor.fontLigatures": true,
+    // sync
+    "sync.gist": "ba5796a961d5637128931651e7919f2c",
+    "sync.autoUpload": true,
+    "sync.forceUpload": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "eslint.alwaysShowStatus": true,
+    "javascript.validate.enable": false,
+    "editor.wordWrapColumn": 200,
+    "vim.textwidth": 200,
+    "[go]": {
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+    "kite.showWelcomeNotificationOnStartup": false
+
 }

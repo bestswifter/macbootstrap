@@ -15,7 +15,7 @@
 只需要执行以下代码即可：
 
 ```shell
-curl https://raw.githubusercontent.com/bestswifter/macbootstrap/master/bootstrap.sh | sh
+curl https://raw.githubusercontent.com/Deerdev/macbootstrap/deer_main/bootstrap.sh | sh
 ```
 
 这个命令会安装 `HomeBrew`，如果是全新的电脑还会安装 Xcode 命令行工具（包括 gcc 等），这是必须的，绝大多数命令行程序都依赖这个。如果安装失败，可以手动执行 `xcode-select --install` 命令。如果还是无法安装，需要去[苹果官网](https://developer.apple.com/download/more/)手动下载安装

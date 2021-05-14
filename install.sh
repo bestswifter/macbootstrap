@@ -1,18 +1,18 @@
 #!/bin/sh
 source basic.sh
 
-if [[ ! -e /usr/local/bin/sslocal ]]; then
-    brew install shadowsocks-libev
-    brew services start shadowsocks-libev
-    ln -s /usr/local/opt/shadowsocks-libev/bin/ss-local /usr/local/bin/sslocal
-    ln -s /usr/local/opt/shadowsocks-libev/bin/ss-server /usr/local/bin/ss-server
-else
-    echo "You have installed shadowsocks"
-fi
+# if [[ ! -e /usr/local/bin/sslocal ]]; then
+#     brew install shadowsocks-libev
+#     brew services start shadowsocks-libev
+#     ln -s /usr/local/opt/shadowsocks-libev/bin/ss-local /usr/local/bin/sslocal
+#     ln -s /usr/local/opt/shadowsocks-libev/bin/ss-server /usr/local/bin/ss-server
+# else
+#     echo "You have installed shadowsocks"
+# fi
 
 # install and use shadowsocks
 if not_tt_network; then
-    nohup sslocal -c ~/.macbootstrap/tools/netconf &> /private/tmp/nohup.out&
+    nohup sslocal -c ~/.macbootstrap/tools/netconf &>/private/tmp/nohup.out &
     #export ALL_PROXY=socks5://127.0.0.1:14179
 else
     echo "You are in toutiao network, no need to use ss now"
@@ -62,14 +62,14 @@ else
     echo "You have installed vscode"
 fi
 
-if brew ls --versions gnu-sed > /dev/null; then
+if brew ls --versions gnu-sed >/dev/null; then
     echo "You have installed gsed"
 else
     brew install gnu-sed
 fi
 
 # install sz/rz
-if brew ls --versions lrzsz > /dev/null; then
+if brew ls --versions lrzsz >/dev/null; then
     echo "You have installed lrzsz"
 else
     brew install lrzsz
@@ -173,4 +173,3 @@ ln -s ~/.macbootstrap/zsh-config/ssh_config ~/.ssh/config
 # Personal
 ./install-steps/personal.sh
 ./personal.sh
-
