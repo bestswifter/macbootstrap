@@ -48,7 +48,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 export NVM_DIR=~/.nvm
 export EDITOR="nvim"
 #source $(brew --prefix nvm)/nvm.sh
-export NVM_SH="/usr/local/opt/nvm/nvm.sh"
+export NVM_SH="/opt/homebrew/opt/nvm/nvm.sh"
 # https://github.com/creationix/nvm/issues/860
 declare -a NODE_GLOBALS=(`find $NVM_DIR/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
 

@@ -106,7 +106,7 @@ fi
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
 export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
-nvm install 13.13.0
+nvm install 14.17.0
 ./install-steps/node_global.sh
 
 # hook login
