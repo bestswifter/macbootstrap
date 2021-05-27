@@ -59,6 +59,10 @@ function handle_person_profile() {
     rm "$HOME/Downloads/Alfred.alfredpreferences.zip"
 }
 
+function install_karabiner() {
+    brew cask install karabiner-elements
+}
+
 # Write script you want to use in the `if` block
 if [[ "$username" == $(whoami) ]]; then
     # initialize git
@@ -76,6 +80,9 @@ if [[ "$username" == $(whoami) ]]; then
 
     # setup mysql 5.6
     setup_mysql
+
+    # 安装 karabiner
+    install_karabiner
 
     # cp ss conf
     ln -s ~/.macbootstrap/tools/netconf ~/.macbootstrap/config/shadowsocks.conf

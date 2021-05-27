@@ -21,7 +21,8 @@
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
     "vim.visualstar": true,
-    "vim.insertModeKeyBindings": [{
+    "vim.insertModeKeyBindings": [
+        {
             "before": [
                 "j",
                 "j"
@@ -49,16 +50,19 @@
             ]
         }
     ],
-    "vim.normalModeKeyBindingsNonRecursive": [{
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
             "before": [
                 "g",
                 "c"
             ],
             "after": [],
-            "commands": [{
-                "command": "editor.action.commentLine",
-                "args": []
-            }]
+            "commands": [
+                {
+                    "command": "editor.action.commentLine",
+                    "args": []
+                }
+            ]
         },
         {
             "before": [
@@ -66,10 +70,12 @@
                 "C"
             ],
             "after": [],
-            "commands": [{
-                "command": "editor.action.commentBlock",
-                "args": []
-            }]
+            "commands": [
+                {
+                    "command": "editor.action.commentBlock",
+                    "args": []
+                }
+            ]
         },
         {
             "before": [
@@ -141,10 +147,12 @@
                 ":"
             ],
             "after": [],
-            "commands": [{
-                "command": "workbench.action.showCommands",
-                "args": []
-            }]
+            "commands": [
+                {
+                    "command": "workbench.action.showCommands",
+                    "args": []
+                }
+            ]
         }
     ],
     "vim.handleKeys": {
@@ -181,7 +189,6 @@
     "workbench.editor.enablePreview": false,
     "workbench.editor.highlightModifiedTabs": true,
     "search.showLineNumbers": true,
-
     // Window setting
     "window.title": "${activeEditorLong}",
     "window.zoomLevel": 0,

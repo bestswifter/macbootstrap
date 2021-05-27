@@ -36,6 +36,8 @@
     encoding = utf-8
 [push]
     default = current
+[branch]
+    autosetupmerge = always
 [grep]
     lineNumber = true
 [diff "exif"]
