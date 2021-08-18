@@ -25,7 +25,7 @@ def main():
         raise SystemExit(sys.argv[0] + " [infile [outfile]]")
     try:
         obj = json.load(infile)
-    except ValueError, e:
+    except ValueError as e:
         raise SystemExit(e)
     s = json.dumps(obj, sort_keys=True, indent=4, ensure_ascii=False)
     outfile.write(codecs.encode(s, 'utf-8'))
