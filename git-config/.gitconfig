@@ -27,7 +27,7 @@
     excludesfile = ~/.gitignore_global
     whitespace = cr-at-eol
     quotepath = false
-    editor = /usr/local/bin/nvim
+    editor = /usr/local/bin/vim
     attributesfile = ~/.gitattributes
 [i18n]
     commitencoding = utf-8
