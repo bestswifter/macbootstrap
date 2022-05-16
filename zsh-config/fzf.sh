@@ -1,6 +1,6 @@
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-gga() {
+func gga() {
   git lg --all |\
   fzf --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
       --bind "ctrl-m:execute:
