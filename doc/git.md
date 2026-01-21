@@ -47,7 +47,7 @@
 2. 输入 `gb`，它会展示所有本地分支，等价于命令 `git branch`, 输入命令 `gbv` 可以额外显示每个分支的最后一次提交和这个分支跟踪的远程分支，等价于命令 `git branch -vv`
 3. 输入 `gb branch_name` 表示创建一个分支，指向当前提交，`gb branch_name commit` 表示新建一个分支并指向某个 commit，注意这两个命令都不会切换分支。
 4. 输入 `gba`，查看本地和远程分支，等价于命令 `git branch -a`，输入命令 `gbr`，查看远程分支，等价于命令 `git branch --remote`
-5. 输入 `gcb new_branch` 可以创建分支 **new_branch** 并切换到这个分支上，它是 `git check -b` 命令的缩写，等价于 `git branch new_branch` 和 `git checkout new_branch` 这两条命令
+5. 输入 `gcb new_branch` 可以创建分支 **new_branch** 并切换到这个分支上，它是 `git checkout -b` 命令的缩写，等价于 `git branch new_branch` 和 `git checkout new_branch` 这两条命令
 6. 输入 `gbd branch_name` 删除某个分支，等价于命令 `git branch -d`
 7. 并非所有分支都可以通过 `gbd` 命令删除，可以通过 `git branch --merged` 来查看已经合入到某个指针(默认是 HEAD)的分支，换句话说是可以通过这个指针回溯到的分支。这个命令也简写为 `gbm`
 8. `gbm` 列出的分支都是**可以抵达**的，因此可用 `gbd` 删除，而 `gbnm` 列出的则是不可达的分支，因此不能用 `gbd` 删除，它是 `git branch --no-merged` 命令的简写
